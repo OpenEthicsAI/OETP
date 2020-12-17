@@ -16,7 +16,7 @@ This document is the Internet Draft, it contains a Proposed Standard description
 
 This document is planned to be brought in accordance with the RFC publication requirements for the Internet Standards Track protocol as described in [RFC322](https://www.rfc-editor.org/rfc/rfc7322) and [RFC841](https://www.rfc-editor.org/rfc/rfc7841).
 
-Information about the current status of this document, any errata, and how to provide feedback on it may be obtained at [https://openethics.ai/oetp/](https://openethics.ai/oetp/).
+Information about the current status of this document, any errata, and how to provide feedback on it may be obtained at [https://openethics.ai/open-ethics-transparency-protocol/](https://openethics.ai/open-ethics-transparency-protocol/).
 
 # Copyright Notice
 
