@@ -1,0 +1,34 @@
+{
+    "schema": {
+        "name": "Open Ethics Transparency Protocol",
+        "version": "0.9.3 RFC",
+        "integrity": ""
+    },
+    "snapshot": {
+        "product": {
+            "url": "",
+            "description" : ""
+        },
+        "timestamp": "",
+        "generator": {
+            "name": "Open Ethics",
+            "alias": "oe",
+            "type": "root",
+            "website": "https://openethics.ai"
+        },
+        "label": {
+          	"data":{
+                  "type":"",
+                  "practice": ""
+            },
+          	"source": {
+                  "type": "",
+                  "practice": ""
+            },
+          	"decision":{
+                  "type":"",
+                  "practice": ""
+            } 
+        }
+    }
+}
