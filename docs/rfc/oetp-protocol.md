@@ -230,7 +230,7 @@ The same procedure is being repeated recursively for Vendors of the Vendors, and
 
 ## Example OETP Disclosure File
 
-```javascript
+```JSON
 {
     "schema": {
         "name": "Open Ethics Transparency Protocol",
