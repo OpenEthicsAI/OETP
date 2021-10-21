@@ -73,7 +73,7 @@ Copyright (C) 2020 Open Ethics and the persons identified as the document author
 
 ## Abstract
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ***
 
@@ -187,7 +187,7 @@ A historical sequence of Disclosures, made for a specific Product.
 
 ### Vendor
 
-A legal person (an individual developer or an organization) that owns one or several end-user Products, or provides Components for other Vendors.
+A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
 
 ### Integrator
 
@@ -215,7 +215,11 @@ A sequence of automated software-based checks to control validity and security e
 
 ### Auditor
 
-A third-party, trusted to perform Verification checks and issue Verification Proofs.
+A third-party legal person, trusted to perform Verification checks and to issue Verification Proofs.
+
+### Auditing software
+
+An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.
 
 ### Verification
 
@@ -235,33 +239,33 @@ A user-facing graphical and textual descriptions of the Product facilitating und
 
 ## Protocol Model
 
-### Initial Disclosure
+### Creation of the Disclosure
 
-The initial Disclosure is created using a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative Product Owner or a  Developer MUST submit data-processing and data-collection information on behalf of their own organization (Vendor). The information about the end-point URL, as well as a contact email address MUST be specified.
+The initial Disclosure is created from a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
-#### Disclosure Signature
+#### Cryptographic Signature
 
-The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure recepient (Open Ethics). The integrity hash MUST be appended to a disclosure as OETP.schema.integrity element.
+The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure generator (Open Ethics or federated providers). The integrity hash MUST be appended to a disclosure as OETP.schema.integrity element.
 
-#### Storage
+#### Immutable Storage
 
 Both the signature integrity hash and the Disclosure is stored in the log-centric Open Ethics database and MAY be mirrored by other distributed databases for redundancy and safety.
 
-#### Labeling
+#### Label Formation
 
-Open Ethics Label SHOULD be automatically formed by mirroring the submitted Disclosure into a set of graphical icons and simple user-facing descriptions. Additional Labels MAY be formed by mapping of the regulatory requirements to Disclosures.
+Open Ethics Label SHOULD be automatically formed by mirroring the generated Disclosure into a set of graphical icons and simple human-readable descriptions. Additional Labels MAY be formed by mapping of the regulatory requirements to Disclosures.
 
 ### Access to Disclosure
 
-The OETP file SHOULD be stored in the root of the product&#39;s end-point URL. When establishing vendor relationship, Integrator or a downstream Vendor may examine their Vendors disclosure using the following HTTP request: `GET https://testexample.com/oetp.json`, where *testexample.com* is the URL of the sub-processor&#39;s end-point.
+The most recent OETP file SHOULD be stored in the root of the Product's end-point URL, allowing requests to OETP file from thirt-party domains. When establishing Vendor relationship, Integrator or a downstream Vendor may examine the Disclosure for their Components using the following HTTP request: `GET https://testexample.com/oetp.json`, where *testexample.com* is the URL of the Supplier&#39;s end-point.
 
 ### Automated Disclosure processing
 
-The automated disclosure processing is enabled by requests to both Open Ethics Disclosure database and the Product&#39;s OETP Disclosure.
+The automated disclosure processing is enabled by requests to both Open Ethics Disclosure database and the Product's OETP Disclosure file.
 
 ### End-to-end transparency and formation of the composite Disclosure
 
-A surface-level transparency is not sufficient as IT industry is getting more mature with more specialized Vendors, that are providing more narrow ADM Products to Integrators and to bigger Vendors. The following steps MUST be satisfied for end-to-end transparency:
+A surface-level transparency is not sufficient as IT industry is getting more mature with more specialized Vendors, that are providing more narrow Products to Integrators and to bigger Vendors. The following steps MUST be satisfied for end-to-end transparency:
 
 #### Open Vendor Policy
 
@@ -269,7 +273,7 @@ Every Integrator or a Vendor SHOULD supply the URLs of their sub-processing Vend
 
 #### Request for Vendor&#39;s Disclosures
 
-The OETP Processing system MUST crawl the URLs of the expected sub-processing Vendors disclosures and specifies which of them have Disclosures.
+The OETP Processing system MUST crawl the URLs of the expected sub-processing Vendors' disclosures and specifies which of them have Disclosures.
 
 #### Validation of Vendor&#39;s Disclosures
 
