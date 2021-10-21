@@ -73,7 +73,7 @@ Copyright (C) 2020 Open Ethics and the persons identified as the document author
 
 ## Abstract
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical disclosures. The protocol is based on HTTP transfer of OETP-formatted information about the ethical &quot;postures&quot; of Automated Decision-Making (ADM) systems to allow more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ***
 
@@ -159,17 +159,17 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 
 ## Introduction
 
-The Open Ethics Transparency Protocol (OETP) is brought as a solution to increase transparency of products and services of the IT sector. The introduction of the protocol targets enabling the concept of Ethical Operations (EthOps) where every Automated Decision-Making system (ADM) can disclose its data collection and data processing practice as Open Data in a standardized format.
+The Open Ethics Transparency Protocol (OETP or Protocol) describes creation and exchange of voluntary ethics Disclosures for IT products. It is brought as a solution to increase transparency of how IT products are built and deployed. This document provides details on how disclosures for data collection and data processing practice are formed, stored, validated, and exchanged in a standardized and open format.
 
-The protocol supports ethical disclosure of ADMs and provides facilities for:
+OETP provides facilities for:
 
-- **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and ADM disclosure.
+- **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
 - **Industrial scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
 - **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
 - **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive a nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power-balance, non-discrimination, and other requirements.
 - **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
 
-OETP is an application-level protocol for publishing and accessing ethical disclosures. The protocol is based on HTTP transfer of OETP-formatted information about the ethical &quot;postures&quot; of ADMs to allow more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ## Requirement Levels
 
@@ -177,29 +177,33 @@ The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quo
 
 ## Terminology
 
-### Automated Decision-Making (ADM)
-
-Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
-
 ### Disclosure
 
-Disclosure, or &quot;self-disclosure&quot; is the application-specific information about the data collection, data-processing, and decision-making practices of the ADM Product, provided by its Vendor (a company) or a developer (an individual).
+Disclosure, Ethics Disclosure, or &quot;self-disclosure&quot; is an application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by Product Vendor (an individual developer or an organization).
 
 ### Disclosure Feed
 
-A historical sequence of Disclosures, made by and for a specific ADM Product.
-
-### Product
-
-An ADM system in the form of a software, service, application, or a physically embodied autonomous decision-making agent.
+A historical sequence of Disclosures, made for a specific Product.
 
 ### Vendor
 
-A legal entity (an organization) that owns one or several ADM products and provides services for the end-users or for other Vendors.
+A legal person (an individual developer or an organization) that owns one or several end-user Products, or provides Components for other Vendors.
 
 ### Integrator
 
-An organization that deploys services based on product(s) from 3rd party Vendors to the end users.
+A legal person (an individual developer or an organization) that deploys services to the end-users based on Product(s) from third-party Vendors.
+
+### Product
+
+An IT system in the form of a software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.
+
+### Component
+
+An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
+
+### Automated Decision-Making (ADM)
+
+Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
 ### OETP Disclosure Format
 
@@ -211,29 +215,33 @@ A sequence of automated software-based checks to control validity and security e
 
 ### Auditor
 
-A third-party organization, trusted to perform verification checks.
+A third-party, trusted to perform Verification checks and issue Verification Proofs.
 
 ### Verification
 
 A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
 
+### Verification Proof
+
+A result of the formal Disclosure Verification procedure presented to a requestor.
+
 ### Chaining
 
-A process of combining Vendor Disclosures into a composite high-level ADM disclosure.
+A process of combining Disclosures of individual components into a composite high-level Disclosure for a Product.
 
 ### Label
 
-A user-facing graphical and textual descriptions of the ADM Product facilitating understanding of the values and risks it is carrying.
+A user-facing graphical and textual descriptions of the Product facilitating understanding of the values and risks it carries.
 
 ## Protocol Model
 
 ### Initial Disclosure
 
-The initial ADM Product disclosure is performed using a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). The Developer or a Product Owner MUST submit data-processing and data-collection information on behalf of the Vendor. The information about the end-point URL, as well as a contact email address MUST be specified.
+The initial Disclosure is created using a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative Product Owner or a  Developer MUST submit data-processing and data-collection information on behalf of their own organization (Vendor). The information about the end-point URL, as well as a contact email address MUST be specified.
 
 #### Disclosure Signature
 
-The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure recepient (Open Ethics). The integrity hash MUST be appended to a disclosure as OETP.shcema.integrity element.
+The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure recepient (Open Ethics). The integrity hash MUST be appended to a disclosure as OETP.schema.integrity element.
 
 #### Storage
 
