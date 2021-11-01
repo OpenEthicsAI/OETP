@@ -215,7 +215,7 @@ TODO here
 
 ## 6. Example OETP Disclosure File
 
-```javascript
+```yaml
 {
     "schema": {
         "name": "Open Ethics Transparency Protocol",
