@@ -1,51 +1,4 @@
-<style type="text/css">
-  body {
-    margin: auto;
-    max-width: 44em;
-    font-family: Calibri, sans-serif;
-    font-size: 18pt;
-  }
-
-  /* automatic heading numbering */
-  h1 { counter-reset: h2counter; }
-  h2 { counter-reset: h3counter; }
-  h3 { counter-reset: h4counter; }
-  h4 { counter-reset: h5counter; }
-  h5 { counter-reset: h6counter; }
-  h6 { }
-  h2:before {
-    counter-increment: h2counter;
-    content: counter(h2counter) ".\0000a0\0000a0";
-  }
-  h3:before {
-    counter-increment: h3counter;
-    content: counter(h2counter) "."
-             counter(h3counter) ".\0000a0\0000a0";
-  }
-  h4:before {
-    counter-increment: h4counter;
-    content: counter(h2counter) "."
-             counter(h3counter) "."
-             counter(h4counter) ".\0000a0\0000a0";
-  }
-  h5:before {
-    counter-increment: h5counter;
-    content: counter(h2counter) "."
-             counter(h3counter) "."
-             counter(h4counter) "."
-             counter(h5counter) ".\0000a0\0000a0";
-  }
-  h6:before {
-    counter-increment: h6counter;
-    content: counter(h2counter) "."
-             counter(h3counter) "."
-             counter(h4counter) "."
-             counter(h5counter) "."
-             counter(h6counter) ".\0000a0\0000a0";
-  }
-</style>
-
-# Open Ethics Transparency Protocol - Internet Draft
+# Open Ethics Transparency Protocol - Internet Draft  <!-- omit in toc -->
 
 Version: 0.9.3
 
@@ -59,7 +12,7 @@ Authors: Nikita Lukianets
 
 ***
 
-## Status of this Memo
+## Status of this Memo  <!-- omit in toc -->
 
 This document is the Internet Draft, it contains a Proposed Standard description for the Internet community, and requests discussion and suggestions for improvements.
 
@@ -67,69 +20,64 @@ This document is planned to be brought in accordance with the RFC publication re
 
 Information about the current status of this document, any errata, and how to provide feedback on it may be obtained at [https://openethics.ai/oetp/](https://openethics.ai/oetp/).
 
-## Copyright Notice
+## Copyright Notice <!-- omit in toc -->
 
 Copyright (C) 2020-2021 Open Ethics and the persons identified as the document authors. All Rights Reserved.
 
-## Abstract
+## Abstract <!-- omit in toc -->
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ***
 
-## Contents
+## Contents  <!-- omit in toc -->
 
-- [Open Ethics Transparency Protocol - Internet Draft](#open-ethics-transparency-protocol---internet-draft)
-  - [Status of this Memo](#status-of-this-memo)
-  - [Copyright Notice](#copyright-notice)
-  - [Abstract](#abstract)
-  - [Contents](#contents)
-  - [Introduction](#introduction)
-  - [Requirement Levels](#requirement-levels)
-  - [Terminology](#terminology)
-    - [Disclosure](#disclosure)
-    - [Disclosure Feed](#disclosure-feed)
-    - [Vendor](#vendor)
-    - [Integrator](#integrator)
-    - [Product](#product)
-    - [Component](#component)
-    - [Automated Decision-Making (ADM)](#automated-decision-making-adm)
-    - [OETP Disclosure Format](#oetp-disclosure-format)
-    - [Validation](#validation)
-    - [Auditor](#auditor)
-    - [Auditing software](#auditing-software)
-    - [Verification](#verification)
-    - [Verification Proof](#verification-proof)
-    - [Chaining](#chaining)
-    - [Label](#label)
-  - [Protocol Model](#protocol-model)
-    - [Creation of the Disclosure](#creation-of-the-disclosure)
-      - [Cryptographic Signature](#cryptographic-signature)
-      - [Immutable Storage](#immutable-storage)
-      - [Visual Labeling](#visual-labeling)
-    - [Access to Disclosure](#access-to-disclosure)
-    - [Verification and Validation of Disclosure](#verification-and-validation-of-disclosure)
-      - [Automated Disclosure processing](#automated-disclosure-processing)
-      - [Validation of Vendor&#39;s Disclosures](#validation-of-vendors-disclosures)
-      - [Verification of Vendor&#39;s Disclosures](#verification-of-vendors-disclosures)
-    - [End-to-end transparency and formation of the composite Disclosure](#end-to-end-transparency-and-formation-of-the-composite-disclosure)
-      - [Open Vendor Policy](#open-vendor-policy)
-      - [Request for Vendor&#39;s Disclosures](#request-for-vendors-disclosures)
-      - [Disclosure Chaining](#disclosure-chaining)
-  - [Progressive validation](#progressive-validation)
-  - [Example OETP Disclosure File](#example-oetp-disclosure-file)
-  - [Security Considerations](#security-considerations)
-    - [Response content](#response-content)
-    - [Spoofing](#spoofing)
-    - [Falsification](#falsification)
-  - [IANA Considerations](#iana-considerations)
-  - [Areas for Future Study](#areas-for-future-study)
-  - [References](#references)
-    - [Normative References](#normative-references)
-    - [Informative References](#informative-references)
-  - [Author&#39;s Address](#authors-address)
+- [1. Introduction](#1-introduction)
+- [2. Requirement Levels](#2-requirement-levels)
+- [3. Terminology](#3-terminology)
+  - [3.1. Disclosure](#31-disclosure)
+  - [3.2. Disclosure Feed](#32-disclosure-feed)
+  - [3.3. Vendor](#33-vendor)
+  - [3.4. Integrator](#34-integrator)
+  - [3.5. Product](#35-product)
+  - [3.6. Component](#36-component)
+  - [3.7. Automated Decision-Making (ADM)](#37-automated-decision-making-adm)
+  - [3.8. OETP Disclosure Format](#38-oetp-disclosure-format)
+  - [3.9. Validation](#39-validation)
+  - [3.10. Auditor](#310-auditor)
+  - [3.11. Auditing software](#311-auditing-software)
+  - [3.12. Verification](#312-verification)
+  - [3.13. Verification Proof](#313-verification-proof)
+  - [3.14. Chaining](#314-chaining)
+  - [3.15. Label](#315-label)
+- [4. Protocol Model](#4-protocol-model)
+  - [4.1. Creation of the Disclosure](#41-creation-of-the-disclosure)
+    - [4.1.1. Cryptographic Signature](#411-cryptographic-signature)
+    - [4.1.2. Immutable Storage](#412-immutable-storage)
+    - [4.1.3. Visual Labeling](#413-visual-labeling)
+  - [4.2. Access to Disclosure](#42-access-to-disclosure)
+  - [4.3. Verification and Validation of Disclosure](#43-verification-and-validation-of-disclosure)
+    - [4.3.1. Automated Disclosure processing](#431-automated-disclosure-processing)
+    - [4.3.2. Validation of Vendor&#39;s Disclosures](#432-validation-of-vendors-disclosures)
+    - [4.3.3. Verification of Vendor&#39;s Disclosures](#433-verification-of-vendors-disclosures)
+  - [4.4. End-to-end transparency and formation of the composite Disclosure](#44-end-to-end-transparency-and-formation-of-the-composite-disclosure)
+    - [4.4.1. Open Vendor Policy](#441-open-vendor-policy)
+    - [4.4.2. Request for Vendor&#39;s Disclosures](#442-request-for-vendors-disclosures)
+    - [4.4.3. Disclosure Chaining](#443-disclosure-chaining)
+- [5. Progressive validation](#5-progressive-validation)
+- [6. Example OETP Disclosure File](#6-example-oetp-disclosure-file)
+- [7. Security Considerations](#7-security-considerations)
+  - [7.1. Response content](#71-response-content)
+  - [7.2. Spoofing](#72-spoofing)
+  - [7.3. Falsification](#73-falsification)
+- [8. IANA Considerations](#8-iana-considerations)
+- [9. Areas for Future Study](#9-areas-for-future-study)
+- [10. References](#10-references)
+  - [10.1. Normative References](#101-normative-references)
+  - [10.2. Informative References](#102-informative-references)
+- [11. Author&#39;s Address](#11-authors-address)
 
-## Introduction
+## 1. Introduction
 
 The Open Ethics Transparency Protocol (OETP or Protocol) describes creation and exchange of voluntary ethics Disclosures for IT products. It is brought as a solution to increase transparency of how IT products are built and deployed. This document provides details on how disclosures for data collection and data processing practice are formed, stored, validated, and exchanged in a standardized and open format.
 
@@ -143,129 +91,129 @@ OETP provides facilities for:
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
-## Requirement Levels
+## 2. Requirement Levels
 
 The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
 
-## Terminology
+## 3. Terminology
 
-### Disclosure
+### 3.1. Disclosure
 
 Disclosure (Ethics Disclosure, or self-disclosure) is an application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
 
-### Disclosure Feed
+### 3.2. Disclosure Feed
 
 A historical sequence of Disclosures, made for a specific Product.
 
-### Vendor
+### 3.3. Vendor <!-- no toc -->
 
 A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
 
-### Integrator
+### 3.4. Integrator
 
 A legal person (an individual developer or an organization) that deploys technology-powered services to the end-users based on Product(s) from third-party Vendors.
 
-### Product
+### 3.5. Product
 
 An IT system in the form of a software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.
 
-### Component
+### 3.6. Component
 
 An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
 
-### Automated Decision-Making (ADM)
+### 3.7. Automated Decision-Making (ADM)
 
 Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
-### OETP Disclosure Format
+### 3.8. OETP Disclosure Format
 
 A machine-readable Disclosure with predefined structure, supplied in the JSON format.
 
-### Validation
+### 3.9. Validation
 
 A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
 
-### Auditor
+### 3.10. Auditor
 
 A third-party legal person, trusted to perform Verification checks and to issue Verification Proofs.
 
-### Auditing software
+### 3.11. Auditing software
 
 An automated software-based tools authorized to perform Verification checks and to issue Verification Proofs.
 
-### Verification
+### 3.12. Verification
 
 A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
 
-### Verification Proof
+### 3.13. Verification Proof
 
 A result of the formal Disclosure Verification procedure presented to a requestor.
 
-### Chaining
+### 3.14. Chaining
 
 A process of combining Disclosures of individual components into a composite high-level Disclosure for a Product.
 
-### Label
+### 3.15. Label
 
 A user-facing graphical and textual descriptions of the Product facilitating understanding of the values and risks it carries.
 
-## Protocol Model
+## 4. Protocol Model
 
-### Creation of the Disclosure
+### 4.1. Creation of the Disclosure
 
 The initial Disclosure is created from a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
-#### Cryptographic Signature
+#### 4.1.1. Cryptographic Signature
 
 The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure generator (Open Ethics or federated providers). The integrity hash MUST be appended to a disclosure as `OETP.schema.integrity` element.
 
-#### Immutable Storage
+#### 4.1.2. Immutable Storage
 
 Both the signature integrity hash and the Disclosure SHOULD be stored in the log-centric root database and MAY be mirrored by other distributed databases for redundancy and safety.
 
-#### Visual Labeling
+#### 4.1.3. Visual Labeling
 
 Open Ethics Label SHOULD be automatically formed by mirroring the generated Disclosure into a set of graphical icons and simple human-readable descriptions. Additional Labels MAY be formed by mapping of the regulatory requirements to Disclosures.
 
-### Access to Disclosure
+### 4.2. Access to Disclosure
 
 The most recent OETP file SHOULD be stored in the root of the Product's specified end-point URL, allowing requests to OETP file from thirt-party domains. When establishing Vendor relationship, Integrator or a downstream Vendor MAY examine the Disclosure for their Components using the following HTTP request: `GET https://testexample.com/oetp.json`, where *testexample.com* is the URL of the Supplier&#39;s end-point.
 
-### Verification and Validation of Disclosure
+### 4.3. Verification and Validation of Disclosure
 
-#### Automated Disclosure processing
+#### 4.3.1. Automated Disclosure processing
 
 The automated Disclosure processing is enabled by requests to both Open Ethics Disclosure database and the Product's OETP Disclosure file.
 
-#### Validation of Vendor&#39;s Disclosures
+#### 4.3.2. Validation of Vendor&#39;s Disclosures
 
 The OETP Processing system MUST compare integrity hashes in Open Ethics Disclosure database and entries that arrive as a result of Disclosure Request response.
 
-#### Verification of Vendor&#39;s Disclosures
+#### 4.3.3. Verification of Vendor&#39;s Disclosures
 
 Every disclosure MAY be checked for the existence of the external Verification from Auditors for the entire Disclosures or for one of their elements.
 
-### End-to-end transparency and formation of the composite Disclosure
+### 4.4. End-to-end transparency and formation of the composite Disclosure
 
 A surface-level transparency is not sufficient as IT industry is getting more mature with more specialized Vendors, that are providing more narrow Products to Integrators and to larger Vendors. The following steps MUST be satisfied for the end-to-end transparency:
 
-#### Open Vendor Policy
+#### 4.4.1. Open Vendor Policy
 
 Every Integrator or a Vendor SHOULD supply the URLs of their sub-processing Vendors (Suppliers), indicating the scope of the data processing.
 
-#### Request for Vendor&#39;s Disclosures
+#### 4.4.2. Request for Vendor&#39;s Disclosures
 
 The OETP Processing system MUST crawl the URLs of each Supplier's disclosure and specify which of them have Disclosures and which don't have Disclosure.
 
-#### Disclosure Chaining
+#### 4.4.3. Disclosure Chaining
 
 The same procedure is being repeated recursively for Vendors of the Vendors, and for the Vendors of the Vendors of the Vendors, etc.
 
-## Progressive validation
+## 5. Progressive validation
 
 TODO here
 
-## Example OETP Disclosure File
+## 6. Example OETP Disclosure File
 
 ```javascript
 {
@@ -304,25 +252,25 @@ TODO here
 }
 ```
 
-## Security Considerations
+## 7. Security Considerations
 
-### Response content
+### 7.1. Response content
 
 OETP exchanges data using JSON ([RFC159](https://www.rfc-editor.org/rfc/rfc7159)) which is a light weight data-interchange format. JSON-based application can be attacked in multiple ways such as, sending data in an improper format or embedding attack vectors in the data. It is important for any applications using JSON format to validate the inputs before being processed. To mitigate this attack type, the JSON Key Profile is provided for OETP responses.
 
-### Spoofing
+### 7.2. Spoofing
 
 OETP Processors should be aware of the potential for spoofing attacks where the attacker publishes an OETP disclosure with the `OETP.snapshot` value from another product, or, perhaps with an outdated `OETP.snapshot.label` element. For example, an OETP Processor could suppress display of falsified entries by comparing the snapshot integrity from the submission database and a calculated hash for the `OETP.snapshot` object. In that situation, the OETP Processor might also take steps to determine whether the disclosures originated from the same publisher require further investigation of the Disclosure Feed and alert the downstream OETP Processors.
 
-### Falsification
+### 7.3. Falsification
 
 Dishonest or falsified Disclosures is the problem that is hard to address generally. The approach to it is the public control and systematic checks. Vendors or user-facing applications and services could further raise the level of trust to their Disclosures by implementing programmatic control scoring mechanisms, as well as the external verification by trusted Auditors.
 
-## IANA Considerations
+## 8. IANA Considerations
 
 This document has no IANA actions.
 
-## Areas for Future Study
+## 9. Areas for Future Study
 
 The following topics not addressed in this version of LDP are possible areas for future study:
 
@@ -333,19 +281,19 @@ The following topics not addressed in this version of LDP are possible areas for
 - Mapping of the regulatory requirements and future Disclosure elements.
 - Standardizing privacy Disclosure and PII data-collection practices.
 
-## References
+## 10. References
 
-### Normative References
+### 10.1. Normative References
 
 - TBD
 
-### Informative References
+### 10.2. Informative References
 
 - The JavaScript Object Notation (JSON) Data Interchange Format [https://www.rfc-editor.org/rfc/rfc7159](https://www.rfc-editor.org/rfc/rfc7159)
 - RFC Style Guide [https://www.rfc-editor.org/rfc/rfc7322](https://www.rfc-editor.org/rfc/rfc7322)
 - RFC Streams, Headers, and Boilerplates [https://www.rfc-editor.org/rfc/rfc7841](https://www.rfc-editor.org/rfc/rfc7841)
 
-## Author&#39;s Address
+## 11. Author&#39;s Address
 
 Nikita Lukianets
 
