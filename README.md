@@ -8,7 +8,7 @@ Structure:
 
 */docs/* - Documentation.
 
-*/templates/* - Examples of disclosures and associated labels.
+*/examples/* - Examples of disclosures and associated labels.
 
 */templates/* - Current version of the Disclosure templates.
 
@@ -27,6 +27,7 @@ The protocol supports ethical disclosure of ADMs and provides facilities for:
 OETP is an application-level protocol for publishing and accessing ethical disclosures. The protocol is based on HTTP transfer of OETP-formatted information about the ethical &quot;postures&quot; of ADMs to allow more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ## Links
+
 [docs/rfc/oetp-protocol.md](docs/rfc/oetp-protocol.md) - Protocol documentation (work in progress).
 
 [https://openethics.ai/oetp/](https://openethics.ai/oetp/) - The Official project webpage on the Open Ethics website.
@@ -35,6 +36,13 @@ OETP is an application-level protocol for publishing and accessing ethical discl
 
 [https://openethics.ai/manifesto/](https://openethics.ai/manifesto/) - The Open Ethics Manifesto.
 
+## How to contribute?
+You can contribute by submitting your comments and by making pull requests to [this repository](https://github.com/OpenEthicsAI/OETP).
+
+Automated numbering and TOC generation could be done using free [Markdown All in One
+](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+) extension for the [Visual Studio Code](https://code.visualstudio.com/).
+
 ## Copyright Notice
 
-Copyright (C) 2020 Open Ethics and the persons identified as the document authors. All Rights Reserved.
+Copyright (C) 2020-2021 Open Ethics and the persons identified as the document authors. All Rights Reserved.
