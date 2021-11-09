@@ -1,0 +1,28 @@
+@startuml
+
+title Disclouse Creation Process
+
+skinparam roundCorner 15
+
+actor "Supplier A" as SA
+actor "Supplier B" as SB
+actor Vendor as V
+
+component "Component A" as CA
+component "Component B" as CB
+file "Disclosure A" as DA
+file "Disclosure B" as DB
+file "Composite Disclosure" as D
+
+V-right->(Creation):disclose
+SA-up->CA
+SB-up->CB
+CA-up->DA
+CB-up->DB
+DA-up->(Chaining)
+DB-up->(Chaining)
+(Creation)->(Chaining)
+(Chaining)->(Validation)
+(Validation)->(Verification)
+(Verification)->D
+@enduml

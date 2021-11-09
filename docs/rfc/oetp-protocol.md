@@ -60,11 +60,11 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
     - [4.3.1. Automated Disclosure processing](#431-automated-disclosure-processing)
     - [4.3.2. Validation of Vendor&#39;s Disclosures](#432-validation-of-vendors-disclosures)
     - [4.3.3. Verification of Vendor&#39;s Disclosures](#433-verification-of-vendors-disclosures)
+    - [4.3.4. Progressive Verification](#434-progressive-verification)
   - [4.4. End-to-end transparency and formation of the composite Disclosure](#44-end-to-end-transparency-and-formation-of-the-composite-disclosure)
     - [4.4.1. Open Vendor Policy](#441-open-vendor-policy)
     - [4.4.2. Request for Vendor&#39;s Disclosures](#442-request-for-vendors-disclosures)
     - [4.4.3. Disclosure Chaining](#443-disclosure-chaining)
-- [5. Progressive validation](#5-progressive-validation)
 - [6. Example OETP Disclosure File](#6-example-oetp-disclosure-file)
 - [7. Security Considerations](#7-security-considerations)
   - [7.1. Response content](#71-response-content)
@@ -76,6 +76,7 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
   - [10.1. Normative References](#101-normative-references)
   - [10.2. Informative References](#102-informative-references)
 - [11. Author&#39;s Address](#11-authors-address)
+
 
 ## 1. Introduction
 
@@ -163,6 +164,8 @@ A user-facing graphical and textual descriptions of the Product facilitating und
 
 The initial Disclosure is created from a standardized disclosure form (for Example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
+<img src="src/images/disclosure-creation-process.svg">
+
 #### 4.1.1. Cryptographic Signature
 
 The Disclosure is organized into a predefined data schema and MUST be cryptographically signed using standard SHA3-512 hash implementation by the Disclosure generator (Open Ethics or federated providers). The integrity hash MUST be appended to a disclosure as `OETP.schema.integrity` element.
@@ -191,7 +194,26 @@ The OETP Processing system MUST compare integrity hashes in Open Ethics Disclosu
 
 #### 4.3.3. Verification of Vendor&#39;s Disclosures
 
-Every disclosure MAY be checked for the existence of the external Verification from Auditors for the entire Disclosures or for one of their elements.
+Every disclosure MAY be checked for the existence of the external Verification from Auditors for the entire Disclosures or for one of Disclosure elements.
+
+#### 4.3.4. Progressive Verification
+
+To raise a level of trust to a Disclosure, a Vedor MAY decide to opt-in for a third-party Disclosure Verification. OETP suggests Progressive Verification scheme where mutiple external Verification Proofs COULD be issued by third-parties to confirm the information specified in the Discloure.
+
+The Progressive Verification applies to Disclosure as a whole or to a specific elements of Disclosure.
+
+The diagram below displays a general scheme for Disclosure request and response.
+
+<img src="src/images/progressive-verification.svg" alt="Progressive Verification" style="float: left; margin-right: 10px;" />
+
+The following elements MAY play a role in providing different kinds of Verification proofs:
+* Qualified Auditor reports
+* Qualified Vendor of Auditing software tests
+* Certification Authority assessments
+* Conformity assessments
+* User Feedback
+* Market Brokers
+* Real-time Loggers
 
 ### 4.4. End-to-end transparency and formation of the composite Disclosure
 
@@ -209,9 +231,7 @@ The OETP Processing system MUST crawl the URLs of each Supplier's disclosure and
 
 The same procedure is being repeated recursively for Vendors of the Vendors, and for the Vendors of the Vendors of the Vendors, etc.
 
-## 5. Progressive validation
 
-TODO here
 
 ## 6. Example OETP Disclosure File
 

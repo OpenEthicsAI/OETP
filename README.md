@@ -43,6 +43,8 @@ Automated numbering and TOC generation could be done using free [Markdown All in
 ](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
 ) extension for the [Visual Studio Code](https://code.visualstudio.com/).
 
+Diagrams in SVG are stored in `/src/images` and are built from code using `*.puml` files automatically with [PlantUML](https://plantuml.com/)
+
 ## Copyright Notice
 
 Copyright (C) 2020-2021 Open Ethics and the persons identified as the document authors. All Rights Reserved.
