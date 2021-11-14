@@ -1,0 +1,22 @@
+@startuml
+title Basic Disclosure Submission
+
+skinparam roundCorner 15
+autonumber
+
+actor Vendor
+database "Disclosure Identity Provider" as ID
+control "Signature Generator" as SIG
+database "Federated Identity Provider" as DIS
+
+Vendor -> ID: Disclosure Request
+ID -> ID: Validate input
+ID -> SIG: Structured Data, Initialized
+
+ID <-- SIG: SHA3-512 integrity hash
+    group Distributed Identity Storage
+DIS <-- SIG: SHA3-512 integrity hash
+end
+ID -> ID: Log OETP file and a corresponding intgrity hash
+Vendor <-- ID: OETP Disclosure File
+@enduml
