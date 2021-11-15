@@ -165,13 +165,13 @@ User-facing graphical illustrations and textual descriptions of the Product that
 
 The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties.
 
-<img src="src/images/disclosure-creation-process.svg">
+<img src="../diagrams/images/disclosure-creation/disclosure-creation.svg">
 
 ### 4.1. Creation of the Disclosure
 
 The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
-<img src="src/images/basic-disclosure-submission.svg">
+<img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg">
 
 #### 4.1.1. Cryptographic Signature
 
@@ -227,9 +227,9 @@ The Progressive Verification applies to a whole Disclosure, or to specific eleme
 
 The diagram below displays a general scheme for Disclosure requests and responses.
 
-<img src="src/images/progressive-verification.svg" alt="Progressive Verification" style="float: left; margin-right: 10px;" />
+<img src="../diagrams/images/disclosure-progressive-verification/disclosure-progressive-verification.svg" style="float: left; margin-right: 10px;" />
 
-The following elements MAY play a role in providing different kinds of Verification proofs:
+The following elements MAY serve as sources for various kinds of Verification proofs:
 * Qualified Auditor reports
 * Qualified Vendor of Auditing software tests
 * Certification Authority assessments
