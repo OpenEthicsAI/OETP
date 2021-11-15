@@ -1,0 +1,27 @@
+@startuml
+
+title Progressive Verification with multiple Auditors
+
+skinparam roundCorner 15
+autonumber
+actor User
+User -> Vendor: Disclosure Request
+User <-- Vendor: OETP Disclosure File
+
+database "Disclosure Identity Provider" as ID
+
+User -> ID: Disclosure Validation and Verification Request
+
+group Progressive Disclosure Verification
+    ID -> ID: Retrieve and Compare Disclosure Integrity
+    ID -> "Auditor 1": Disclosure Verification Request
+    ID <-- "Auditor 1": Verification Proof 1
+    ID -> "Auditor N": Disclosure Verification Request
+    ID <-- "Auditor N": Verification Proof N
+end
+
+User <-- ID: Verification response
+
+User -> Vendor: Service Request
+User <-- Vendor: Service Response
+@enduml
