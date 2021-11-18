@@ -281,7 +281,15 @@ The OETP Processing system MUST send GET requests to the URLs of each Component 
 
 #### 4.4.3. Disclosure Chaining
 
-The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc.
+The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
+
+In this tree:
+* Node is a structure which contains Component's Disclosure;
+* Root is the top Node representing a Product's Disclosure information;
+* Edge is the connection between one Node and another, representing scope of the Data Processing by the Component.
+
+
+<img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal">
 
 
 
