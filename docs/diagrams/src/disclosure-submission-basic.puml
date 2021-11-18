@@ -9,7 +9,7 @@ database "Disclosure Identity Provider" as ID
 control "Signature Generator" as SIG
 database "Federated Identity Provider" as DIS
 
-Vendor -> ID: Disclosure Request
+Vendor -> ID: Request with Disclosure payload
 ID -> ID: Validate input
 ID -> SIG: Structured Data, Initialized
 
