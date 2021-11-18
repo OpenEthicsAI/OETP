@@ -41,15 +41,17 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
   - [3.4. Integrator](#34-integrator)
   - [3.5. Product](#35-product)
   - [3.6. Component](#36-component)
-  - [3.7. Automated Decision-Making (ADM)](#37-automated-decision-making-adm)
-  - [3.8. OETP Disclosure Format](#38-oetp-disclosure-format)
-  - [3.9. Validation](#39-validation)
-  - [3.10. Auditor](#310-auditor)
-  - [3.11. Auditing software](#311-auditing-software)
-  - [3.12. Verification](#312-verification)
-  - [3.13. Verification Proof](#313-verification-proof)
-  - [3.14. Chaining](#314-chaining)
-  - [3.15. Label](#315-label)
+  - [3.7. Upstream Component](#37-upstream-component)
+  - [3.8. Downstream Component](#38-downstream-component)
+  - [3.9. Automated Decision-Making (ADM)](#39-automated-decision-making-adm)
+  - [3.10. OETP Disclosure Format](#310-oetp-disclosure-format)
+  - [3.11. Validation](#311-validation)
+  - [3.12. Auditor](#312-auditor)
+  - [3.13. Auditing software](#313-auditing-software)
+  - [3.14. Verification](#314-verification)
+  - [3.15. Verification Proof](#315-verification-proof)
+  - [3.16. Chaining](#316-chaining)
+  - [3.17. Label](#317-label)
 - [4. Protocol Model](#4-protocol-model)
   - [4.1. Creation of the Disclosure](#41-creation-of-the-disclosure)
     - [4.1.1. Cryptographic Signature](#411-cryptographic-signature)
@@ -90,7 +92,7 @@ OETP provides facilities for:
 * **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
 * **Industrial-scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
 * **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
-* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power-balance, non-discrimination, and other requirements.
+* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.
 * **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
@@ -125,39 +127,47 @@ An IT system in the form of software, software as a service system, application,
 
 An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
 
-### 3.7. Automated Decision-Making (ADM)
+### 3.7. Upstream Component
+
+A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.
+
+### 3.8. Downstream Component
+
+A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.
+
+### 3.9. Automated Decision-Making (ADM)
 
 The automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
-### 3.8. OETP Disclosure Format
+### 3.10. OETP Disclosure Format
 
 A machine-readable Disclosure with predefined structure, supplied in the JSON format.
 
-### 3.9. Validation
+### 3.11. Validation
 
 A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
 
-### 3.10. Auditor
+### 3.12. Auditor
 
 A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.
 
-### 3.11. Auditing software
+### 3.13. Auditing software
 
 An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.
 
-### 3.12. Verification
+### 3.14. Verification
 
 A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
 
-### 3.13. Verification Proof
+### 3.15. Verification Proof
 
 A result of the formal Disclosure Verification procedure presented to a requestor.
 
-### 3.14. Chaining
+### 3.16. Chaining
 
 A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.
 
-### 3.15. Label
+### 3.17. Label
 
 User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.
 
@@ -240,7 +250,7 @@ The following elements MAY serve as sources for various kinds of Verification pr
 
 ### 4.4. End-to-end transparency and formation of the composite Disclosure
 
-IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chain are becoming more complex and distributed accross various Components. The following steps MUST be satisfied for the end-to-end transparency:
+IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as a supply chain is becoming more complex and distributed across various Components. The following steps MUST be satisfied for the end-to-end transparency:
 
 #### 4.4.1. Open Supplier Policy
 
@@ -249,7 +259,7 @@ Every Integrator or a Vendor SHOULD disclose the information about their Supplie
 If the Supplier information is not provided, Disclosure SHOULD contain information that a Vendor (Integrator) has not provided Supplier information.
 
 ##### 4.4.1.1. First-party Components
-For the greater transparency Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
+For greater transparency, Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component, the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
 
 Required: [Component information](#44132-component-information) only
 
@@ -277,16 +287,18 @@ Required: [Supplier identity](#44131-supplier-identity)+[Component information](
 
 #### 4.4.2. Request for Supplier&#39;s Disclosures
 
-The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, OETP Processing system MUST specify which of Components have Disclosures and which don't have Disclosures.
+The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
+
+<img src="../diagrams/images/disclosure-chaining-request/disclosure-chaining-request.svg" alt="Disclosure Chaining: Request-Response">
 
 #### 4.4.3. Disclosure Chaining
 
 The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
 
 In this tree:
-* Node is a structure which contains Component's Disclosure;
+* Node is a structure that contains Component's Disclosure;
 * Root is the top Node representing a Product's Disclosure information;
-* Edge is the connection between one Node and another, representing scope of the Data Processing by the Component.
+* Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.
 
 
 <img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal">

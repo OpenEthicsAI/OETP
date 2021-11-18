@@ -1,0 +1,31 @@
+@startuml
+title Disclosure Chaining: Request-Response
+
+
+start
+repeat
+  :Request Component's Disclosure;
+    if (Disclosure Obtained?) then (yes)
+      :Validate Disclosure;
+      :Verify Disclosure;
+      :Chain Disclosure;
+      :Obtain list of Child Components;
+      if (Supplier information exists?) then (yes)
+        :Update Tree with (yet)
+        Unchained Disclosures;
+      else (no)
+        #Gold:**Alert** "Vendor has not provided
+        Supplier information";
+      endif
+    else (no)
+      #pink:**Alert** "Vendor has not provided
+      any Disclosure";
+      stop
+    endif
+repeat while (Unchained Disclosures in the Disclosure Tree?) is (yes) not (no)
+:**Generate**
+Composite Disclosure;
+#palegreen:**Display** Label for "Composite Disclosure";
+stop
+
+@enduml
