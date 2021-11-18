@@ -41,15 +41,17 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
   - [3.4. Integrator](#34-integrator)
   - [3.5. Product](#35-product)
   - [3.6. Component](#36-component)
-  - [3.7. Automated Decision-Making (ADM)](#37-automated-decision-making-adm)
-  - [3.8. OETP Disclosure Format](#38-oetp-disclosure-format)
-  - [3.9. Validation](#39-validation)
-  - [3.10. Auditor](#310-auditor)
-  - [3.11. Auditing software](#311-auditing-software)
-  - [3.12. Verification](#312-verification)
-  - [3.13. Verification Proof](#313-verification-proof)
-  - [3.14. Chaining](#314-chaining)
-  - [3.15. Label](#315-label)
+  - [3.7. Upstream Component](#37-upstream-component)
+  - [3.8. Downstream Component](#38-downstream-component)
+  - [3.9. Automated Decision-Making (ADM)](#39-automated-decision-making-adm)
+  - [3.10. OETP Disclosure Format](#310-oetp-disclosure-format)
+  - [3.11. Validation](#311-validation)
+  - [3.12. Auditor](#312-auditor)
+  - [3.13. Auditing software](#313-auditing-software)
+  - [3.14. Verification](#314-verification)
+  - [3.15. Verification Proof](#315-verification-proof)
+  - [3.16. Chaining](#316-chaining)
+  - [3.17. Label](#317-label)
 - [4. Protocol Model](#4-protocol-model)
   - [4.1. Creation of the Disclosure](#41-creation-of-the-disclosure)
     - [4.1.1. Cryptographic Signature](#411-cryptographic-signature)
@@ -126,39 +128,47 @@ An IT system in the form of software, software as a service system, application,
 
 An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
 
-### 3.7. Automated Decision-Making (ADM)
+### 3.7. Upstream Component
+
+A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.
+
+### 3.8. Downstream Component
+
+A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.
+
+### 3.9. Automated Decision-Making (ADM)
 
 The automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
-### 3.8. OETP Disclosure Format
+### 3.10. OETP Disclosure Format
 
 A machine-readable Disclosure with predefined structure, supplied in the JSON format.
 
-### 3.9. Validation
+### 3.11. Validation
 
 A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
 
-### 3.10. Auditor
+### 3.12. Auditor
 
 A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.
 
-### 3.11. Auditing software
+### 3.13. Auditing software
 
 An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.
 
-### 3.12. Verification
+### 3.14. Verification
 
 A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
 
-### 3.13. Verification Proof
+### 3.15. Verification Proof
 
 A result of the formal Disclosure Verification procedure presented to a requestor.
 
-### 3.14. Chaining
+### 3.16. Chaining
 
 A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.
 
-### 3.15. Label
+### 3.17. Label
 
 User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.
 
@@ -279,6 +289,9 @@ Required: [Supplier identity](#44131-supplier-identity)+[Component information](
 #### 4.4.2. Request for Supplier&#39;s Disclosures
 
 The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
+
+<img src="../diagrams/images/disclosure-chaining-request/disclosure-chaining-request.svg" alt="Disclosure Chaining: Request-Response">
+
 
 #### 4.4.3. Disclosure Chaining
 
