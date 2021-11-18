@@ -1,0 +1,15 @@
+@startmindmap
+title Disclosure Chaining: Level Order Traversal
+
+skinparam roundCorner 15
+* Root (Product)
+	* 1 (Component)
+		* 3 (Component)
+			* 7 (Component)
+		* 4 (Component)
+	* 2 (Component)
+		* 5 (Component)
+			* 8 (Component)
+			* 9 (Component)
+		* 6 (Component)
+@endmindmap

@@ -6,7 +6,7 @@ Format: [IETF](https://www.ietf.org/) Request for Comments (RFC)
 
 State: [Internet Draft](https://www.ietf.org/standards/ids/)
 
-Last update: 2021-11-14
+Last update: 2021-11-18
 
 Authors: Nikita Lukianets
 
@@ -66,8 +66,8 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
     - [4.3.3. Verification of Vendor&#39;s Disclosures](#433-verification-of-vendors-disclosures)
     - [4.3.4. Progressive Verification](#434-progressive-verification)
   - [4.4. End-to-end transparency and formation of the composite Disclosure](#44-end-to-end-transparency-and-formation-of-the-composite-disclosure)
-    - [4.4.1. Open Vendor Policy](#441-open-vendor-policy)
-    - [4.4.2. Request for Vendor&#39;s Disclosures](#442-request-for-vendors-disclosures)
+    - [4.4.1. Open Supplier Policy](#441-open-supplier-policy)
+    - [4.4.2. Request for Supplier&#39;s Disclosures](#442-request-for-suppliers-disclosures)
     - [4.4.3. Disclosure Chaining](#443-disclosure-chaining)
 - [5. Example OETP Disclosure File](#5-example-oetp-disclosure-file)
 - [6. Security Considerations](#6-security-considerations)
@@ -87,11 +87,11 @@ The Open Ethics Transparency Protocol (OETP or Protocol) describes the creation 
 
 OETP provides facilities for:
 
-- **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
-- **Industrial-scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
-- **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
-- **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power-balance, non-discrimination, and other requirements.
-- **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
+* **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
+* **Industrial-scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
+* **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
+* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power-balance, non-discrimination, and other requirements.
+* **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
@@ -155,7 +155,7 @@ A result of the formal Disclosure Verification procedure presented to a requesto
 
 ### 3.14. Chaining
 
-A process of combining Disclosures of individual components into a composite high-level Disclosure for a Product.
+A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.
 
 ### 3.15. Label
 
@@ -165,13 +165,13 @@ User-facing graphical illustrations and textual descriptions of the Product that
 
 The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties.
 
-<img src="../diagrams/images/disclosure-creation/disclosure-creation.svg">
+<img src="../diagrams/images/disclosure-creation/disclosure-creation.svg" alt="Creation of the Disclosure">
 
 ### 4.1. Creation of the Disclosure
 
 The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
-<img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg">
+<img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg" alt="Basic Disclosure Submission">
 
 #### 4.1.1. Cryptographic Signature
 
@@ -227,7 +227,7 @@ The Progressive Verification applies to a whole Disclosure, or to specific eleme
 
 The diagram below displays a general scheme for Disclosure requests and responses.
 
-<img src="../diagrams/images/disclosure-progressive-verification/disclosure-progressive-verification.svg" style="float: left; margin-right: 10px;" />
+<img src="../diagrams/images/disclosure-progressive-verification/disclosure-progressive-verification.svg" style="float: left; margin-right: 10px;" alt="Progressive Verification Scheme for Disclosures" />
 
 The following elements MAY serve as sources for various kinds of Verification proofs:
 * Qualified Auditor reports
@@ -240,19 +240,56 @@ The following elements MAY serve as sources for various kinds of Verification pr
 
 ### 4.4. End-to-end transparency and formation of the composite Disclosure
 
-Surface-level transparency is not sufficient as the IT industry is getting more mature with more specialized Vendors, that are providing more narrow Products to Integrators and large Vendors. The following steps MUST be satisfied for the end-to-end transparency:
+IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chain are becoming more complex and distributed accross various Components. The following steps MUST be satisfied for the end-to-end transparency:
 
-#### 4.4.1. Open Vendor Policy
+#### 4.4.1. Open Supplier Policy
 
-Every Integrator or a Vendor SHOULD supply the URLs of their sub-processing Vendors (Suppliers), indicating the scope of the data processing.
+Every Integrator or a Vendor SHOULD disclose the information about their Suppliers (sub-processing Vendors), indicating the scope of the data processing in the Components they provide. 
 
-#### 4.4.2. Request for Vendor&#39;s Disclosures
+If the Supplier information is not provided, Disclosure SHOULD contain information that a Vendor (Integrator) has not provided Supplier information.
 
-The OETP Processing system MUST crawl the URLs of each Supplier's disclosure and specify which of them have Disclosures and which don't have Disclosure.
+##### 4.4.1.1. First-party Components
+For the greater transparency Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
+
+Required: [Component information](#44132-component-information) only
+
+##### 4.4.1.2. Third-party Components
+
+When disclosing Components originating from the third-party Vendors SHOULD provide both the Supplier identity information and Component information
+
+Required: [Supplier identity](#44131-supplier-identity)+[Component information](#44132-component-information)
+
+##### 4.4.1.3. Elements of Supplier disclosure
+
+###### 4.4.1.3.1. Supplier identity
+* Vendor Name
+* Vendor URL
+* Vendor ID
+* Vendor DPO Contact Email
+
+###### 4.4.1.3.2. Component information
+* Component Scope of use
+* Personal Data Being Processed by Component
+* Is a Safety Component [YES]/[NO]
+* Component URL (if different from the Vendor URL)
+* Component Disclosure URL (if different from the default `Component URL/oetp.json`)
+* Component DPO Contact (if different from Vendor DPO Contact Email)
+
+#### 4.4.2. Request for Supplier&#39;s Disclosures
+
+The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, OETP Processing system MUST specify which of Components have Disclosures and which don't have Disclosures.
 
 #### 4.4.3. Disclosure Chaining
 
-The same procedure is being repeated recursively for Vendors of the Vendors, and for the Vendors of the Vendors of the Vendors, etc.
+The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
+
+In this tree:
+* Node is a structure which contains Component's Disclosure;
+* Root is the top Node representing a Product's Disclosure information;
+* Edge is the connection between one Node and another, representing scope of the Data Processing by the Component.
+
+
+<img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal">
 
 ## 5. Example OETP Disclosure File
 
@@ -315,24 +352,24 @@ This document has no IANA actions.
 
 The following topics not addressed in this version of LDP are possible areas for future study:
 
-- IANA requests for the Data Processor identity management.
-- Extensibility of the OETP Disclosure Format.
-- Disclosure Chaining mechanisms and various use-cases.
-- Typical scenarios and templates for Disclosure submissions.
-- Mapping of the regulatory requirements and future Disclosure elements.
-- Standardizing Privacy Disclosure and PII data-collection practices.
+* IANA requests for the Data Processor identity management.
+* Extensibility of the OETP Disclosure Format.
+* Disclosure Chaining mechanisms and various use-cases.
+* Typical scenarios and templates for Disclosure submissions.
+* Mapping of the regulatory requirements and future Disclosure elements.
+* Standardizing Privacy Disclosure and PII data-collection practices.
 
 ## 9. References
 
 ### 9.1. Normative References
 
-- TBD
+* TBD
 
 ### 9.2. Informative References
 
-- The JavaScript Object Notation (JSON) Data Interchange Format [https://www.rfc-editor.org/rfc/rfc7159](https://www.rfc-editor.org/rfc/rfc7159)
-- RFC Style Guide [https://www.rfc-editor.org/rfc/rfc7322](https://www.rfc-editor.org/rfc/rfc7322)
-- RFC Streams, Headers, and Boilerplates [https://www.rfc-editor.org/rfc/rfc7841](https://www.rfc-editor.org/rfc/rfc7841)
+* The JavaScript Object Notation (JSON) Data Interchange Format [https://www.rfc-editor.org/rfc/rfc7159](https://www.rfc-editor.org/rfc/rfc7159)
+* RFC Style Guide [https://www.rfc-editor.org/rfc/rfc7322](https://www.rfc-editor.org/rfc/rfc7322)
+* RFC Streams, Headers, and Boilerplates [https://www.rfc-editor.org/rfc/rfc7841](https://www.rfc-editor.org/rfc/rfc7841)
 
 ## 10. Author&#39;s Address
 
