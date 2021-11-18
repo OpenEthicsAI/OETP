@@ -69,6 +69,7 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
     - [4.4.1. Open Supplier Policy](#441-open-supplier-policy)
     - [4.4.2. Request for Supplier&#39;s Disclosures](#442-request-for-suppliers-disclosures)
     - [4.4.3. Disclosure Chaining](#443-disclosure-chaining)
+    - [4.4.4. Generation of the Composite Disclosure](#444-generation-of-the-composite-disclosure)
 - [5. Example OETP Disclosure File](#5-example-oetp-disclosure-file)
 - [6. Security Considerations](#6-security-considerations)
   - [6.1. Response content](#61-response-content)
@@ -90,7 +91,7 @@ OETP provides facilities for:
 * **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
 * **Industrial-scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
 * **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
-* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power-balance, non-discrimination, and other requirements.
+* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.
 * **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
@@ -240,7 +241,7 @@ The following elements MAY serve as sources for various kinds of Verification pr
 
 ### 4.4. End-to-end transparency and formation of the composite Disclosure
 
-IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chain are becoming more complex and distributed accross various Components. The following steps MUST be satisfied for the end-to-end transparency:
+IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chains are becoming more complex and distributed across various Components. The following steps MUST be satisfied for the end-to-end transparency:
 
 #### 4.4.1. Open Supplier Policy
 
@@ -249,7 +250,7 @@ Every Integrator or a Vendor SHOULD disclose the information about their Supplie
 If the Supplier information is not provided, Disclosure SHOULD contain information that a Vendor (Integrator) has not provided Supplier information.
 
 ##### 4.4.1.1. First-party Components
-For the greater transparency Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
+For greater transparency, Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component, the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
 
 Required: [Component information](#44132-component-information) only
 
@@ -277,19 +278,33 @@ Required: [Supplier identity](#44131-supplier-identity)+[Component information](
 
 #### 4.4.2. Request for Supplier&#39;s Disclosures
 
-The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, OETP Processing system MUST specify which of Components have Disclosures and which don't have Disclosures.
+The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
 
 #### 4.4.3. Disclosure Chaining
 
 The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
 
 In this tree:
-* Node is a structure which contains Component's Disclosure;
+* Node is a structure that contains Component's Disclosure;
 * Root is the top Node representing a Product's Disclosure information;
-* Edge is the connection between one Node and another, representing scope of the Data Processing by the Component.
-
+* Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.
 
 <img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal">
+
+#### 4.4.4. Generation of the Composite Disclosure
+
+The current consensus from the user & developer community suggests that Composite Disclosure should follow The "Weakest Link" model. According to this model, the risk that the Product is carrying should not be considered any less than the risk for each of the Components.
+
+Formally this approach could be illustrated with the use of a conjunction table for risk modeling. The Truth Table for Logical AND operator below takes one risk factor and evaluates risk outcomes as High (H) or Low (L) for hypothetical Disclosure options of the Product(P) and its Component(C).
+
+|Disclosed risk of **P** |Disclosed risk of  **C** | Composite **P ∧ C** |
+|:-----:|:-----:|:--------------------:|
+| L     | L     | **L**                |
+| L     | H     | **H**                |
+| H     | L     | **H**                |
+| H     | H     | **H**                |
+
+Further evaluation of this approach is required.
 
 ## 5. Example OETP Disclosure File
 
@@ -354,6 +369,7 @@ The following topics not addressed in this version of LDP are possible areas for
 
 * IANA requests for the Data Processor identity management.
 * Extensibility of the OETP Disclosure Format.
+* Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree
 * Disclosure Chaining mechanisms and various use-cases.
 * Typical scenarios and templates for Disclosure submissions.
 * Mapping of the regulatory requirements and future Disclosure elements.
