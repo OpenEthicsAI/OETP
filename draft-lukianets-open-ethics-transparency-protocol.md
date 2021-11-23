@@ -11,7 +11,11 @@ keyword: Internet-Draft
 
 stand_alone: yes
 smart_quotes: no
-pi: [toc, sortrefs, symrefs]
+pi:
+    toc: yes
+    tocdepth: 4
+    sortrefs: yes
+    symrefs: yes
 
 author:
  -
@@ -45,10 +49,62 @@ OETP provides facilities for:
 
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
-# Conventions and Definitions
+# Requirement Levels
 
 {::boilerplate bcp14-tagged}
 
+# Terminology
+
+Disclosure
+: Disclosure (Ethics Disclosure, or self-disclosure) is application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
+
+Disclosure Feed
+: A historical sequence of Disclosures, made for a specific Product.
+
+Vendor
+: A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
+
+Integrator
+: A legal person (an individual developer or an organization) that deploys technology-powered services to the end-users based on Product(s) from third-party Vendors.
+
+Product
+: An IT system in the form of software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.
+
+Component
+: An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
+
+Upstream Component
+: A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.
+
+Downstream Component
+: A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.
+
+Automated Decision-Making (ADM)
+: The automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
+
+OETP Disclosure Format
+: A machine-readable Disclosure with predefined structure, supplied in the JSON format.
+
+Validation
+: A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
+
+Auditor
+: A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.
+
+Auditing software
+: An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.
+
+Verification
+: A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
+
+Verification Proof
+: A result of the formal Disclosure Verification procedure presented to a requestor.
+
+Chaining
+: A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.
+
+Label
+: User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.
 
 # Security Considerations
 
