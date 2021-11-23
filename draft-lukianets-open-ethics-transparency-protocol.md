@@ -116,7 +116,7 @@ The Disclosure creation and delivery consist of the two parts, starting from (I)
 
 The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
 
-TODO Figure Basic Disclosure Submission
+{{figure-disclosure-submission-basic}}
 <!-- <img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg" alt="Basic Disclosure Submission"> -->
 
 ### Cryptographic Signature
@@ -173,7 +173,7 @@ The Progressive Verification applies to a whole Disclosure, or to specific eleme
 
 The diagram below displays a general scheme for Disclosure requests and responses.
 
-TODO Figure Progressive Verification Scheme for Disclosures
+{{figure-disclosure-progressive-verification}}
 
 <!-- <img src="../diagrams/images/disclosure-progressive-verification/disclosure-progressive-verification.svg" style="float: left; margin-right: 10px;" alt="Progressive Verification Scheme for Disclosures" /> -->
 
@@ -227,7 +227,7 @@ Required: ({{supplier-identity}}, {{component-information}})
 
 The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
 
-TODO Figure Disclosure Chaining: Request-Response
+{{figure-disclosure-chaining-request}}
 
 <!-- <img src="../diagrams/images/disclosure-chaining-request/disclosure-chaining-request.svg" alt="Disclosure Chaining: Request-Response"> -->
 
@@ -241,7 +241,7 @@ In this tree:
 * Root is the top Node representing a Product's Disclosure information;
 * Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.
 
-TODO Figure Disclosure Chaining: Level Order Traversal
+{{figure-disclosure-chaining-tree}}
 
 <!-- <img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal"> -->
 
@@ -335,16 +335,38 @@ The following topics not addressed in this version of LDP are possible areas for
 
 --- back
 
-# Acknowledgments
-{:numbered="false"}
 
-TODO acknowledge.
 
 # Appendix
-{:numbered="false"}
+
 ## Figures
 
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-creation.puml}
 ~~~~
 {: #figure-disclosure-creation title="Creation of the Disclosure"}
+
+~~~~ PUML
+{::include docs/diagrams/src/disclosure-submission-basic.puml}
+~~~~
+{: #figure-disclosure-submission-basic title="Basic Disclosure Submission"}
+
+~~~~ PUML
+{::include docs/diagrams/src/disclosure-progressive-verification.puml}
+~~~~
+{: #figure-disclosure-progressive-verification title="Progressive Verification Scheme for Disclosures"}
+
+~~~~ PUML
+{::include docs/diagrams/src/disclosure-chaining-request.puml}
+~~~~
+{: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
+
+~~~~ PUML
+{::include docs/diagrams/src/disclosure-chaining-tree .puml}
+~~~~
+{: #figure-disclosure-chaining-tree title="Disclosure Chaining: Level Order Traversal"}
+
+# Acknowledgments
+{:numbered="false"}
+
+TODO acknowledge.
