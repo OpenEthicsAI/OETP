@@ -309,26 +309,34 @@ The following topics not addressed in this version of LDP are possible areas for
 
 ## Figures
 
+Diagrams could be built from code using below `*.puml` files automatically using [PlantUML](https://plantuml.com/).
+
+
+### Creation of the Disclosure
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-creation.puml}
 ~~~~
 {: #figure-disclosure-creation title="Creation of the Disclosure"}
 
+### Basic Disclosure Submission
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-submission-basic.puml}
 ~~~~
 {: #figure-disclosure-submission-basic title="Basic Disclosure Submission"}
 
+### Progressive Verification Scheme for Disclosures
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-progressive-verification.puml}
 ~~~~
 {: #figure-disclosure-progressive-verification title="Progressive Verification Scheme for Disclosures"}
 
+### Disclosure Chaining: Request-Response
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-chaining-request.puml}
 ~~~~
 {: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
 
+### Disclosure Chaining: Level Order Traversal
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-chaining-tree.puml}
 ~~~~
