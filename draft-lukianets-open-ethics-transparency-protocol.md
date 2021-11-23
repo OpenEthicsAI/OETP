@@ -330,7 +330,7 @@ The following topics not addressed in this version of LDP are possible areas for
 {: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
 
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-chaining-tree .puml}
+{::include docs/diagrams/src/disclosure-chaining-tree.puml}
 ~~~~
 {: #figure-disclosure-chaining-tree title="Disclosure Chaining: Level Order Traversal"}
 
