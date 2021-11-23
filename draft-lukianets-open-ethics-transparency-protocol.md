@@ -54,7 +54,7 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 {::boilerplate bcp14-tagged}
 
 # Terminology
-{: vspace="0"}
+
 Disclosure:
 : Disclosure (Ethics Disclosure, or self-disclosure) is application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
 
@@ -264,7 +264,7 @@ Further evaluation of this approach is required.
 
 # Example OETP Disclosure File
 
-~~~~JSON
+~~~~ JSON
 {
     "schema": {
         "name": "Open Ethics Transparency Protocol",
