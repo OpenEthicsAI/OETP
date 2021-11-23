@@ -54,56 +54,56 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 {::boilerplate bcp14-tagged}
 
 # Terminology
-
-Disclosure
+{: vspace="0"}
+Disclosure:
 : Disclosure (Ethics Disclosure, or self-disclosure) is application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
 
-Disclosure Feed
+Disclosure Feed:
 : A historical sequence of Disclosures, made for a specific Product.
 
-Vendor
+Vendor:
 : A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
 
-Integrator
+Integrator:
 : A legal person (an individual developer or an organization) that deploys technology-powered services to the end-users based on Product(s) from third-party Vendors.
 
-Product
+Product:
 : An IT system in the form of software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.
 
-Component
+Component:
 : An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.
 
-Upstream Component
+Upstream Component:
 : A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.
 
-Downstream Component
+Downstream Component:
 : A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.
 
-Automated Decision-Making (ADM)
+Automated Decision-Making (ADM):
 : The automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
-OETP Disclosure Format
+OETP Disclosure Format:
 : A machine-readable Disclosure with predefined structure, supplied in the JSON format.
 
-Validation
+Validation:
 : A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
 
-Auditor
+Auditor:
 : A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.
 
-Auditing software
+Auditing software:
 : An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.
 
-Verification
+Verification:
 : A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.
 
-Verification Proof
+Verification Proof:
 : A result of the formal Disclosure Verification procedure presented to a requestor.
 
-Chaining
+Chaining:
 : A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.
 
-Label
+Label:
 : User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.
 
 # Protocol Model
