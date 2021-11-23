@@ -27,7 +27,6 @@ author:
 normative:
 
 informative:
-    RFC159:
 
 --- abstract
 
@@ -305,7 +304,7 @@ Further evaluation of this approach is required.
 
 ## Response content
 
-OETP exchanges data using JSON {{RFC159}} which is a lightweight data-interchange format. A JSON-based application can be attacked in multiple ways such as sending data in an improper format or embedding attack vectors in the data. It is important for any application using JSON format to validate the inputs before being processed. To mitigate this attack type, the JSON Key Profile is provided for OETP responses.
+OETP exchanges data using JSON {{?RFC7159}} which is a lightweight data-interchange format. A JSON-based application can be attacked in multiple ways such as sending data in an improper format or embedding attack vectors in the data. It is important for any application using JSON format to validate the inputs before being processed. To mitigate this attack type, the JSON Key Profile is provided for OETP responses.
 
 ## Spoofing
 
