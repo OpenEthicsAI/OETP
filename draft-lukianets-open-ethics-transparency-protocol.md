@@ -261,6 +261,45 @@ Formally this approach could be illustrated with the use of a conjunction table 
 
 Further evaluation of this approach is required.
 
+# Example OETP Disclosure File
+
+~~~~JSON
+{
+    "schema": {
+        "name": "Open Ethics Transparency Protocol",
+        "version": "0.9.3 RFC",
+        "integrity": "156d624b8f2dbea87128a2147f255842652475c5dc595c79f64c90c7ff486d59007c3e18c993e3163395812e26b70ea70dfc413f7ca128869d115f12e5699bf2"
+    },
+    "snapshot": {
+        "product": {
+            "url": "testexample.com",
+            "description": ""
+        },
+        "timestamp": 1608273946,
+        "generator": {
+            "name": "Open Ethics",
+            "alias": "oe",
+            "type": "root",
+            "website": "https://openethics.ai"
+        },
+        "label": {
+            "data": {
+                "type": "open",
+                "practice": ""
+            },
+            "source": {
+                "type": "open",
+                "practice": ""
+            },
+            "decision": {
+                "type": "restricted",
+                "practice": ""
+            }
+        }
+    }
+}
+~~~~
+
 # Security Considerations
 
 ## Response content
@@ -280,6 +319,18 @@ Dishonest or falsified Disclosures is a problem that is hard to address generall
 # IANA Considerations
 
 This document has no IANA actions.
+
+# Areas for Future Study
+
+The following topics not addressed in this version of LDP are possible areas for future study:
+
+* IANA requests for the Data Processor identity management.
+* Extensibility of the OETP Disclosure Format.
+* Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree
+* Disclosure Chaining mechanisms and various use-cases.
+* Typical scenarios and templates for Disclosure submissions.
+* Mapping of the regulatory requirements and future Disclosure elements.
+* Standardizing Privacy Disclosure and PII data-collection practices.
 
 
 
