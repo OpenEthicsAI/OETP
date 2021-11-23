@@ -107,16 +107,15 @@ Label:
 
 # Protocol Model
 
-The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties.
+The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties. {{figure-disclosure-creation}} shows disclosure creation steps.
 
-{{figure-disclosure-creation}}
 <!-- <img src="../diagrams/images/disclosure-creation/disclosure-creation.svg" alt="Creation of the Disclosure"> -->
 
 ## Creation of the Disclosure
 
-The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline.
+The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline. {{figure-disclosure-submission-basic}} shows basic disclosure submission process.
 
-{{figure-disclosure-submission-basic}}
+
 <!-- <img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg" alt="Basic Disclosure Submission"> -->
 
 ### Cryptographic Signature
@@ -174,9 +173,7 @@ To raise a level of trust to a Disclosure, a Vendor MAY decide to opt-in for a t
 
 The Progressive Verification applies to a whole Disclosure, or to specific elements of the Disclosure.
 
-The diagram below displays a general scheme for Disclosure requests and responses.
-
-{{figure-disclosure-progressive-verification}}
+{{figure-disclosure-progressive-verification}} displays a general scheme for Disclosure requests and responses.
 
 <!-- <img src="../diagrams/images/disclosure-progressive-verification/disclosure-progressive-verification.svg" style="float: left; margin-right: 10px;" alt="Progressive Verification Scheme for Disclosures" /> -->
 
@@ -230,7 +227,7 @@ Required: ({{supplier-identity}}, {{component-information}})
 
 The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
 
-{{figure-disclosure-chaining-request}}
+{{figure-disclosure-chaining-request}} shows the process how Disclosure Chaining request and response happen.
 
 <!-- <img src="../diagrams/images/disclosure-chaining-request/disclosure-chaining-request.svg" alt="Disclosure Chaining: Request-Response"> -->
 
@@ -244,7 +241,7 @@ In this tree:
 * Root is the top Node representing a Product's Disclosure information;
 * Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.
 
-{{figure-disclosure-chaining-tree}}
+{{figure-disclosure-chaining-tree}} displays the order of the Disclosure Chaining with Level Order Tree Traversal algorithm.
 
 <!-- <img src="../diagrams/images/disclosure-chaining-tree/disclosure-chaining-tree.svg" alt="Disclosure Chaining: Level Order Traversal"> -->
 
