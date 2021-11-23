@@ -341,7 +341,7 @@ The following topics not addressed in this version of LDP are possible areas for
 TODO acknowledge.
 
 # Appendix
-
+{:numbered="false"}
 ## Figures
 
 ~~~~ PUML
