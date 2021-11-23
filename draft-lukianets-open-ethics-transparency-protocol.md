@@ -150,6 +150,9 @@ A Vendor SHOULD place a visual Label generated as a result of the Disclosure pro
 
 Based on the Verification performed for the OETP Disclosure file, the labels MAY include Conformity assessment marks, Certification marks, as well as marks showing adherence to certain standards. These marks MAY be generated and displayed automatically based on the Verification Proofs.
 
+### Accessibility considerations
+Accessibility of the Labels for the sight-impaired Users SHOULD be considered. The OETP Processing system MUST provide alternative forms of the Label, so that voice-reading software could be used to narrate the Label.
+
 
 ## Verification and Validation of Disclosure
 
@@ -298,6 +301,8 @@ The following topics not addressed in this version of LDP are possible areas for
 * Typical scenarios and templates for Disclosure submissions.
 * Mapping of the regulatory requirements and future Disclosure elements.
 * Standardizing Privacy Disclosure and PII data-collection practices.
+* Enchancing Label accessibility with ARIA W3C Recommendation and other approaches
+
 
 
 
