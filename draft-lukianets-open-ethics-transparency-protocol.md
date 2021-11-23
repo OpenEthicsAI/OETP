@@ -250,14 +250,15 @@ TODO Figure Disclosure Chaining: Level Order Traversal
 
 The current consensus from the user & developer community suggests that Composite Disclosure should follow The "Weakest Link" model. According to this model, the risk that the Product is carrying should not be considered any less than the risk for each of the Components.
 
-Formally this approach could be illustrated with the use of a conjunction table for risk modeling. The Truth Table for Logical AND operator below takes one risk factor and evaluates risk outcomes as High (H) or Low (L) for hypothetical Disclosure options of the Product(P) and its Component(C).
+Formally this approach could be illustrated with the use of a conjunction table for risk modeling (see {{conjunction-table-risk-modeling}}). The Truth Table for Logical AND operator below takes one risk factor and evaluates risk outcomes as High (H) or Low (L) for hypothetical Disclosure options of the Product(P) and its Component(C).
 
-|Disclosed risk of **P** |Disclosed risk of  **C** | Composite **P ∧ C** |
+|Disclosed risk of P |Disclosed risk of  C | Composite P ∧ C |
 |:-----:|:-----:|:--------------------:|
 | L     | L     | **L**                |
 | L     | H     | **H**                |
 | H     | L     | **H**                |
 | H     | H     | **H**                |
+{: #conjunction-table-risk-modeling title="Conjunction Table for Risk Modeling"}
 
 Further evaluation of this approach is required.
 
