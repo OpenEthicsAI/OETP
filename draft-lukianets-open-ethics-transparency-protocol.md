@@ -34,7 +34,7 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 # Introduction
 
 TODO Introduction
-
+TBD here
 
 # Conventions and Definitions
 
