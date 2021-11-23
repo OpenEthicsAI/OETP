@@ -109,7 +109,7 @@ Label:
 
 The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties.
 
-TODO Figure Creation of the Disclosure
+{{figure-disclosure-creation}}
 <!-- <img src="../diagrams/images/disclosure-creation/disclosure-creation.svg" alt="Creation of the Disclosure"> -->
 
 ## Creation of the Disclosure
@@ -339,3 +339,12 @@ The following topics not addressed in this version of LDP are possible areas for
 {:numbered="false"}
 
 TODO acknowledge.
+
+# Appendix
+
+## Figures
+
+~~~~ PUML
+{::include docs/diagrams/src/disclosure-creation.puml}
+~~~~
+{: #figure-disclosure-creation title="Creation of the Disclosure"}
