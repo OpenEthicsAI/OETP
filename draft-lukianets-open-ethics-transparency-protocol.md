@@ -199,13 +199,13 @@ If the Supplier information is not provided, Disclosure SHOULD contain informati
 ##### First-party Components
 For greater transparency, Vendors may decide to reveal Components even if they originate from themselves (first-party Components). For the first-party Component, the Supplier identity information SHOULD NOT be provided because it was already disclosed earlier.
 
-Required: (Component information) only
+Required: ({{component-information}}) only
 
 #### Third-party Components
 
 When disclosing Components originating from the third-party Vendors SHOULD provide both the Supplier identity information and Component information
 
-Required: (Supplier identity, Component information)
+Required: ({{supplier-identity}}, {{component-information}})
 
 #### Elements of Supplier disclosure
 
