@@ -264,41 +264,9 @@ Further evaluation of this approach is required.
 # Example OETP Disclosure File
 
 ~~~~ JSON
-{
-    "schema": {
-        "name": "Open Ethics Transparency Protocol",
-        "version": "0.9.3 RFC",
-        "integrity": "156d624b8f2dbea87128a2147f255842652475c5dc595c79f64c90c7ff486d59007c3e18c993e3163395812e26b70ea70dfc413f7ca128869d115f12e5699bf2"
-    },
-    "snapshot": {
-        "product": {
-            "url": "testexample.com",
-            "description": ""
-        },
-        "timestamp": 1608273946,
-        "generator": {
-            "name": "Open Ethics",
-            "alias": "oe",
-            "type": "root",
-            "website": "https://openethics.ai"
-        },
-        "label": {
-            "data": {
-                "type": "open",
-                "practice": ""
-            },
-            "source": {
-                "type": "open",
-                "practice": ""
-            },
-            "decision": {
-                "type": "restricted",
-                "practice": ""
-            }
-        }
-    }
-}
+{::include examples/basic disclosure/oetp.json}
 ~~~~
+{: #figure-example-oetp-json title="Example OETP Disclosure File"}
 
 # Security Considerations
 
