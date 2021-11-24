@@ -6,4 +6,4 @@ Automated numbering and TOC generation for the non-IETF docs could be done using
 ](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
 ) extension for the [Visual Studio Code](https://code.visualstudio.com/).
 
-Diagrams in SVG are stored in `/src/images` and are built from code using `*.puml` files automatically with [PlantUML](https://plantuml.com/)
+Diagrams in SVG are stored in [docs/diagrams/images](docs/diagrams/images/) and are built from `*.puml` files in [docs/diagrams/src](docs/diagrams/src/) automatically with [PlantUML](https://plantuml.com/)
