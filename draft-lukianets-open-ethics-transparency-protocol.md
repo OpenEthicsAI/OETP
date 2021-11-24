@@ -79,7 +79,7 @@ Downstream Component:
 : A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.
 
 Automated Decision-Making (ADM):
-: The automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
+: Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
 
 OETP Disclosure Format:
 : A machine-readable Disclosure with predefined structure, supplied in the JSON format.
@@ -150,7 +150,7 @@ A Vendor SHOULD place a visual Label generated as a result of the Disclosure pro
 Based on the Verification performed for the OETP Disclosure file, the labels MAY include Conformity assessment marks, Certification marks, as well as marks showing adherence to certain standards. These marks MAY be generated and displayed automatically based on the Verification Proofs.
 
 ### Accessibility considerations
-Accessibility of the Labels for the visually impaired Users SHOULD be considered. The OETP Processing system MUST provide alternative forms of the Label, so that text-to-speech tools could be used to narrate the Label.
+Accessibility of the Labels for the visually impaired Users SHOULD be considered. The OETP Processing system MUST provide alternative forms of the Label so that text-to-speech tools could be used to narrate the Label.
 
 
 ## Verification and Validation of Disclosure
@@ -227,7 +227,7 @@ Required: ({{supplier-identity}}, {{component-information}})
 
 The OETP Processing system MUST send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system MUST specify which Components have Disclosures and which don't have Disclosures.
 
-{{figure-disclosure-chaining-request}} shows the process how Disclosure Chaining request and response happen.
+{{figure-disclosure-chaining-request}} shows the process of how Disclosure Chaining requests and responses happen.
 
 <!-- <img src="../diagrams/images/disclosure-chaining-request/disclosure-chaining-request.svg" alt="Disclosure Chaining: Request-Response"> -->
 
@@ -347,6 +347,6 @@ Diagrams could be built from code using below `*.puml` files automatically using
 # Acknowledgments
 {:numbered="false"}
 
-Part of this work related to Verification and Validation of Disclosure and Disclosure Chaining was supported by H2020 Programme of the European Commission under Article 15 of Grant Agreement No. 951972 StandICT.eu 2023
+Part of this work related to Verification and Validation of Disclosure and Disclosure Chaining was supported by the H2020 Programme of the European Commission under Article 15 of Grant Agreement No. 951972 StandICT.eu 2023
 
-The Open Ethics commumity and expert volunteers contributed with their valuable feedback, discussions, and comments. Thank you Ashley Duque Kienzle, Angela Kim, Ioannis Zempekakis, Karl Müdespacher, Ida Varošanec, Claudia Del Pozo, Joerg Buss, Mariia Kriuchok, Minhaaj Rehman, Oleksii Molchanovskyi, Roberta Barone, Phil Volkofsky and others.
+The Open Ethics community and expert volunteers contributed with their valuable feedback, discussions, and comments. Thank you Ashley Duque Kienzle, Angela Kim, Ioannis Zempekakis, Karl Müdespacher, Ida Varošanec, Claudia Del Pozo, Joerg Buss, Mariia Kriuchok, Minhaaj Rehman, Oleksii Molchanovskyi, Roberta Barone, Phil Volkofsky and others.
