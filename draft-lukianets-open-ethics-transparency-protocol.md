@@ -347,4 +347,6 @@ Diagrams could be built from code using below `*.puml` files automatically using
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Part of this work related to Verification and Validation of Disclosure and Disclosure Chaining was supported by H2020 Programme of the European Commission under Article 15 of Grant Agreement No. 951972 StandICT.eu 2023
+
+The Open Ethics commumity and expert volunteers contributed with their valuable feedback, discussions, and comments. Thank you Ashley Duque Kienzle, Angela Kim, Ioannis Zempekakis, Karl Müdespacher, Ida Varošanec, Claudia Del Pozo, Joerg Buss, Mariia Kriuchok, Minhaaj Rehman, Oleksii Molchanovskyi, Roberta Barone, Phil Volkofsky and others.
