@@ -13,7 +13,7 @@ stand_alone: yes
 smart_quotes: no
 pi:
     toc: yes
-    tocdepth: 3
+    tocdepth: 2
     sortrefs: yes
     symrefs: yes
 
@@ -111,7 +111,7 @@ The Disclosure creation and delivery consist of the two parts, starting from (I)
 
 <!-- <img src="../diagrams/images/disclosure-creation/disclosure-creation.svg" alt="Creation of the Disclosure"> -->
 
-## Creation of the Disclosure
+## Creation of Disclosure
 
 The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline. {{figure-disclosure-submission-basic}} shows basic disclosure submission process.
 
@@ -314,7 +314,7 @@ The following topics not addressed in this version of LDP are possible areas for
 Diagrams could be built from code using below `*.puml` files automatically using [PlantUML](https://plantuml.com/).
 
 
-### Creation of the Disclosure
+### Creation of Disclosure
 ~~~~ PUML
 {::include docs/diagrams/src/disclosure-creation.puml}
 ~~~~
