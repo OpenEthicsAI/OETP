@@ -289,7 +289,7 @@ This document has no IANA actions.
 
 # Areas for Future Study
 
-The following topics not addressed in this version of LDP are possible areas for future study:
+The following topics not addressed in this version of document are possible areas for the future study:
 
 * IANA requests for the Data Processor identity management.
 * Extensibility of the OETP Disclosure Format.
@@ -299,7 +299,7 @@ The following topics not addressed in this version of LDP are possible areas for
 * Mapping of the regulatory requirements and future Disclosure elements.
 * Standardizing Privacy Disclosure and PII data-collection practices.
 * Enhancing Label accessibility with ARIA W3C Recommendation and other approaches
-
+* Use of the OETP Disclosure in the ADM explainability (XAI).
 
 
 
