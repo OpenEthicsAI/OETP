@@ -13,7 +13,7 @@ stand_alone: yes
 smart_quotes: no
 pi:
     toc: yes
-    tocdepth: 2
+    tocdepth: 3
     sortrefs: yes
     symrefs: yes
 
