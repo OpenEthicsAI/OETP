@@ -201,7 +201,7 @@ The IT industry is getting more mature with Vendors becoming more specialized. S
 
 ### Open Supplier Policy
 
-Every Integrator or a Vendor SHOULD disclose the information about their Suppliers (sub-processing Vendors), indicating the scope of the data processing in the Components they provide. 
+Every Integrator or a Vendor SHOULD disclose the information about their Suppliers (sub-processing Vendors), indicating the scope of the data processing in the Components they provide.
 
 If the Supplier information is not provided, Disclosure SHOULD contain information that a Vendor (Integrator) has not provided Supplier information.
 
@@ -268,7 +268,7 @@ Formally this approach could be illustrated with the use of a conjunction table 
 | H     | H     | **H**                |
 {: #conjunction-table-risk-modeling title="Conjunction Table for Risk Modeling"}
 
-Further evaluation of this approach is required. 
+Further evaluation of this approach is required.
 
 # Example OETP Disclosure File
 
