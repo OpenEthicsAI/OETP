@@ -27,6 +27,15 @@ author:
 normative:
 
 informative:
+    SPDX:
+        target: https://spdx.dev/
+        author:
+            org: The Linux Foundation
+        title: SPDX Specification – Version 2.2
+        date: 2020
+        format:
+            PDF: https://spdx.dev/wp-content/uploads/sites/41/2020/08/SPDX-specification-2-2.pdf
+            HTML: https://spdx.github.io/spdx-spec/
 
 --- abstract
 
@@ -55,7 +64,7 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 # Terminology
 
 Disclosure:
-: Disclosure (Ethics Disclosure, or self-disclosure) is application-specific information about the data collection, data-processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
+: Disclosure (Ethics Disclosure, or self-disclosure) is application-specific information about the data collection, data processing, and decision-making practices of a Product, provided by the Product Vendor (an individual developer or an organization).
 
 Disclosure Feed:
 : A historical sequence of Disclosures, made for a specific Product.
@@ -107,13 +116,13 @@ Label:
 
 # Protocol Model
 
-The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and to the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties. {{figure-disclosure-creation}} shows disclosure creation steps.
+The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties. {{figure-disclosure-creation}} shows disclosure creation steps.
 
 <!-- <img src="../diagrams/images/disclosure-creation/disclosure-creation.svg" alt="Creation of the Disclosure"> -->
 
 ## Creation of Disclosure
 
-The initial Disclosure is created by filling a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline. {{figure-disclosure-submission-basic}} shows basic disclosure submission process.
+The initial Disclosure is created by filling out a standardized disclosure form (for example, see 1. [https://openethics.ai/label/](https://openethics.ai/label/)). A Vendor representative, a Product Owner, or a Developer, MUST submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, MUST be specified. Disclosure MAY also be created in a fully automated way as a part of the CI/CD DevOps pipeline. {{figure-disclosure-submission-basic}} shows basic disclosure submission process.
 
 
 <!-- <img src="../diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg" alt="Basic Disclosure Submission"> -->
@@ -165,11 +174,11 @@ The OETP Processing system MUST compare integrity hashes in the Open Ethics Disc
 
 ### Verification of Vendor&#39;s Disclosures
 
-Every disclosure SHOULD be checked for the existence of the external Verification from Auditors for the entire Disclosures or one of Disclosure elements.
+Every disclosure SHOULD be checked for the existence of the external Verification from Auditors for the entire Disclosures or one of the Disclosure elements.
 
 ### Progressive Verification
 
-To raise a level of trust to a Disclosure, a Vendor MAY decide to opt-in for a third-party Disclosure Verification. OETP suggests a Progressive Verification scheme where multiple independent external Verification Proofs COULD be issued by third parties to confirm the information specified in the Disclosure.
+To raise a level of trust in a Disclosure, a Vendor MAY decide to opt-in for a third-party Disclosure Verification. OETP suggests a Progressive Verification scheme where multiple independent external Verification Proofs COULD be issued by third parties to confirm the information specified in the Disclosure.
 
 The Progressive Verification applies to a whole Disclosure, or to specific elements of the Disclosure.
 
@@ -188,7 +197,7 @@ The following elements MAY serve as sources for various kinds of Verification pr
 
 ## End-to-end transparency and formation of the composite Disclosure
 
-IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chains are becoming more complex and distributed across various Components. The following steps MUST be satisfied for the end-to-end transparency:
+The IT industry is getting more mature with Vendors becoming more specialized. Surface-level transparency is not sufficient as supply chains are becoming more complex and distributed across various Components. The following steps MUST be satisfied for the end-to-end transparency:
 
 ### Open Supplier Policy
 
@@ -234,10 +243,10 @@ The OETP Processing system MUST send GET requests to the URLs of each Component 
 
 ### Disclosure Chaining
 
-The same Request-response operation applies recursively for Components of the Components, and for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
+The same Request-response operation applies recursively for Components of the Components, for the Components of the Components of the Components, etc. It is proposed to view the supply chain as a tree-like hierarchical data structure, where the information about Components is assembled using Level Order Tree Traversal algorithm.
 
 In this tree:
-* Node is a structure that contains Component's Disclosure;
+* Node is a structure that contains the Component's Disclosure;
 * Root is the top Node representing a Product's Disclosure information;
 * Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.
 
@@ -247,7 +256,7 @@ In this tree:
 
 ### Generation of the Composite Disclosure
 
-The current consensus from the user & developer community suggests that Composite Disclosure should follow The "Weakest Link" model. According to this model, the risk that the Product is carrying should not be considered any less than the risk for each of the Components.
+The current consensus from the user & developer community suggests that Composite Disclosure should follow The "Weakest Link" model. According to this model, the risk that the Product is carrying should not be considered any less than the risk for each of the Components. A similar approach in dealing with software licenses has been successful by allowing to generate Software Bills of Materials (SBOMs) by providing package information in the [SPDX](#SPDX) files.
 
 Formally this approach could be illustrated with the use of a conjunction table for risk modeling (see {{conjunction-table-risk-modeling}}). The Truth Table for Logical AND operator below takes one risk factor and evaluates risk outcomes as High (H) or Low (L) for hypothetical Disclosure options of the Product(P) and its Component(C).
 
@@ -259,7 +268,7 @@ Formally this approach could be illustrated with the use of a conjunction table 
 | H     | H     | **H**                |
 {: #conjunction-table-risk-modeling title="Conjunction Table for Risk Modeling"}
 
-Further evaluation of this approach is required.
+Further evaluation of this approach is required. 
 
 # Example OETP Disclosure File
 
@@ -272,7 +281,7 @@ Further evaluation of this approach is required.
 
 ## Response content
 
-OETP exchanges data using JSON {{?RFC7159}} which is a lightweight data-interchange format. A JSON-based application can be attacked in multiple ways such as sending data in an improper format or embedding attack vectors in the data. It is important for any application using JSON format to validate the inputs before being processed. To mitigate this attack type, the JSON Key Profile is provided for OETP responses.
+OETP exchanges data using JSON {{?RFC8259}} which is a lightweight data-interchange format. A JSON-based application can be attacked in multiple ways such as sending data in an improper format or embedding attack vectors in the data. It is important for any application using JSON format to validate the inputs before being processed. To mitigate this attack type, the JSON Key Profile is provided for OETP responses.
 
 ## Spoofing
 
@@ -289,7 +298,7 @@ This document has no IANA actions.
 
 # Areas for Future Study
 
-The following topics not addressed in this version of document are possible areas for the future study:
+The following topics not addressed in this version of the document are possible areas for the future study:
 
 * IANA requests for the Data Processor identity management.
 * Extensibility of the OETP Disclosure Format.
@@ -311,7 +320,7 @@ The following topics not addressed in this version of document are possible area
 
 ## Figures
 
-Diagrams could be built from code using below `*.puml` files automatically using [PlantUML](https://plantuml.com/).
+Diagrams could be built from code using the below `*.puml` files automatically using [PlantUML](https://plantuml.com/).
 
 
 ### Creation of Disclosure
