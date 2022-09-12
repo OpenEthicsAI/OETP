@@ -65,6 +65,8 @@ The Open Ethics Transparency Protocol (OETP) is an application-level protocol fo
 
 [https://openethics.ai/manifesto/](https://openethics.ai/manifesto/) - The Open Ethics Manifesto.
 
+[https://github.com/OpenEthicsAI/OETP-RI-scheme](https://github.com/OpenEthicsAI/OETP-RI-scheme) - URI scheme
+
 ## How to contribute?
 You can contribute by submitting your comments and by making pull requests to [this repository](https://github.com/OpenEthicsAI/OETP).
 
