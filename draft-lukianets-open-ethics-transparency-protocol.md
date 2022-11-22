@@ -21,7 +21,7 @@ author:
  -
     ins: N. Lukianets
     name: Nikita Lukainets
-    organization: Open Ethics
+    organization: Open Ethics Initiative
     email: n.lukianets@openethics.ai
 
 normative:
@@ -36,6 +36,12 @@ informative:
         format:
             PDF: https://spdx.dev/wp-content/uploads/sites/41/2020/08/SPDX-specification-2-2.pdf
             HTML: https://spdx.github.io/spdx-spec/
+    OETP-RI:
+        target: https://github.com/OpenEthicsAI/OETP-RI-scheme
+        author:
+            org: Open Ethics Initiative
+        title: Resource Identifier Scheme for OETP
+        date: 2022
 
 --- abstract
 
@@ -68,6 +74,9 @@ Disclosure:
 
 Disclosure Feed:
 : A historical sequence of Disclosures, made for a specific Product.
+
+Disclosure Identity Provider:
+: The automated Disclosure processing is enabled by requests to both the Open Ethics Disclosure database powered by Disclosure Identity Providers (DIP) and the Product's OETP Disclosure file, stored in the product's website root following OETP specification. DIP serves as a service point to generate and retrieve generated disclosures.
 
 Vendor:
 : A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
@@ -167,6 +176,12 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 ### Automated Disclosure processing
 
 The automated Disclosure processing is enabled by requests to both the Open Ethics Disclosure database powered by Disclosure Identity Providers and the Product's OETP Disclosure file.
+
+To allow efficient decentralization and access to the disclosures of autonomous systems, such as AI systems powered by trained machine learning models, the vendor (or a developer) MUST send requests to a Disclosure Identity Provider. Disclosures MAY be resolved using URIs. To satisfy the mentioned requirements for disclosure RI, it is proposed in [OETP-RI](#OETP-RI) to use the following formats:
+
+* `oetp://<hash>` - Here integrity `<hash>` is the SHA3-512 generated during the disclosure process.
+* `oetp://<component>@<alias>[:<disclosure>]` - Here `<component>` is the ID assigned via Disclosure Identity Provider under its `<alias>` during the first disclosure.
+* `oetp://<domain>[:<disclosure>]` - For verified domains (Domain Validation), disclosure could be accessed using product's `<domain>` instead of `<component>@<alias>`.)
 
 ### Validation of Vendor&#39;s Disclosures
 
@@ -294,13 +309,12 @@ Dishonest or falsified Disclosures is a problem that is hard to address generall
 
 # IANA Considerations
 
-This document has no IANA actions.
+Disclosures MAY be resolved using their URIs. To allow this requirement, the `oetp://` URI scheme should be registered with IANA.
 
 # Areas for Future Study
 
 The following topics not addressed in this version of the document are possible areas for the future study:
 
-* IANA requests for the Data Processor identity management.
 * Extensibility of the OETP Disclosure Format.
 * Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree
 * Disclosure Chaining mechanisms and various use-cases.
