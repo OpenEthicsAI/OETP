@@ -321,8 +321,9 @@ The following topics not addressed in this version of the document are possible 
 * Typical scenarios and templates for Disclosure submissions.
 * Mapping of the regulatory requirements and future Disclosure elements.
 * Standardizing Privacy Disclosure and PII data-collection practices.
-* Enhancing Label accessibility with ARIA W3C Recommendation and other approaches
+* Enhancing Label accessibility with ARIA W3C Recommendation and other approaches.
 * Use of the OETP Disclosure in the ADM explainability (XAI).
+* Disclosure formats for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.
 
 
 
