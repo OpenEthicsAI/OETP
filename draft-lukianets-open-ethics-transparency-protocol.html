@@ -9,24 +9,24 @@
 <meta content='
        The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format. 
     ' name="description">
-<meta content="xml2rfc 3.17.1" name="generator">
+<meta content="xml2rfc 3.18.2" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-lukianets-open-ethics-transparency-protocol-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.1
-    Python 3.11.3
-    appdirs 1.4.4
+  xml2rfc 3.18.2
+    Python 3.11.6
     ConfigArgParse 1.5.3
-    google-i18n-address 2.5.2
+    google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
-    lxml 4.9.2
+    lxml 4.9.3
+    platformdirs 3.11.0
     pycountry 22.3.5
     PyYAML 6.0
-    requests 2.30.0
+    requests 2.31.0
     setuptools 67.7.2
     six 1.16.0
-    wcwidth 0.2.6
+    wcwidth 0.2.9
 -->
 <link href="draft-lukianets-open-ethics-transparency-protocol.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -608,6 +608,7 @@ sub, sup {
   clear: left;
   float: left;
   text-align: right;
+  margin-right: 1ch;
 }
 #identifiers dd {
   margin: 0;
@@ -648,7 +649,7 @@ sub, sup {
 }
 #toc nav li {
   line-height: 1.3em;
-  margin: 0.75em 0;
+  margin: 2px 0;
   padding-left: 1.2em;
   text-indent: -1.2em;
 }
@@ -741,7 +742,7 @@ hr.addr {
     z-index: 2;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
@@ -865,16 +866,13 @@ hr.addr {
     border-top: none;
     padding-top: 0;
   }
-  figure, pre {
+  figure, pre, .vcard {
     page-break-inside: avoid;
-  }
-  figure {
-    overflow: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
-  h2+*, h3+*, h4+*, h5+*, h6+* {
+  :is(h2, h3, h4, h5, h6)+*, dd {
     page-break-before: avoid;
   }
   pre {
@@ -887,6 +885,9 @@ hr.addr {
   }
   td {
     border-top: 1px solid #ddd;
+  }
+  .toplink {
+    display: none;
   }
 }
 
@@ -988,28 +989,6 @@ address div.right {
   text-align: right;
 }
 
-/* Give the table caption label the same styling as the figcaption */
-
-@media print {
-  .toplink {
-    display: none;
-  }
-
-  /* avoid overwriting the top border line with the ToC header */
-  #toc {
-    padding-top: 1px;
-  }
-
-  /* Avoid page breaks inside dl and author address entries */
-  dd {
-    page-break-before: avoid;
-  }
-  .vcard {
-    page-break-inside: avoid;
-  }
-
-}
-
 /* Dark mode. */
 @media (prefers-color-scheme: dark) {
 :root {
@@ -1046,11 +1025,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">OETP</td>
-<td class="right">May 2023</td>
+<td class="right">November 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Lukianets</td>
-<td class="center">Expires 22 November 2023</td>
+<td class="center">Expires 18 May 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1063,12 +1042,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-lukianets-open-ethics-transparency-protocol-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-05-21" class="published">21 May 2023</time>
+<time datetime="2023-11-15" class="published">15 November 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-11-22">22 November 2023</time></dd>
+<dd class="expires"><time datetime="2024-05-18">18 May 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1102,7 +1081,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 22 November 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1291,19 +1270,19 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1-2">OETP provides facilities for:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-3.1">
-          <strong>Informed consumer choices</strong> : End-users able to make informed choices based on their own ethical preferences and product disclosure.<a href="#section-1-3.1" class="pilcrow">¶</a>
+          <p id="section-1-3.1.1"><strong>Informed consumer choices</strong> : End-users able to make informed choices based on their own ethical preferences and product disclosure.<a href="#section-1-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.2">
-          <strong>Industrial-scale monitoring</strong> : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.<a href="#section-1-3.2" class="pilcrow">¶</a>
+          <p id="section-1-3.2.1"><strong>Industrial-scale monitoring</strong> : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.<a href="#section-1-3.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.3">
-          <strong>Legally-agnostic guidelines</strong> : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.<a href="#section-1-3.3" class="pilcrow">¶</a>
+          <p id="section-1-3.3.1"><strong>Legally-agnostic guidelines</strong> : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.<a href="#section-1-3.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.4">
-          <strong>Iterative improvement</strong> : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.<a href="#section-1-3.4" class="pilcrow">¶</a>
+          <p id="section-1-3.4.1"><strong>Iterative improvement</strong> : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.<a href="#section-1-3.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.5">
-          <strong>Labeling and certification</strong> : Mapping to existing and future regulatory initiatives and standards.<a href="#section-1-3.5" class="pilcrow">¶</a>
+          <p id="section-1-3.5.1"><strong>Labeling and certification</strong> : Mapping to existing and future regulatory initiatives and standards.<a href="#section-1-3.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-1-4">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.<a href="#section-1-4" class="pilcrow">¶</a></p>
@@ -1424,13 +1403,13 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-protocol-model">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-protocol-model" class="section-name selfRef">Protocol Model</a>
       </h2>
-<p id="section-4-1">The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties. <a href="#_figure-disclosure-creation" class="auto internal xref">Figure 2</a> shows disclosure creation steps.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">The Disclosure creation and delivery consist of the two parts, starting from (I) the submission of the Disclosure form, chaining of the Suppliers' Disclosures, Signature of the disclosed information, and the delivery part (II) that first checks that the Disclosure is Valid, and then that the information specified in it is Verified by the third-parties. <a href="#_figure-disclosure-creation" class="auto internal xref">Figure 4</a> shows disclosure creation steps.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <div id="creation-of-disclosure">
 <section id="section-4.1">
         <h3 id="name-creation-of-disclosure">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-creation-of-disclosure" class="section-name selfRef">Creation of Disclosure</a>
         </h3>
-<p id="section-4.1-1">The initial Disclosure is created by filling out a standardized disclosure form (for example, see 1. <a href="https://openethics.ai/label/">https://openethics.ai/label/</a>). A Vendor representative, a Product Owner, or a Developer, <span class="bcp14">MUST</span> submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, <span class="bcp14">MUST</span> be specified. Disclosure <span class="bcp14">MAY</span> also be created in a fully automated way as a part of the CI/CD DevOps pipeline. <a href="#_figure-disclosure-submission-basic" class="auto internal xref">Figure 3</a> shows basic disclosure submission process.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">The initial Disclosure is created by filling out a standardized disclosure form (for example, see 1. <a href="https://openethics.ai/label/">https://openethics.ai/label/</a>). A Vendor representative, a Product Owner, or a Developer, <span class="bcp14">MUST</span> submit data-processing and data-collection information about the Product. The information about the end-point URL, as well as a contact email address, <span class="bcp14">MUST</span> be specified. Disclosure <span class="bcp14">MAY</span> also be created in a fully automated way as a part of the CI/CD DevOps pipeline. <a href="#_figure-disclosure-submission-basic" class="auto internal xref">Figure 5</a> shows basic disclosure submission process.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <div id="cryptographic-signature">
 <section id="section-4.1.1">
           <h4 id="name-cryptographic-signature">
@@ -1485,10 +1464,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           </h4>
 <ul class="normal">
 <li class="normal" id="section-4.2.3-1.1">
-              <strong>Labels in the online digital media</strong> <span class="bcp14">MUST</span> be generated automatically based on the content of the Disclosure and <span class="bcp14">MUST</span> contain a URL allowing to check the complete Integrity hash and explore more detailed information about the Disclosure.<a href="#section-4.2.3-1.1" class="pilcrow">¶</a>
+              <p id="section-4.2.3-1.1.1"><strong>Labels in the online digital media</strong> <span class="bcp14">MUST</span> be generated automatically based on the content of the Disclosure and <span class="bcp14">MUST</span> contain a URL allowing to check the complete Integrity hash and explore more detailed information about the Disclosure.<a href="#section-4.2.3-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.2.3-1.2">
-              <strong>Labels in the offline media</strong> <span class="bcp14">MUST</span> be generated automatically based on the content of the Disclosure and should carry the first 10 digits of the corresponding Integrity hash.<a href="#section-4.2.3-1.2" class="pilcrow">¶</a>
+              <p id="section-4.2.3-1.2.1"><strong>Labels in the offline media</strong> <span class="bcp14">MUST</span> be generated automatically based on the content of the Disclosure and should carry the first 10 digits of the corresponding Integrity hash.<a href="#section-4.2.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1506,7 +1485,51 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <h4 id="name-accessibility-consideration">
 <a href="#section-4.2.5" class="section-number selfRef">4.2.5. </a><a href="#name-accessibility-consideration" class="section-name selfRef">Accessibility considerations</a>
           </h4>
-<p id="section-4.2.5-1">Accessibility of the Labels for the visually impaired Users <span class="bcp14">SHOULD</span> be considered. The OETP Processing system <span class="bcp14">MUST</span> provide alternative forms of the Label so that text-to-speech tools could be used to narrate the Label.<a href="#section-4.2.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.5-1">Accessibility of the Labels for the visually impaired Users <span class="bcp14">SHOULD</span> be considered. The OETP Processing system <span class="bcp14">MUST</span> provide alternative forms of the Label so that text-to-speech tools could be used to narrate the Label without the lost of meaning.<a href="#section-4.2.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.5-2">1) A Label <span class="bcp14">MUST</span> contain a title. Title could be either marked by the <code>aria-label</code> attribute for the narration software or be labeled by another content tag(s) present via <code>aria-labelledby</code> attribute, pointing to the ID(s) describing the label content.<a href="#section-4.2.5-2" class="pilcrow">¶</a></p>
+<span id="name-example-label-snippet-conte"></span><div id="_figure-example-oel-snippet">
+<figure id="figure-1">
+            <div class="lang-HTML sourcecode" id="section-4.2.5-3.1">
+<pre>
+&lt;!-- Open Ethics Label snippet: visible content --&gt;
+&lt;a href="https://openethics.ai/label" target="_blank"&gt;
+    &lt;div id="label" aria-label="Open Ethics Label"&gt;
+        &lt;img src="/src/images/Open Ethics logo.svg" class="oesign svg" height="30" alt="Open Ethics Logo" role="img" aria-hidden="true"&gt;
+        &lt;!-- Dynamic Content of the Open Ethics Label goes here --&gt;
+    &lt;/div&gt;
+&lt;/a&gt;
+</pre>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-example-label-snippet-conte" class="selfRef">Example Label Snippet Content</a>
+            </figcaption></figure>
+</div>
+<p id="section-4.2.5-4">2) Every icon that is present in the visual Label <span class="bcp14">MUST</span> contain a title, describing the property illustrated by the icon. A more extended description <span class="bcp14">MAY</span> be provided when necessary. The following patterns are suggested:<a href="#section-4.2.5-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.2.5-5.1">
+              <p id="section-4.2.5-5.1.1">Pattern for images embedded using SVG tags: <code>&lt;img&gt; + role="img" + alt="[title text here]"</code> OR <code>&lt;img&gt; + role="img" + aria-label="[title text here]"</code><a href="#section-4.2.5-5.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-4.2.5-5.2">
+              <p id="section-4.2.5-5.2.1">Pattern for images embedded using IMG tags: <code>&lt;svg&gt; + role="img" + &lt;title&gt; + &lt;desc&gt; + aria-labelledby="[ID]"</code><a href="#section-4.2.5-5.2.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<span id="name-example-of-the-svg-icon-wit"></span><div id="_figure-example-oel-icon-label-source-open">
+<figure id="figure-2">
+            <div class="lang-XML sourcecode" id="section-4.2.5-6.1">
+<pre>
+&lt;svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="iconOpenSourceCodeTitle iconOpenSourceCodeDescription"&gt;
+&lt;title id="iconOpenSourceCodeTitle"&gt;Algorithms and code libraries: Open Source Code&lt;/title&gt;
+&lt;desc id="iconOpenSourceCodeDescription"&gt;This product/component has disclosed that it mainly uses the Open Source Code as a part of its codebase.&lt;/desc&gt;
+&lt;circle cx="8" cy="8" r="7" fill="#FFFFFF" class="branding-accent" /&gt;
+&lt;path d="M10.56 4.83221C9.70667 4.08053 8.64 3.75839 7.46667 3.97315C5.44 4.18792 3.84 6.01342 3.84 8.16107V8.26845C3.84 8.37584 3.84 8.48322 3.84 8.5906C3.94666 9.98658 4.8 11.1678 6.08 11.9195C6.4 11.1678 6.61333 10.5235 6.82667 9.87919C6.18667 9.44966 5.86667 8.80537 5.86667 8.05369C5.86667 7.51678 6.08 7.08725 6.4 6.7651C7.14667 6.01342 8.21333 5.79866 9.06667 6.33557C9.81333 6.7651 10.1333 7.51678 10.1333 8.37584C10.0267 9.02013 9.70667 9.55704 9.17333 9.87919C9.38667 10.5235 9.70667 11.1678 9.92 11.9195C10.4533 11.5973 10.9867 11.1678 11.4133 10.6309C12.0533 9.77181 12.2667 8.69798 12.16 7.62416C12.0533 6.55033 11.52 5.47651 10.56 4.83221Z" fill="#333333" class="branding-main" /&gt;
+&lt;path d="M8 0C3.62667 0 0 3.54362 0 7.94631C0 12.349 3.62667 16 8 16C12.3733 16 16 12.4564 16 7.94631C16 3.43624 12.3733 0 8 0ZM9.92 12.8859C9.81333 12.8859 9.70667 12.9933 9.49333 12.8859C9.38667 12.8859 9.28 12.7785 9.17333 12.5638L8.10667 9.77181C8.10667 9.55705 8.21333 9.34228 8.42667 9.2349C8.85333 9.02013 9.06667 8.80537 9.17333 8.37584C9.17333 8.05369 9.17333 7.73154 8.96 7.51678C8.74667 7.19463 8.42667 6.97987 8.10667 6.97987C7.46667 6.97987 6.93333 7.30201 6.93333 7.94631C6.82667 8.48322 7.04 8.91275 7.57333 9.2349C7.89333 9.34228 8 9.55705 7.89333 9.87919L6.82667 12.6711C6.72 12.8859 6.61333 12.8859 6.61333 12.9933C6.61333 12.9933 6.50667 12.9933 6.4 12.9933C6.29333 12.9933 6.29333 12.9933 6.18667 12.9933C5.01333 12.5638 4.05333 11.7047 3.52 10.5235C2.98667 9.55705 2.88 8.80537 2.88 8.37584V8.26846C2.88 5.58389 4.8 3.43624 7.36 3.11409C10.1333 2.68456 12.5867 4.61745 13.12 7.30201C13.5467 9.66443 12.2667 12.0268 9.92 12.8859Z" fill="#333333" class="branding-main" /&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<a href="#name-example-of-the-svg-icon-wit" class="selfRef">Example of the SVG icon with ARIA attributes for Accessibility</a>
+            </figcaption></figure>
+</div>
 </section>
 </div>
 </section>
@@ -1525,13 +1548,13 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <p id="section-4.3.1-2">To allow efficient decentralization and access to the disclosures of autonomous systems, such as AI systems powered by trained machine learning models, the vendor (or a developer) <span class="bcp14">MUST</span> send requests to a Disclosure Identity Provider. Disclosures <span class="bcp14">MAY</span> be resolved using URIs. To satisfy the mentioned requirements for disclosure RI, it is proposed in <span>[<a href="#OETP-RI" class="cite xref">OETP-RI</a>]</span> to use the following formats:<a href="#section-4.3.1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.3.1-3.1">
-              <code>oetp://&lt;hash&gt;</code> - Here integrity <code>&lt;hash&gt;</code> is the SHA3-512 generated during the disclosure process.<a href="#section-4.3.1-3.1" class="pilcrow">¶</a>
+              <p id="section-4.3.1-3.1.1"><code>oetp://&lt;hash&gt;</code> - Here integrity <code>&lt;hash&gt;</code> is the SHA3-512 generated during the disclosure process.<a href="#section-4.3.1-3.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.3.1-3.2">
-              <code>oetp://&lt;component&gt;@&lt;alias&gt;[:&lt;disclosure&gt;]</code> - Here <code>&lt;component&gt;</code> is the ID assigned via Disclosure Identity Provider under its <code>&lt;alias&gt;</code> during the first disclosure.<a href="#section-4.3.1-3.2" class="pilcrow">¶</a>
+              <p id="section-4.3.1-3.2.1"><code>oetp://&lt;component&gt;@&lt;alias&gt;[:&lt;disclosure&gt;]</code> - Here <code>&lt;component&gt;</code> is the ID assigned via Disclosure Identity Provider under its <code>&lt;alias&gt;</code> during the first disclosure.<a href="#section-4.3.1-3.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.3.1-3.3">
-              <code>oetp://&lt;domain&gt;[:&lt;disclosure&gt;]</code> - For verified domains (Domain Validation), disclosure could be accessed using product's <code>&lt;domain&gt;</code> instead of <code>&lt;component&gt;@&lt;alias&gt;</code>.)<a href="#section-4.3.1-3.3" class="pilcrow">¶</a>
+              <p id="section-4.3.1-3.3.1"><code>oetp://&lt;domain&gt;[:&lt;disclosure&gt;]</code> - For verified domains (Domain Validation), disclosure could be accessed using product's <code>&lt;domain&gt;</code> instead of <code>&lt;component&gt;@&lt;alias&gt;</code>.)<a href="#section-4.3.1-3.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1559,7 +1582,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           </h4>
 <p id="section-4.3.4-1">To raise a level of trust in a Disclosure, a Vendor <span class="bcp14">MAY</span> decide to opt-in for a third-party Disclosure Verification. OETP suggests a Progressive Verification scheme where multiple independent external Verification Proofs COULD be issued by third parties to confirm the information specified in the Disclosure.<a href="#section-4.3.4-1" class="pilcrow">¶</a></p>
 <p id="section-4.3.4-2">The Progressive Verification applies to a whole Disclosure, or to specific elements of the Disclosure.<a href="#section-4.3.4-2" class="pilcrow">¶</a></p>
-<p id="section-4.3.4-3"><a href="#_figure-disclosure-progressive-verification" class="auto internal xref">Figure 4</a> displays a general scheme for Disclosure requests and responses.<a href="#section-4.3.4-3" class="pilcrow">¶</a></p>
+<p id="section-4.3.4-3"><a href="#_figure-disclosure-progressive-verification" class="auto internal xref">Figure 6</a> displays a general scheme for Disclosure requests and responses.<a href="#section-4.3.4-3" class="pilcrow">¶</a></p>
 <p id="section-4.3.4-4">The following elements <span class="bcp14">MAY</span> serve as sources for various kinds of Verification proofs:
 * Qualified Auditor reports
 * Qualified Vendor of Auditing software tests
@@ -1614,13 +1637,17 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#section-4.4.1.3.1" class="section-number selfRef">4.4.1.3.1. </a><a href="#name-supplier-identity" class="section-name selfRef">Supplier identity</a>
               </h6>
 <ul class="normal">
-<li class="normal" id="section-4.4.1.3.1-1.1">Vendor Name<a href="#section-4.4.1.3.1-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.4.1.3.1-1.1">
+                  <p id="section-4.4.1.3.1-1.1.1">Vendor Name<a href="#section-4.4.1.3.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.1-1.2">Vendor URL<a href="#section-4.4.1.3.1-1.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.1-1.2">
+                  <p id="section-4.4.1.3.1-1.2.1">Vendor URL<a href="#section-4.4.1.3.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.1-1.3">Vendor ID<a href="#section-4.4.1.3.1-1.3" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.1-1.3">
+                  <p id="section-4.4.1.3.1-1.3.1">Vendor ID<a href="#section-4.4.1.3.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.1-1.4">Vendor DPO Contact Email<a href="#section-4.4.1.3.1-1.4" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.1-1.4">
+                  <p id="section-4.4.1.3.1-1.4.1">Vendor DPO Contact Email<a href="#section-4.4.1.3.1-1.4.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </section>
@@ -1631,17 +1658,23 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#section-4.4.1.3.2" class="section-number selfRef">4.4.1.3.2. </a><a href="#name-component-information" class="section-name selfRef">Component information</a>
               </h6>
 <ul class="normal">
-<li class="normal" id="section-4.4.1.3.2-1.1">Component Scope of use<a href="#section-4.4.1.3.2-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.4.1.3.2-1.1">
+                  <p id="section-4.4.1.3.2-1.1.1">Component Scope of use<a href="#section-4.4.1.3.2-1.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.2-1.2">Personal Data Being Processed by Component<a href="#section-4.4.1.3.2-1.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.2-1.2">
+                  <p id="section-4.4.1.3.2-1.2.1">Personal Data Being Processed by Component<a href="#section-4.4.1.3.2-1.2.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.2-1.3">Is a Safety Component (YES)/(NO)<a href="#section-4.4.1.3.2-1.3" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.2-1.3">
+                  <p id="section-4.4.1.3.2-1.3.1">Is a Safety Component (YES)/(NO)<a href="#section-4.4.1.3.2-1.3.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.2-1.4">Component URL (if different from the Vendor URL)<a href="#section-4.4.1.3.2-1.4" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.2-1.4">
+                  <p id="section-4.4.1.3.2-1.4.1">Component URL (if different from the Vendor URL)<a href="#section-4.4.1.3.2-1.4.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.2-1.5">Component Disclosure URL (if different from the default <code>Component URL/oetp.json</code>)<a href="#section-4.4.1.3.2-1.5" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.2-1.5">
+                  <p id="section-4.4.1.3.2-1.5.1">Component Disclosure URL (if different from the default <code>Component URL/oetp.json</code>)<a href="#section-4.4.1.3.2-1.5.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.4.1.3.2-1.6">Component DPO Contact (if different from Vendor DPO Contact Email)<a href="#section-4.4.1.3.2-1.6" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.4.1.3.2-1.6">
+                  <p id="section-4.4.1.3.2-1.6.1">Component DPO Contact (if different from Vendor DPO Contact Email)<a href="#section-4.4.1.3.2-1.6.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </section>
@@ -1656,7 +1689,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#section-4.4.2" class="section-number selfRef">4.4.2. </a><a href="#name-request-for-suppliers-discl" class="section-name selfRef">Request for Supplier's Disclosures</a>
           </h4>
 <p id="section-4.4.2-1">The OETP Processing system <span class="bcp14">MUST</span> send GET requests to the URLs of each Component to obtain their Disclosures. Based on the response to each Disclosure request, the OETP Processing system <span class="bcp14">MUST</span> specify which Components have Disclosures and which don't have Disclosures.<a href="#section-4.4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.4.2-2"><a href="#_figure-disclosure-chaining-request" class="auto internal xref">Figure 5</a> shows the process of how Disclosure Chaining requests and responses happen.<a href="#section-4.4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.4.2-2"><a href="#_figure-disclosure-chaining-request" class="auto internal xref">Figure 7</a> shows the process of how Disclosure Chaining requests and responses happen.<a href="#section-4.4.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="disclosure-chaining">
@@ -1669,7 +1702,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 * Node is a structure that contains the Component's Disclosure;
 * Root is the top Node representing a Product's Disclosure information;
 * Edge is the connection between one Node and another, representing the scope of the Data Processing by the Component.<a href="#section-4.4.3-2" class="pilcrow">¶</a></p>
-<p id="section-4.4.3-3"><a href="#_figure-disclosure-chaining-tree" class="auto internal xref">Figure 6</a> displays the order of the Disclosure Chaining with Level Order Tree Traversal algorithm.<a href="#section-4.4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.4.3-3"><a href="#_figure-disclosure-chaining-tree" class="auto internal xref">Figure 8</a> displays the order of the Disclosure Chaining with Level Order Tree Traversal algorithm.<a href="#section-4.4.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="generation-of-the-composite-disclosure">
@@ -1737,7 +1770,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-example-oetp-disclosure-fil" class="section-name selfRef">Example OETP Disclosure File</a>
       </h2>
 <span id="name-example-oetp-disclosure-file"></span><div id="_figure-example-oetp-json">
-<figure id="figure-1">
+<figure id="figure-3">
         <div class="lang-JSON sourcecode" id="section-5-1.1">
 <pre>
 {
@@ -1776,7 +1809,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 }
 </pre>
 </div>
-<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
 <a href="#name-example-oetp-disclosure-file" class="selfRef">Example OETP Disclosure File</a>
         </figcaption></figure>
 </div>
@@ -1828,23 +1861,32 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       </h2>
 <p id="section-8-1">The following topics not addressed in this version of the document are possible areas for the future study:<a href="#section-8-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-8-2.1">Extensibility of the OETP Disclosure Format.<a href="#section-8-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-8-2.1">
+          <p id="section-8-2.1.1">Extensibility of the OETP Disclosure Format.<a href="#section-8-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.2">Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree<a href="#section-8-2.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.2">
+          <p id="section-8-2.2.1">Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree<a href="#section-8-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.3">Disclosure Chaining mechanisms and various use-cases.<a href="#section-8-2.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.3">
+          <p id="section-8-2.3.1">Disclosure Chaining mechanisms and various use-cases.<a href="#section-8-2.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.4">Typical scenarios and templates for Disclosure submissions.<a href="#section-8-2.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.4">
+          <p id="section-8-2.4.1">Typical scenarios and templates for Disclosure submissions.<a href="#section-8-2.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.5">Mapping of the regulatory requirements and future Disclosure elements.<a href="#section-8-2.5" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.5">
+          <p id="section-8-2.5.1">Mapping of the regulatory requirements and future Disclosure elements.<a href="#section-8-2.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.6">Standardizing Privacy Disclosure and PII data-collection practices.<a href="#section-8-2.6" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.6">
+          <p id="section-8-2.6.1">Standardizing Privacy Disclosure and PII data-collection practices.<a href="#section-8-2.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.7">Enhancing Label accessibility with ARIA W3C Recommendation and other approaches.<a href="#section-8-2.7" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.7">
+          <p id="section-8-2.7.1">Enhancing Label accessibility with ARIA W3C Recommendation and other approaches.<a href="#section-8-2.7.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.8">Use of the OETP Disclosure in the ADM explainability (XAI).<a href="#section-8-2.8" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.8">
+          <p id="section-8-2.8.1">Use of the OETP Disclosure in the ADM explainability (XAI).<a href="#section-8-2.8.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-8-2.9">Disclosure formats for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.<a href="#section-8-2.9" class="pilcrow">¶</a>
+        <li class="normal" id="section-8-2.9">
+          <p id="section-8-2.9.1">Disclosure formats for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.<a href="#section-8-2.9.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -1853,6 +1895,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-references">
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
 <section id="section-9.1">
         <h3 id="name-normative-references">
 <a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
@@ -1868,6 +1911,8 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
+<div id="sec-informative-references">
 <section id="section-9.2">
         <h3 id="name-informative-references">
 <a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
@@ -1887,6 +1932,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
 </section>
 <div id="appendix">
 <section id="appendix-A">
@@ -1905,7 +1951,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#appendix-A.1.1" class="section-number selfRef">A.1.1. </a><a href="#name-creation-of-disclosure-2" class="section-name selfRef">Creation of Disclosure</a>
           </h4>
 <span id="name-creation-of-the-disclosure"></span><div id="_figure-disclosure-creation">
-<figure id="figure-2">
+<figure id="figure-4">
             <div class="lang-PUML sourcecode" id="appendix-A.1.1-1.1">
 <pre>
 @startuml
@@ -1938,7 +1984,7 @@ DB-up-&gt;(Chaining)
 @enduml
 </pre>
 </div>
-<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
 <a href="#name-creation-of-the-disclosure" class="selfRef">Creation of the Disclosure</a>
             </figcaption></figure>
 </div>
@@ -1950,7 +1996,7 @@ DB-up-&gt;(Chaining)
 <a href="#appendix-A.1.2" class="section-number selfRef">A.1.2. </a><a href="#name-basic-disclosure-submission" class="section-name selfRef">Basic Disclosure Submission</a>
           </h4>
 <span id="name-basic-disclosure-submission-2"></span><div id="_figure-disclosure-submission-basic">
-<figure id="figure-3">
+<figure id="figure-5">
             <div class="lang-PUML sourcecode" id="appendix-A.1.2-1.1">
 <pre>
 @startuml
@@ -1977,7 +2023,7 @@ Vendor &lt;-- ID: OETP Disclosure File
 @enduml
 </pre>
 </div>
-<figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
+<figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
 <a href="#name-basic-disclosure-submission-2" class="selfRef">Basic Disclosure Submission</a>
             </figcaption></figure>
 </div>
@@ -1989,7 +2035,7 @@ Vendor &lt;-- ID: OETP Disclosure File
 <a href="#appendix-A.1.3" class="section-number selfRef">A.1.3. </a><a href="#name-progressive-verification-sc" class="section-name selfRef">Progressive Verification Scheme for Disclosures</a>
           </h4>
 <span id="name-progressive-verification-sch"></span><div id="_figure-disclosure-progressive-verification">
-<figure id="figure-4">
+<figure id="figure-6">
             <div class="lang-PUML sourcecode" id="appendix-A.1.3-1.1">
 <pre>
 @startuml
@@ -2021,7 +2067,7 @@ User &lt;-- Vendor: Service Response
 @enduml
 </pre>
 </div>
-<figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
+<figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
 <a href="#name-progressive-verification-sch" class="selfRef">Progressive Verification Scheme for Disclosures</a>
             </figcaption></figure>
 </div>
@@ -2033,7 +2079,7 @@ User &lt;-- Vendor: Service Response
 <a href="#appendix-A.1.4" class="section-number selfRef">A.1.4. </a><a href="#name-disclosure-chaining-request" class="section-name selfRef">Disclosure Chaining: Request-Response</a>
           </h4>
 <span id="name-disclosure-chaining-request-"></span><div id="_figure-disclosure-chaining-request">
-<figure id="figure-5">
+<figure id="figure-7">
             <div class="lang-PUML sourcecode" id="appendix-A.1.4-1.1">
 <pre>
 @startuml
@@ -2069,7 +2115,7 @@ stop
 @enduml
 </pre>
 </div>
-<figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
+<figcaption><a href="#figure-7" class="selfRef">Figure 7</a>:
 <a href="#name-disclosure-chaining-request-" class="selfRef">Disclosure Chaining: Request-Response</a>
             </figcaption></figure>
 </div>
@@ -2081,7 +2127,7 @@ stop
 <a href="#appendix-A.1.5" class="section-number selfRef">A.1.5. </a><a href="#name-disclosure-chaining-level-o" class="section-name selfRef">Disclosure Chaining: Level Order Traversal</a>
           </h4>
 <span id="name-disclosure-chaining-level-or"></span><div id="_figure-disclosure-chaining-tree">
-<figure id="figure-6">
+<figure id="figure-8">
             <div class="lang-PUML sourcecode" id="appendix-A.1.5-1.1">
 <pre>
 @startmindmap
@@ -2101,7 +2147,7 @@ skinparam roundCorner 15
 @endmindmap
 </pre>
 </div>
-<figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
+<figcaption><a href="#figure-8" class="selfRef">Figure 8</a>:
 <a href="#name-disclosure-chaining-level-or" class="selfRef">Disclosure Chaining: Level Order Traversal</a>
             </figcaption></figure>
 </div>

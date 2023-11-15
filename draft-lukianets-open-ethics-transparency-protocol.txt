@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                                21 May 2023
-Expires: 22 November 2023
+Intended status: Experimental                           15 November 2023
+Expires: 18 May 2024
 
 
                    Open Ethics Transparency Protocol
@@ -41,7 +41,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 November 2023.
+   This Internet-Draft will expire on 18 May 2024.
 
 Copyright Notice
 
@@ -243,7 +243,7 @@ Table of Contents
    the Suppliers' Disclosures, Signature of the disclosed information,
    and the delivery part (II) that first checks that the Disclosure is
    Valid, and then that the information specified in it is Verified by
-   the third-parties.  Figure 2 shows disclosure creation steps.
+   the third-parties.  Figure 4 shows disclosure creation steps.
 
 4.1.  Creation of Disclosure
 
@@ -254,7 +254,7 @@ Table of Contents
    collection information about the Product.  The information about the
    end-point URL, as well as a contact email address, MUST be specified.
    Disclosure MAY also be created in a fully automated way as a part of
-   the CI/CD DevOps pipeline.  Figure 3 shows basic disclosure
+   the CI/CD DevOps pipeline.  Figure 5 shows basic disclosure
    submission process.
 
 4.1.1.  Cryptographic Signature
@@ -327,7 +327,45 @@ Table of Contents
    Accessibility of the Labels for the visually impaired Users SHOULD be
    considered.  The OETP Processing system MUST provide alternative
    forms of the Label so that text-to-speech tools could be used to
-   narrate the Label.
+   narrate the Label without the lost of meaning.
+
+   1) A Label MUST contain a title.  Title could be either marked by the
+   aria-label attribute for the narration software or be labeled by
+   another content tag(s) present via aria-labelledby attribute,
+   pointing to the ID(s) describing the label content.
+
+   <!-- Open Ethics Label snippet: visible content -->
+   <a href="https://openethics.ai/label" target="_blank">
+       <div id="label" aria-label="Open Ethics Label">
+           <img src="/src/images/Open Ethics logo.svg" class="oesign svg" height="30" alt="Open Ethics Logo" role="img" aria-hidden="true">
+           <!-- Dynamic Content of the Open Ethics Label goes here -->
+       </div>
+   </a>
+
+                  Figure 1: Example Label Snippet Content
+
+   2) Every icon that is present in the visual Label MUST contain a
+   title, describing the property illustrated by the icon.  A more
+   extended description MAY be provided when necessary.  The following
+   patterns are suggested:
+
+   *  Pattern for images embedded using SVG tags: <img> + role="img" +
+      alt="[title text here]" OR <img> + role="img" + aria-label="[title
+      text here]"
+
+   *  Pattern for images embedded using IMG tags: <svg> + role="img" +
+      <title> + <desc> + aria-labelledby="[ID]"
+
+   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="iconOpenSourceCodeTitle iconOpenSourceCodeDescription">
+   <title id="iconOpenSourceCodeTitle">Algorithms and code libraries: Open Source Code</title>
+   <desc id="iconOpenSourceCodeDescription">This product/component has disclosed that it mainly uses the Open Source Code as a part of its codebase.</desc>
+   <circle cx="8" cy="8" r="7" fill="#FFFFFF" class="branding-accent" />
+   <path d="M10.56 4.83221C9.70667 4.08053 8.64 3.75839 7.46667 3.97315C5.44 4.18792 3.84 6.01342 3.84 8.16107V8.26845C3.84 8.37584 3.84 8.48322 3.84 8.5906C3.94666 9.98658 4.8 11.1678 6.08 11.9195C6.4 11.1678 6.61333 10.5235 6.82667 9.87919C6.18667 9.44966 5.86667 8.80537 5.86667 8.05369C5.86667 7.51678 6.08 7.08725 6.4 6.7651C7.14667 6.01342 8.21333 5.79866 9.06667 6.33557C9.81333 6.7651 10.1333 7.51678 10.1333 8.37584C10.0267 9.02013 9.70667 9.55704 9.17333 9.87919C9.38667 10.5235 9.70667 11.1678 9.92 11.9195C10.4533 11.5973 10.9867 11.1678 11.4133 10.6309C12.0533 9.77181 12.2667 8.69798 12.16 7.62416C12.0533 6.55033 11.52 5.47651 10.56 4.83221Z" fill="#333333" class="branding-main" />
+   <path d="M8 0C3.62667 0 0 3.54362 0 7.94631C0 12.349 3.62667 16 8 16C12.3733 16 16 12.4564 16 7.94631C16 3.43624 12.3733 0 8 0ZM9.92 12.8859C9.81333 12.8859 9.70667 12.9933 9.49333 12.8859C9.38667 12.8859 9.28 12.7785 9.17333 12.5638L8.10667 9.77181C8.10667 9.55705 8.21333 9.34228 8.42667 9.2349C8.85333 9.02013 9.06667 8.80537 9.17333 8.37584C9.17333 8.05369 9.17333 7.73154 8.96 7.51678C8.74667 7.19463 8.42667 6.97987 8.10667 6.97987C7.46667 6.97987 6.93333 7.30201 6.93333 7.94631C6.82667 8.48322 7.04 8.91275 7.57333 9.2349C7.89333 9.34228 8 9.55705 7.89333 9.87919L6.82667 12.6711C6.72 12.8859 6.61333 12.8859 6.61333 12.9933C6.61333 12.9933 6.50667 12.9933 6.4 12.9933C6.29333 12.9933 6.29333 12.9933 6.18667 12.9933C5.01333 12.5638 4.05333 11.7047 3.52 10.5235C2.98667 9.55705 2.88 8.80537 2.88 8.37584V8.26846C2.88 5.58389 4.8 3.43624 7.36 3.11409C10.1333 2.68456 12.5867 4.61745 13.12 7.30201C13.5467 9.66443 12.2667 12.0268 9.92 12.8859Z" fill="#333333" class="branding-main" />
+   </svg>
+
+         Figure 2: Example of the SVG icon with ARIA attributes for
+                               Accessibility
 
 4.3.  Verification and Validation of Disclosure
 
@@ -378,7 +416,7 @@ Table of Contents
    The Progressive Verification applies to a whole Disclosure, or to
    specific elements of the Disclosure.
 
-   Figure 4 displays a general scheme for Disclosure requests and
+   Figure 6 displays a general scheme for Disclosure requests and
    responses.
 
    The following elements MAY serve as sources for various kinds of
@@ -456,7 +494,7 @@ Table of Contents
    Disclosure request, the OETP Processing system MUST specify which
    Components have Disclosures and which don't have Disclosures.
 
-   Figure 5 shows the process of how Disclosure Chaining requests and
+   Figure 7 shows the process of how Disclosure Chaining requests and
    responses happen.
 
 4.4.3.  Disclosure Chaining
@@ -473,7 +511,7 @@ Table of Contents
    another, representing the scope of the Data Processing by the
    Component.
 
-   Figure 6 displays the order of the Disclosure Chaining with Level
+   Figure 8 displays the order of the Disclosure Chaining with Level
    Order Tree Traversal algorithm.
 
 4.4.4.  Generation of the Composite Disclosure
@@ -545,7 +583,7 @@ Table of Contents
        }
    }
 
-                   Figure 1: Example OETP Disclosure File
+                   Figure 3: Example OETP Disclosure File
 
 6.  Security Considerations
 
@@ -681,7 +719,7 @@ A.1.1.  Creation of Disclosure
    (Verification)->D
    @enduml
 
-                    Figure 2: Creation of the Disclosure
+                    Figure 4: Creation of the Disclosure
 
 A.1.2.  Basic Disclosure Submission
 
@@ -708,7 +746,7 @@ A.1.2.  Basic Disclosure Submission
    Vendor <-- ID: OETP Disclosure File
    @enduml
 
-                   Figure 3: Basic Disclosure Submission
+                   Figure 5: Basic Disclosure Submission
 
 A.1.3.  Progressive Verification Scheme for Disclosures
 
@@ -740,7 +778,7 @@ A.1.3.  Progressive Verification Scheme for Disclosures
    User <-- Vendor: Service Response
    @enduml
 
-         Figure 4: Progressive Verification Scheme for Disclosures
+         Figure 6: Progressive Verification Scheme for Disclosures
 
 A.1.4.  Disclosure Chaining: Request-Response
 
@@ -776,7 +814,7 @@ A.1.4.  Disclosure Chaining: Request-Response
 
    @enduml
 
-              Figure 5: Disclosure Chaining: Request-Response
+              Figure 7: Disclosure Chaining: Request-Response
 
 A.1.5.  Disclosure Chaining: Level Order Traversal
 
@@ -796,7 +834,7 @@ A.1.5.  Disclosure Chaining: Level Order Traversal
                    * 6 (Component)
    @endmindmap
 
-            Figure 6: Disclosure Chaining: Level Order Traversal
+            Figure 8: Disclosure Chaining: Level Order Traversal
 
 Acknowledgments
 
