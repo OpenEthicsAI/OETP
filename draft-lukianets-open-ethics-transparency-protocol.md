@@ -168,8 +168,24 @@ A Vendor SHOULD place a visual Label generated as a result of the Disclosure pro
 Based on the Verification performed for the OETP Disclosure file, the labels MAY include Conformity assessment marks, Certification marks, as well as marks showing adherence to certain standards. These marks MAY be generated and displayed automatically based on the Verification Proofs.
 
 ### Accessibility considerations
-Accessibility of the Labels for the visually impaired Users SHOULD be considered. The OETP Processing system MUST provide alternative forms of the Label so that text-to-speech tools could be used to narrate the Label.
+Accessibility of the Labels for the visually impaired Users SHOULD be considered. The OETP Processing system MUST provide alternative forms of the Label so that text-to-speech tools could be used to narrate the Label without the lost of meaning.
 
+1) A Label MUST contain a title. Title could be either marked by the `aria-label` attribute for the narration software or be labeled by another content tag(s) present via `aria-labelledby` attribute, pointing to the ID(s) describing the label content.
+
+~~~~ HTML
+{::include examples/basic disclosure/oel snippet.html}
+~~~~
+{: #figure-example-oel-snippet title="Example Label Snippet Content"}
+
+2) Every icon that is present in the visual Label MUST contain a title, describing the property illustrated by the icon. A more extended description MAY be provided when necessary. The following patterns are suggested:
+
+- Pattern for images embedded using SVG tags: `<img> + role="img" + alt="[title text here]"` OR `<img> + role="img" + aria-label="[title text here]"`
+- Pattern for images embedded using IMG tags: `<svg> + role="img" + <title> + <desc> + aria-labelledby="[ID]"`
+
+~~~~ XML
+{::include examples/basic disclosure/label-source-open.svg}
+~~~~
+{: #figure-example-oel-icon-label-source-open title="Example of the SVG icon with ARIA attributes for Accessibility"}
 
 ## Verification and Validation of Disclosure
 
