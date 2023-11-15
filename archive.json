@@ -1,0 +1,214 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2021-11-25T00:30:25.796752+00:00",
+  "repo": "OpenEthicsAI/OETP",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 5,
+      "id": "I_kwDOEzZp0M4_QD3m",
+      "title": "Refactor repository for I-D submission",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/5",
+      "state": "CLOSED",
+      "author": "OpenEthicsAI",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "documentation"
+      ],
+      "body": "- [x] update license files\r\n- [x] add draft-*.md\r\n- [x] generate GitHub pages\r\n- [x] rework diagrams",
+      "createdAt": "2021-11-23T11:52:05Z",
+      "updatedAt": "2021-11-24T08:55:45Z",
+      "closedAt": "2021-11-24T08:55:45Z",
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOEzZp0M4uhFwA",
+      "title": "Verification update v2",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/1",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- [x] Added **Progressive Verification** to the Protocol model\r\n- [x] Added PlantUML deployment and sequence diagrams for\r\n   - [x] Basic Disclosure Submission\r\n   - [x] Progressive Verification with multiple Auditors\r\n   - [x] Disclosure Creation Process\r\n- [x] Added/Updated **Terminology** sections\r\n- [x] Additionally\r\n    - [x] Basic typo correction\r\n    - [x] Reindexing of the document\r\n    - [x] Added **How to contribute?** to the README.md section\r\n    - [x] Improved readability of Example Disclosure File with YAML syntax highlighting ",
+      "createdAt": "2021-11-15T08:31:24Z",
+      "updatedAt": "2021-11-15T08:36:13Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "e5ce7b44499fae1ebf2c4dadd656ab94ca7e6bc7",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "verification-update-v2",
+      "headRefOid": "754475539a72337505c4f8d4fe9cafe787ac74b8",
+      "closedAt": "2021-11-15T08:34:18Z",
+      "mergedAt": "2021-11-15T08:34:18Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "de8afdb299f98de2acf828c82ff5607223cf6721"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOEzZp0M4utqhr",
+      "title": "Disclosure chaining v1",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/2",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- [x] Added Description for the Disclosure Chaining process\r\n- [x] Added Disclosure Chaining Diagram\r\n- [x] Added Open Supplier Policy requirements\r\n     - [x] First-party Components\r\n     - [x] Third-party Components\r\n- [x] Additionally\r\n     - [x] Basic typo correction\r\n     - [x] Alt descriptions",
+      "createdAt": "2021-11-18T13:04:03Z",
+      "updatedAt": "2021-11-18T13:05:18Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "de8afdb299f98de2acf828c82ff5607223cf6721",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "disclosure-chaining-v1",
+      "headRefOid": "b6c13c4fe39e222540fce9fd050b4c30e0f55d99",
+      "closedAt": "2021-11-18T13:05:07Z",
+      "mergedAt": "2021-11-18T13:05:07Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "f252fa3449a050541911c6248124fa0e7f941104"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOEzZp0M4uuDVo",
+      "title": "Basic typo corection and Chaining Request diagrams",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/3",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- [x] Chaining Requests diagram\r\n- [x] Disclosure Tree terminology\r\n- [x] Aditionally\r\n    - [x] Basic Typo correction",
+      "createdAt": "2021-11-18T14:54:33Z",
+      "updatedAt": "2021-11-18T14:55:44Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "f252fa3449a050541911c6248124fa0e7f941104",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "component-disclosure-v2",
+      "headRefOid": "7937384ce7be5c608b12e5e96fab9d35920326d7",
+      "closedAt": "2021-11-18T14:55:40Z",
+      "mergedAt": "2021-11-18T14:55:40Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "fb01be875f50408a60d33480517a3eec5f02db80"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOEzZp0M4uuPCk",
+      "title": "Generation of the Composite Disclosure",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/4",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- [x] Suggested a mechanism for Generation of the Composite Disclosure\n- [x] Identified new are od study",
+      "createdAt": "2021-11-18T15:43:56Z",
+      "updatedAt": "2021-11-18T15:46:01Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "fb01be875f50408a60d33480517a3eec5f02db80",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "composite-disclosure-v1",
+      "headRefOid": "8ab2e2b9f90a508e0b2e0c5a3f420d5746a0211d",
+      "closedAt": "2021-11-18T15:45:57Z",
+      "mergedAt": "2021-11-18T15:45:57Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "711c6587757fd9736efd81bff05fdac44248b77e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOEzZp0M4u86d3",
+      "title": "Issue 5 refactor repository for Internet Draft submission",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/6",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- [x] Addressed the #5 \r\n- [x] Additionally\r\n    - [x] Added Accessibility considerations\r\n    - [x] Added Areas for Future Study",
+      "createdAt": "2021-11-24T08:53:50Z",
+      "updatedAt": "2021-11-24T08:55:13Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "711c6587757fd9736efd81bff05fdac44248b77e",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "issue-5-refactor-repository-for-i-d-submission",
+      "headRefOid": "de4059f089ffc9c4753f49b8da44425dea545466",
+      "closedAt": "2021-11-24T08:55:01Z",
+      "mergedAt": "2021-11-24T08:55:01Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "9bb24e7a5524c4c5969f5fa6c2ba4b0b2f3708b6"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
