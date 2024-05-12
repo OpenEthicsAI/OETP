@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                           15 November 2023
-Expires: 18 May 2024
+Intended status: Experimental                                12 May 2024
+Expires: 13 November 2024
 
 
                    Open Ethics Transparency Protocol
@@ -41,11 +41,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 May 2024.
+   This Internet-Draft will expire on 13 November 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -654,6 +654,9 @@ Table of Contents
       Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs),
       Attention Mechanisms, Transformer-based Models.
 
+   *  Use of the .well-known [RFC8615] location to store the
+      transparency Disclosure
+
 9.  References
 
 9.1.  Normative References
@@ -677,6 +680,10 @@ Table of Contents
               Interchange Format", STD 90, RFC 8259,
               DOI 10.17487/RFC8259, December 2017,
               <https://www.rfc-editor.org/rfc/rfc8259>.
+
+   [RFC8615]  Nottingham, M., "Well-Known Uniform Resource Identifiers
+              (URIs)", RFC 8615, DOI 10.17487/RFC8615, May 2019,
+              <https://www.rfc-editor.org/rfc/rfc8615>.
 
    [SPDX]     The Linux Foundation, "SPDX Specification – Version 2.2",
               2020, <https://spdx.dev/>.
