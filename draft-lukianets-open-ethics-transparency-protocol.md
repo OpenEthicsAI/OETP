@@ -45,7 +45,7 @@ informative:
 
 --- abstract
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.
 
 --- middle
 
@@ -61,7 +61,7 @@ OETP provides facilities for:
 * **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.
 * **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.
 
 # Requirement Levels
 
@@ -77,6 +77,12 @@ Disclosure Feed:
 
 Disclosure Identity Provider:
 : The automated Disclosure processing is enabled by requests to both the Open Ethics Disclosure database powered by Disclosure Identity Providers (DIP) and the Product's OETP Disclosure file, stored in the product's website root following OETP specification. DIP serves as a service point to generate and retrieve generated disclosures.
+
+OETP Disclosure Schema:
+: A predefined structure for Disclosure, supplied in the form of the JSON schema.
+
+Transparency Manifest:
+: A JSON file, typically named `OETP.json` or `transparency.json`, storing the Disclosure using the defined OETP Disclosure Schema.
 
 Vendor:
 : A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.
@@ -98,9 +104,6 @@ Downstream Component:
 
 Automated Decision-Making (ADM):
 : Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.
-
-OETP Disclosure Format:
-: A machine-readable Disclosure with predefined structure, supplied in the JSON format.
 
 Validation:
 : A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.
@@ -331,7 +334,7 @@ Disclosures MAY be resolved using their URIs. To allow this requirement, the `oe
 
 The following topics not addressed in this version of the document are possible areas for the future study:
 
-* Extensibility of the OETP Disclosure Format.
+* Extensibility of the OETP Disclosure Schema.
 * Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree
 * Disclosure Chaining mechanisms and various use-cases.
 * Typical scenarios and templates for Disclosure submissions.
@@ -339,8 +342,7 @@ The following topics not addressed in this version of the document are possible 
 * Standardizing Privacy Disclosure and PII data-collection practices.
 * Enhancing Label accessibility with ARIA W3C Recommendation and other approaches.
 * Use of the OETP Disclosure in the ADM explainability (XAI).
-* Disclosure formats for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.
-* Use of the `.well-known` {{?RFC8615}} location to store the transparency Disclosure
+* Disclosure Schemas for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.
 
 
 
