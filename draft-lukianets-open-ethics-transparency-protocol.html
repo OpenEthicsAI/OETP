@@ -7,25 +7,24 @@
 <title>Open Ethics Transparency Protocol</title>
 <meta content="Nikita Lukainets" name="author">
 <meta content='
-       The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format. 
+       The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format. 
     ' name="description">
-<meta content="xml2rfc 3.21.0" name="generator">
+<meta content="xml2rfc 3.22.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-lukianets-open-ethics-transparency-protocol-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.21.0
-    Python 3.11.9
+  xml2rfc 3.22.0
+    Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
-    Jinja2 3.1.2
-    lxml 4.9.3
-    platformdirs 4.2.1
+    Jinja2 3.1.4
+    lxml 4.9.4
+    platformdirs 4.2.2
     pycountry 22.3.5
     PyYAML 6.0.1
-    requests 2.31.0
-    setuptools 68.2.2
-    six 1.16.0
+    requests 2.32.3
+    setuptools 69.5.1
     wcwidth 0.2.13
 -->
 <link href="draft-lukianets-open-ethics-transparency-protocol.xml" rel="alternate" type="application/rfc+xml">
@@ -1025,11 +1024,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">OETP</td>
-<td class="right">May 2024</td>
+<td class="right">August 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Lukianets</td>
-<td class="center">Expires 13 November 2024</td>
+<td class="center">Expires 4 February 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1042,12 +1041,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-lukianets-open-ethics-transparency-protocol-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-05-12" class="published">12 May 2024</time>
+<time datetime="2024-08-03" class="published">3 August 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-11-13">13 November 2024</time></dd>
+<dd class="expires"><time datetime="2025-02-04">4 February 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1060,7 +1059,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Open Ethics Transparency Protocol</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1081,7 +1080,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 13 November 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 4 February 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1285,7 +1284,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
           <p id="section-1-3.5.1"><strong>Labeling and certification</strong> : Mapping to existing and future regulatory initiatives and standards.<a href="#section-1-3.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-1-4">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-4">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="requirement-levels">
@@ -1320,79 +1319,84 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <p id="section-3-1.6.1">The automated Disclosure processing is enabled by requests to both the Open Ethics Disclosure database powered by Disclosure Identity Providers (DIP) and the Product's OETP Disclosure file, stored in the product's website root following OETP specification. DIP serves as a service point to generate and retrieve generated disclosures.<a href="#section-3-1.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.7">Vendor:</dt>
+<dt id="section-3-1.7">OETP Disclosure Schema:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.8">
-          <p id="section-3-1.8.1">A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.<a href="#section-3-1.8.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.8.1">A predefined structure for Disclosure, supplied in the form of the JSON schema.<a href="#section-3-1.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.9">Integrator:</dt>
+<dt id="section-3-1.9">Transparency Manifest:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.10">
-          <p id="section-3-1.10.1">A legal person (an individual developer or an organization) that deploys technology-powered services to the end-users based on Product(s) from third-party Vendors.<a href="#section-3-1.10.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.10.1">A JSON file, typically named <code>OETP.json</code> or <code>transparency.json</code>, storing the Disclosure using the defined OETP Disclosure Schema.<a href="#section-3-1.10.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.11">Product:</dt>
+<dt id="section-3-1.11">Vendor:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.12">
-          <p id="section-3-1.12.1">An IT system in the form of software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.<a href="#section-3-1.12.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.12.1">A legal person (an individual developer or an organization) that owns one or several end-user Products, or acts as a Supplier and provides Components for other Vendors.<a href="#section-3-1.12.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.13">Component:</dt>
+<dt id="section-3-1.13">Integrator:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.14">
-          <p id="section-3-1.14.1">An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.<a href="#section-3-1.14.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.14.1">A legal person (an individual developer or an organization) that deploys technology-powered services to the end-users based on Product(s) from third-party Vendors.<a href="#section-3-1.14.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.15">Upstream Component:</dt>
+<dt id="section-3-1.15">Product:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.16">
-          <p id="section-3-1.16.1">A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.<a href="#section-3-1.16.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.16.1">An IT system in the form of software, software as a service system, application, software component, application programming interface, or a physically embodied automated decision-making agent.<a href="#section-3-1.16.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.17">Downstream Component:</dt>
+<dt id="section-3-1.17">Component:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.18">
-          <p id="section-3-1.18.1">A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.<a href="#section-3-1.18.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.18.1">An IT system supplied by Vendor and integrated/embedded into end-user Products. Components themselves do not necessarily interface with end-users.<a href="#section-3-1.18.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.19">Automated Decision-Making (ADM):</dt>
+<dt id="section-3-1.19">Upstream Component:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.20">
-          <p id="section-3-1.20.1">Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.<a href="#section-3-1.20.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.20.1">A Component that sends its outputs to the Product Downstream in the data processing chain. Disclosure for the Upstream Component is represented as a Child relative to the Disclosure node of the Downstream Product.<a href="#section-3-1.20.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.21">OETP Disclosure Format:</dt>
+<dt id="section-3-1.21">Downstream Component:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.22">
-          <p id="section-3-1.22.1">A machine-readable Disclosure with predefined structure, supplied in the JSON format.<a href="#section-3-1.22.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.22.1">A Component that receives inputs from the Components Upstream in the data processing chain. Disclosure for the Downstream Component is represented as a Parent relative to the Disclosure node of the Upstream Component.<a href="#section-3-1.22.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.23">Validation:</dt>
+<dt id="section-3-1.23">Automated Decision-Making (ADM):</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.24">
-          <p id="section-3-1.24.1">A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.<a href="#section-3-1.24.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.24.1">Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data.<a href="#section-3-1.24.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.25">Auditor:</dt>
+<dt id="section-3-1.25">Validation:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.26">
-          <p id="section-3-1.26.1">A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.<a href="#section-3-1.26.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.26.1">A sequence of automated software-based checks to control validity and security elements in the OETP Disclosure.<a href="#section-3-1.26.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.27">Auditing software:</dt>
+<dt id="section-3-1.27">Auditor:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.28">
-          <p id="section-3-1.28.1">An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.<a href="#section-3-1.28.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.28.1">A third-party legal person trusted to perform Verification checks and to issue Verification Proofs.<a href="#section-3-1.28.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.29">Verification:</dt>
+<dt id="section-3-1.29">Auditing software:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.30">
-          <p id="section-3-1.30.1">A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.<a href="#section-3-1.30.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.30.1">An automated software-based tool authorized to perform Verification checks and to issue Verification Proofs.<a href="#section-3-1.30.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.31">Verification Proof:</dt>
+<dt id="section-3-1.31">Verification:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.32">
-          <p id="section-3-1.32.1">A result of the formal Disclosure Verification procedure presented to a requestor.<a href="#section-3-1.32.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.32.1">A procedure to control the correspondence of the elements in the OETP Disclosure and the actual data processing and data collection practices of the Vendors.<a href="#section-3-1.32.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.33">Chaining:</dt>
+<dt id="section-3-1.33">Verification Proof:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.34">
-          <p id="section-3-1.34.1">A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.<a href="#section-3-1.34.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.34.1">A result of the formal Disclosure Verification procedure presented to a requestor.<a href="#section-3-1.34.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-3-1.35">Label:</dt>
+<dt id="section-3-1.35">Chaining:</dt>
         <dd style="margin-left: 1.5em" id="section-3-1.36">
-          <p id="section-3-1.36.1">User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.<a href="#section-3-1.36.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.36.1">A process of combining Disclosures of individual Components into a composite high-level Disclosure for a Product.<a href="#section-3-1.36.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-3-1.37">Label:</dt>
+        <dd style="margin-left: 1.5em" id="section-3-1.38">
+          <p id="section-3-1.38.1">User-facing graphical illustrations and textual descriptions of the Product that facilitate understanding of the values and risks the Product carries.<a href="#section-3-1.38.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
@@ -1862,7 +1866,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <p id="section-8-1">The following topics not addressed in this version of the document are possible areas for the future study:<a href="#section-8-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-8-2.1">
-          <p id="section-8-2.1.1">Extensibility of the OETP Disclosure Format.<a href="#section-8-2.1.1" class="pilcrow">¶</a></p>
+          <p id="section-8-2.1.1">Extensibility of the OETP Disclosure Schema.<a href="#section-8-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-8-2.2">
           <p id="section-8-2.2.1">Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree<a href="#section-8-2.2.1" class="pilcrow">¶</a></p>
@@ -1886,14 +1890,12 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <p id="section-8-2.8.1">Use of the OETP Disclosure in the ADM explainability (XAI).<a href="#section-8-2.8.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-8-2.9">
-          <p id="section-8-2.9.1">Disclosure formats for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.<a href="#section-8-2.9.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-8-2.10">
-          <p id="section-8-2.10.1">Use of the <code>.well-known</code> <span>[<a href="#RFC8615" class="cite xref">RFC8615</a>]</span> location to store the transparency Disclosure<a href="#section-8-2.10.1" class="pilcrow">¶</a></p>
+          <p id="section-8-2.9.1">Disclosure Schemas for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.<a href="#section-8-2.9.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
 </div>
+<div id="sec-combined-references">
 <section id="section-9">
       <h2 id="name-references">
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-references" class="section-name selfRef">References</a>
@@ -1929,10 +1931,6 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <dd>
 <span class="refAuthor">Bray, T., Ed.</span>, <span class="refTitle">"The JavaScript Object Notation (JSON) Data Interchange Format"</span>, <span class="seriesInfo">STD 90</span>, <span class="seriesInfo">RFC 8259</span>, <span class="seriesInfo">DOI 10.17487/RFC8259</span>, <time datetime="2017-12" class="refDate">December 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC8615">[RFC8615]</dt>
-        <dd>
-<span class="refAuthor">Nottingham, M.</span>, <span class="refTitle">"Well-Known Uniform Resource Identifiers (URIs)"</span>, <span class="seriesInfo">RFC 8615</span>, <span class="seriesInfo">DOI 10.17487/RFC8615</span>, <time datetime="2019-05" class="refDate">May 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8615">https://www.rfc-editor.org/rfc/rfc8615</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="SPDX">[SPDX]</dt>
       <dd>
 <span class="refAuthor">The Linux Foundation</span>, <span class="refTitle">"SPDX Specification – Version 2.2"</span>, <time datetime="2020" class="refDate">2020</time>, <span>&lt;<a href="https://spdx.dev/">https://spdx.dev/</a>&gt;</span>. </dd>
@@ -1941,6 +1939,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </section>
 </div>
 </section>
+</div>
 <div id="appendix">
 <section id="appendix-A">
       <h2 id="name-appendix">
