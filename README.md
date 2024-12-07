@@ -4,20 +4,23 @@
 
 This repository contains useful links, figures, and RFC-formatted version of The Open Ethics Transparency Protocol (OETP).
 
-Structure: 
+Structure:
 
-*/docs/* - Documentation.
+`/docs/` - Documentation.
 
-*/examples/* - Examples of disclosures and associated labels.
+`/examples/` - Examples of disclosures and associated labels.
 
-*/templates/* - Current version of the Disclosure templates.
+`/templates/` - Current version of the Disclosure templates.
+
+`/schema/` - OETP Disclosure Schema in JSON with automated deployment to `https://openethics.ai/schema/oetp/` vis GitHub action.
 
 ## Contents <!-- omit in toc -->
 - [Introduction](#introduction)
 - [Key Elements](#key-elements)
+  - [Schema](#schema)
   - [Basic Disclosure Submission](#basic-disclosure-submission)
   - [Progressive Verification](#progressive-verification)
-  - [Request for Supplier&#39;s Disclosures](#request-for-suppliers-disclosures)
+  - [Request for Supplier's Disclosures](#request-for-suppliers-disclosures)
   - [Disclosure Chaining: Level Order Traversal](#disclosure-chaining-level-order-traversal)
 - [Links](#links)
 - [How to contribute?](#how-to-contribute)
@@ -38,6 +41,10 @@ OETP provides facilities for:
 The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Format is an extensible JSON-based format.
 
 ## Key Elements
+
+### Schema
+Current schema (v0.9.3): `schema/oetp.disclosure.schema-v0.9.3.json`
+Next version schema: `schema/oetp.disclosure.schema-vNext.json`
 
 ### Basic Disclosure Submission
 <img src="docs/diagrams/images/disclosure-submission-basic/disclosure-submission-basic.svg" alt="Basic Disclosure Submission">
