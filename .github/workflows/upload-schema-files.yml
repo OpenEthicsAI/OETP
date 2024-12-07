@@ -17,3 +17,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         local-dir: ./schema/
+        dangerous-clean-slate: false
