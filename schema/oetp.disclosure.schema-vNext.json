@@ -1,5 +1,5 @@
 {
-	"$id": "https://openethics.ai/schema/oetp.disclosure.schema-vNext.json",
+	"$id": "https://openethics.ai/schema/oetp/oetp.disclosure.schema-vNext.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "JSON Schema for a Transparency Disclosure",
 	"description": "JSON Schema for a Transparency Disclosure v1.0.0 Beta",
