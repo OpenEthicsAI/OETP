@@ -1,0 +1,340 @@
+{
+	"$id": "https://openethics.ai/schema/oetp.disclosure.schema-vNext.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "JSON Schema for a Transparency Disclosure",
+	"description": "JSON Schema for a Transparency Disclosure v1.0.0 Beta",
+	"type": "object",
+	"required": ["schema", "snapshot"],
+	"properties": {
+		"schema": {
+			"title": "The metadata properties about the schema",
+			"description": "The metadata properties about the schema, filled in automatically. This element will be deprecated in the next version of the schema because the disclosure manifest will have a direct reference to the Schema file.",
+			"type": "object",
+			"required": ["name", "version", "integrity"],
+			"properties": {
+				"name": {
+					"title": "The schema name",
+					"description": "The name of the schema",
+					"type": "string",
+					"default": "Open Ethics Transparency Protocol"
+				},
+				"version": {
+					"title": "The schema version",
+					"type": "string",
+					"description": "The version of the schema",
+					"default": "0.9.3 RFC"
+				},
+				"integrity": {
+					"title": "The integrity hash",
+					"type": "string",
+					"description": "The integrity hash is generated upon submission based on the serialized JSON of the submitted disclosure. The integrity hash is used to validate the disclosure and link the disclosure to the label via the HTML tag attribute."
+				}
+			}
+		},
+		"snapshot": {
+			"title": "The snapshot of the disclosure data",
+			"description": "The snapshot of the disclosure data",
+			"type": "object",
+			"required": ["product", "timestamp", "generator", "label"],
+			"properties": {
+				"product": {
+					"title": "The product schema",
+					"description": "The information about the product",
+					"type": "object",
+					"required": ["url"],
+					"properties": {
+						"url": {
+							"title": "The url of the product",
+							"description": "The url of the product",
+							"type": "string"
+						},
+						"description": {
+							"title": "The description of the product",
+							"description": "The description of the product",
+							"type": "string"
+						}
+					}
+				},
+				"timestamp": {
+					"title": "UTC timestamp",
+					"description": "The UTC timestamp of the disclosure",
+					"type": "number"
+				},
+				"generator": {
+					"title": "The generator schema",
+					"description": "The information about the schema generator, typically a disclosure provider",
+					"type": "object",
+					"default": {
+						"name": "Open Ethics",
+						"alias": "oe",
+						"type": "root",
+						"website": "https://openethics.ai"
+					},
+					"required": ["name", "alias", "type", "website"],
+					"properties": {
+						"name": {
+							"title": "The name of the disclosure provider",
+							"description": "The name of the disclosure provider",
+							"type": "string"
+						},
+						"alias": {
+							"title": "The alias of the disclosure provider",
+							"description": "The alias of the disclosure provider",
+							"type": "string"
+						},
+						"type": {
+							"title": "The type of the disclosure provider",
+							"description": "The type of the disclosure provider",
+							"type": "string"
+						},
+						"website": {
+							"title": "The website of the disclosure provider",
+							"description": "The website of the disclosure provider",
+							"type": "string"
+						}
+					}
+				},
+				"label": {
+					"title": "The schema of the main elements of the disclosure",
+					"type": "object",
+					"description": "The object with the main elements of the disclosure",
+					"required": ["data", "source", "decision"],
+					"properties": {
+						"data": {
+							"title": "The data and model information",
+							"description": "Please describe your data collection and data labeling practices, or your approach to heuristic in case if you are not using trained models for decision-making",
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"title": "The type Schema",
+									"description": "Training Data Sources: Open Dataset, Proprietary Dataset, Limited Access Dataset, Rule-based heuristic",
+									"type": "string"
+								},
+								"practice": {
+									"title": "The practice Schema",
+									"description": "The description of the training dataset handling and model training",
+									"type": "string"
+								}
+							}
+						},
+						"source": {
+							"title": "The sourcecode Schema",
+							"description": "Please describe choices made for development and for use of existing code libraries",
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"title": "The type Schema",
+									"description": "Code sources: Open Source Code, Proprietary Source Code",
+									"type": "string"
+								},
+								"practice": {
+									"title": "The practice Schema",
+									"description": "The description of the practices of reusing the existing codebases or the information about the principles on which the proprietary code was built, without revealing of the sensitive information or the trade secrets",
+									"type": "string"
+								}
+							}
+						},
+						"decision": {
+							"title": "The decision Schema",
+							"description": "Please describe types of decisions/outputs the system generates and safety measures taken",
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"title": "The type Schema",
+									"description": "Type of Decision Space: Restricted Decision Space, Unrestricted Decision Space",
+									"type": "string"
+								},
+								"practice": {
+									"title": "The practice Schema",
+									"description": "Describe practices and approaches of how the outputs are handled, how the failure modes are defined and how the user will interact with the outputs of the digital product",
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"processing": {
+					"title": "The data processing schema",
+					"description": "Describe your data processing approaches, such as processing and retention of the Personal Data, Sources to external resources such as code, model description, and legal notices, provide clarity on output validation techniques including Human-in-the-Loop",
+					"type": "object",
+					"properties": {
+						"records": {
+							"title": "The list for the personal data records",
+							"description": "The list for the personal data records",
+							"type": "array",
+							"items": {
+								"title": "A personal data record schema",
+								"description": "A personal data record",
+								"type": "object",
+								"required": ["type", "source", "retention", "purpose", "consent", "identifying"],
+								"properties": {
+									"type": {
+										"title": "The type of the personal data record",
+										"description": "The type of the personal data record",
+										"type": "string",
+										"examples": ["Email", "Home Address"]
+									},
+									"source": {
+										"title": "The source of how the data record was obtained",
+										"description": "The source of how the data record was obtained",
+										"type": "string",
+										"examples": ["app"]
+									},
+									"retention": {
+										"title": "The personal data retention information",
+										"description": "The personal data retention information",
+										"type": "string"
+									},
+									"purpose": {
+										"title": "The purpose of the collection of the personal data records",
+										"description": "The purpose of the collection of the personal data records",
+										"type": "string"
+									},
+									"consent": {
+										"title": "The information on whether the consent was obtained directly",
+										"description": "The information on whether the consent was obtained directly",
+										"type": "boolean"
+									},
+									"identifying": {
+										"title": "The information whether the record is identifying (is PII)",
+										"description": "The information whether the record is identifying (is PII)",
+										"type": "boolean"
+									}
+								}
+							}
+						},
+						"source": {
+							"title": "The schema for any additional sources of information",
+							"description": "The list with any additional sources of information",
+							"type": "array",
+							"items": {
+								"title": "A source schema",
+								"description": "A unique source of the additional information",
+								"type": "object",
+								"required": ["type", "url"],
+								"properties": {
+									"type": {
+										"title": "The source type",
+										"description": "The source type",
+										"type": "string"
+									},
+									"url": {
+										"title": "The source url",
+										"description": "The source url",
+										"type": "string"
+									},
+									"comments": {
+										"title": "The comments about the source",
+										"description": "The comments about the source",
+										"type": "string"
+									}
+								}
+							}
+						},
+						"hitl": {
+							"title": "The HITL approaches schema",
+							"description": "A list of the HITL approaches with their descriptions",
+							"type": "array",
+							"items": {
+								"title": "A schema of the HITL approach used",
+								"description": "HITL approaches description",
+								"type": "object",
+								"required": ["type", "flow", "objective"],
+								"properties": {
+									"type": {
+										"title": "The type Schema",
+										"description": "The type of the HITL",
+										"type": "string"
+									},
+									"flow": {
+										"title": "The flow Schema",
+										"description": "The flow of how HITL is brought to the data processing pipeline",
+										"type": "string"
+									},
+									"objective": {
+										"title": "The objective Schema",
+										"description": "The objective of having the HITL",
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"examples": [
+		{
+			"schema": {
+				"name": "Open Ethics Transparency Protocol",
+				"version": "0.9.3 RFC",
+				"integrity": "c805a2906a839add22f0c410aa4b938ce3a1d46c15ca49054350df65bf2ce69e9d9d259134c8ea0ae0729fa2fe05675725221139b39dce724f239ffc408c1143"
+			},
+			"snapshot": {
+				"product": {
+					"url": "testflowerwebsite.com",
+					"description": ""
+				},
+				"timestamp": 1732950913,
+				"generator": {
+					"name": "Open Ethics",
+					"alias": "oe",
+					"type": "root",
+					"website": "https://openethics.ai"
+				},
+				"label": {
+					"data": {
+						"type": "proprietary",
+						"practice": "For a mobile app that detects and categorizes different types of flowers, our data collection practices involve collecting images of flowers from various sources, including user-submitted photos and publicly available datasets, and our data labeling approach involves a combination of human annotation and automated tagging using computer vision algorithms to ensure accurate and diverse labeling.\n\n"
+					},
+					"source": {
+						"type": "open",
+						"practice": "For the flower detection and categorization mobile app, we chose to develop the app using React Native and Expo as our frontend framework, leveraging the existing libraries such as TensorFlow.js and OpenCV.js for image processing and machine learning tasks, and integrating with popular libraries like React Navigation and React Hooks for routing and state management, allowing us to quickly build and deploy a high-quality app with minimal development time and resources."
+					},
+					"decision": {
+						"type": "restricted",
+						"practice": "The flower detection and categorization mobile app generates the following types of decisions/outputs:\n\n- Flower Classification: The app identifies and categorizes the type of flower present in the captured image, providing the user with a list of possible matches, along with their confidence scores.\n- Flower Recognition: The app recognizes the specific species of flower present in the image, allowing users to easily identify and learn about different types of flowers.\n\nThese outputs enable users to efficiently identify and learn about different types of flowers, making the app a valuable tool for botanists, gardeners, and nature enthusiasts."
+					}
+				},
+				"processing": {
+					"records": [
+						{
+							"type": "Email",
+							"source": "app",
+							"retention": "180 days",
+							"purpose": "for authentication",
+							"consent": true,
+							"identifying": true
+						},
+						{
+							"type": "Home Address",
+							"source": "app",
+							"retention": "30 days",
+							"purpose": "Flower shipment",
+							"consent": true,
+							"identifying": true
+						}
+					],
+					"source": [
+						{
+							"type": "Code Repository",
+							"url": "https://github.com/opencv/opencv/tree/4.x",
+							"comments": "Use of Cascade Classifier https://docs.opencv.org/4.x/de/d37/group__objdetect__cascade__classifier.html"
+						}
+					],
+					"hitl": [
+						{
+							"type": "AI component + Expert",
+							"flow": "Humans confirm",
+							"objective": "The app's output is validated through a human-in-the-loop process, where a team of experts manually review and correct the app's classifications to ensure accuracy."
+						}
+					]
+				}
+			}
+		}
+	]
+}
