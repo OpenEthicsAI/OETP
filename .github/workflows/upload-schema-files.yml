@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy schema files to openethics.ai/schema/
+name: 🚀 Deploy schema files to openethics.ai/schema/oetp/
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -17,4 +17,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         local-dir: ./schema/
-        dangerous-clean-slate: false
