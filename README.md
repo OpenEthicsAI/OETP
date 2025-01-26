@@ -82,3 +82,5 @@ Automated numbering and TOC generation for the non-IETF docs could be done using
 ) extension for the [Visual Studio Code](https://code.visualstudio.com/).
 
 Diagrams in SVG are stored in [docs/diagrams/images](docs/diagrams/images/) and are built from `*.puml` files in [docs/diagrams/src](docs/diagrams/src/) automatically with [PlantUML](https://plantuml.com/)
+
+I-D submission process to the IETF follows the recommendations from the [martinthomson/i-d-template](https://github.com/martinthomson/i-d-template/blob/main/doc/SUBMITTING.md#github-release)
