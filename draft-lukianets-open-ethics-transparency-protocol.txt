@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                              3 August 2024
-Expires: 4 February 2025
+Intended status: Experimental                            26 January 2025
+Expires: 30 July 2025
 
 
                    Open Ethics Transparency Protocol
@@ -41,11 +41,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 February 2025.
+   This Internet-Draft will expire on 30 July 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -179,7 +179,12 @@ Table of Contents
       generate and retrieve generated disclosures.
 
    OETP Disclosure Schema:  A predefined structure for Disclosure,
-      supplied in the form of the JSON schema.
+      supplied in the form of the JSON schema.  The current version of
+      the JSON schema is available on GitHub
+      https://github.com/OpenEthicsAI/OETP/tree/main/schema
+      (https://github.com/OpenEthicsAI/OETP/tree/main/schema) and is
+      visualized on https://openethics.ai/oetp/ (https://openethics.ai/
+      oetp/).
 
    Transparency Manifest:  A JSON file, typically named OETP.json or
       transparency.json, storing the Disclosure using the defined OETP
