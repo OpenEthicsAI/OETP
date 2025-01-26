@@ -79,7 +79,7 @@ Disclosure Identity Provider:
 : The automated Disclosure processing is enabled by requests to both the Open Ethics Disclosure database powered by Disclosure Identity Providers (DIP) and the Product's OETP Disclosure file, stored in the product's website root following OETP specification. DIP serves as a service point to generate and retrieve generated disclosures.
 
 OETP Disclosure Schema:
-: A predefined structure for Disclosure, supplied in the form of the JSON schema.
+: A predefined structure for Disclosure, supplied in the form of the JSON schema. The current version of the JSON schema is available on GitHub [https://github.com/OpenEthicsAI/OETP/tree/main/schema](https://github.com/OpenEthicsAI/OETP/tree/main/schema) and is visualized on [https://openethics.ai/oetp/](https://openethics.ai/oetp/).
 
 Transparency Manifest:
 : A JSON file, typically named `OETP.json` or `transparency.json`, storing the Disclosure using the defined OETP Disclosure Schema.
