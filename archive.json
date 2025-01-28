@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-11-25T00:30:25.796752+00:00",
+  "timestamp": "2025-01-28T01:19:26.279393+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -24,14 +24,14 @@
       "color": "a2eeef"
     },
     {
-      "name": "help wanted",
-      "description": "Extra attention is needed",
-      "color": "008672"
-    },
-    {
       "name": "good first issue",
       "description": "Good for newcomers",
       "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
     },
     {
       "name": "invalid",
@@ -56,8 +56,8 @@
       "title": "Refactor repository for I-D submission",
       "url": "https://github.com/OpenEthicsAI/OETP/issues/5",
       "state": "CLOSED",
-      "author": "OpenEthicsAI",
-      "authorAssociation": "OWNER",
+      "author": null,
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [
         "documentation"
@@ -67,6 +67,419 @@
       "updatedAt": "2021-11-24T08:55:45Z",
       "closedAt": "2021-11-24T08:55:45Z",
       "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOEzZp0M5KKZFw",
+      "title": "Add informative reference for SPDX",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/7",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add informative reference for SPDX",
+      "createdAt": "2022-05-22T12:20:25Z",
+      "updatedAt": "2022-05-22T12:46:38Z",
+      "closedAt": "2022-05-22T12:46:38Z",
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOEzZp0M5W19MD",
+      "title": "Add examples explaining the OETP-RI-scheme",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/9",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The \"Areas for Future Study\" section in the I-D includes \"IANA requests for the Data Processor identity management\" This area was previously covered in related work \"Resource Identifier Scheme for OETP\" and published in [GitHub](https://github.com/OpenEthicsAI/OETP-RI-scheme), however not mentioned/discussed in the primary Draft.",
+      "createdAt": "2022-11-20T17:37:08Z",
+      "updatedAt": "2022-11-20T17:37:08Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOEzZp0M5mbftd",
+      "title": "Disclosure formats for generative AI",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/11",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The field of content synthesis is rapidly evolving, and disclosure formats should be discussed, developed, and standardized.",
+      "createdAt": "2023-05-21T12:21:28Z",
+      "updatedAt": "2024-08-04T19:26:17Z",
+      "closedAt": "2024-08-04T19:26:17Z",
+      "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOEzZp0M526naJ",
+      "title": "Label accessibility with ARIA W3C Recommendations",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/13",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Currently, the embedded label icons are not accessible for speech narration and they don't support ARIA accessibility attributes.",
+      "createdAt": "2023-11-15T16:05:36Z",
+      "updatedAt": "2023-11-15T18:15:17Z",
+      "closedAt": "2023-11-15T18:15:17Z",
+      "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOEzZp0M6Ik00c",
+      "title": "Well-Known URI and OETP.json",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/15",
+      "state": "CLOSED",
+      "author": null,
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Registering Well-Known URI for the OETP.json and update of the terminology for the transparency disclosure",
+      "createdAt": "2024-05-12T14:21:41Z",
+      "updatedAt": "2024-08-04T19:24:56Z",
+      "closedAt": "2024-08-04T19:24:56Z",
+      "comments": [
+        {
+          "author": null,
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added in the list for the Areas of Future Study inside, as a technical update",
+          "createdAt": "2024-05-12T15:04:45Z",
+          "updatedAt": "2024-05-12T15:04:45Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOEzZp0M6R3lL5",
+      "title": "Reserve the publication of the transparency.json manifest in the .well-known folder",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/17",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Once the format of the transparency manifest is updated and aligned, it's important to make sure the file structure and naming is recognized by the community and everyone knows that the file called transparency.json is responsible for the transparency protocol disclosures and should be read/treated in a specific way.\n\n```\nFeature: standard placement for disclosures in the .well-known folder\n\nGiven the format of the transparency manifest is registered for `.well-known` folder\nAnd the disclosure is correctly made\nAnd the transparency.json is created\nWhen the user places transparency.json into a .well-known folder\nThen the file is automatically recognized there and  could be read by crawlers and bots\n```",
+      "createdAt": "2024-08-04T19:26:39Z",
+      "updatedAt": "2024-08-04T19:59:29Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@dizzysunset ",
+          "createdAt": "2024-08-04T19:59:29Z",
+          "updatedAt": "2024-08-04T19:59:29Z"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOEzZp0M6R3nhF",
+      "title": "Upload the OEL repository to GitHub",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/18",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "nikiluk"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-08-04T19:57:41Z",
+      "updatedAt": "2024-08-04T19:57:41Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOEzZp0M6R3nkO",
+      "title": "Add content blog article explaining what Disclosure is and how it relates to Transparency Manifest",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/19",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-08-04T19:58:26Z",
+      "updatedAt": "2024-08-04T19:58:26Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 20,
+      "id": "I_kwDOEzZp0M6R3nsT",
+      "title": "Typical scenarios and templates for Disclosure submissions",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/20",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\n```\nFeature: Disclosure Template\n\nGiven AI system provider is about to make the disclosure\nWhen they select from one of the templates\nThen fields get pre-filled\nAnd it's clear which elements of the disclosure are required or optional\n```",
+      "createdAt": "2024-08-04T20:00:13Z",
+      "updatedAt": "2024-08-04T20:00:13Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 21,
+      "id": "I_kwDOEzZp0M6R3n4K",
+      "title": "Enhance Label accessibility with ARIA W3C Recommendation and other approaches",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/21",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Use best practices in WCAG2.1 to improve the SVG files of the label and their presentation within the OEL. \n\nThis task requires updated label files to be shared on GitHub as they are not yet there, ask @nikiluk \n\n```\nFeature: Accessible labels\n\nGiven the label that is displayed in the web interface, loading from label.openethics.ai\nWhen the labels are accessed by the screen readers\nThen their meaning should be clear\nAnd the UI should be not only visible but audible\n```",
+      "createdAt": "2024-08-04T20:02:25Z",
+      "updatedAt": "2024-08-05T19:25:23Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See for example \nhttps://css-tricks.com/accessible-svgs/\nhttps://a11y-101.com/development/aria-describedby\nhttps://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/\nhttps://www.deque.com/blog/creating-accessible-svgs/",
+          "createdAt": "2024-08-05T18:37:14Z",
+          "updatedAt": "2024-08-05T19:25:23Z"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "I_kwDOEzZp0M6g_7Vm",
+      "title": "Create disclosure schemas for families of \"Generative AI\" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/22",
+      "state": "OPEN",
+      "author": "dizzysunset",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "rxhith",
+        "GOVINDFROMINDIA",
+        "aan2907"
+      ],
+      "labels": [],
+      "body": "This task is will help to extend the OETP disclosure schema and make it useful for wider set of applications.",
+      "createdAt": "2024-11-22T09:35:26Z",
+      "updatedAt": "2024-12-15T15:57:15Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "rxhith",
+          "authorAssociation": "NONE",
+          "body": "Can we get more details on the format in which the task has to be submitted. Also the details which are expected wrt OETP disclosure schema for the various models.",
+          "createdAt": "2024-11-26T10:13:33Z",
+          "updatedAt": "2024-11-26T10:13:33Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi @rxhith this will be more of OETP/Label project and will not have to do with this repository https://github.com/OpenEthicsAI/OETP\r\n\r\nYou can get more information and ask more specific questions after reading the OETP document as well as to checking the format of the existing shema. You can get one by submitting an example disclosure here https://openethics.ai/label/generate/ ",
+          "createdAt": "2024-11-26T20:20:27Z",
+          "updatedAt": "2024-11-26T20:20:27Z"
+        },
+        {
+          "author": "aan2907",
+          "authorAssociation": "NONE",
+          "body": "Hi @nikiluk we are not sure what disclosure schema means. In what format are we supposed to create the schema? We have researched about Generative AI technologies but we are not sure how to go from there. We would really appreciate any help in guiding us to create the disclosure schema.",
+          "createdAt": "2024-11-28T09:21:47Z",
+          "updatedAt": "2024-11-28T09:21:47Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Hi @nikiluk we are not sure what disclosure schema means. In what format are we supposed to create the schema? We have researched about Generative AI technologies but we are not sure how to go from there. We would really appreciate any help in guiding us to create the disclosure schema.\r\n\r\nHi, i see, as I mentioned above, you can read about the disclosure principles in the OETP repository and on the IETF page of I-D of the Open Ethics Transparency Protocol.\r\n\r\nThe transparency manifest file that contains the disclosure could be generated on the Open Ethics website (see link in my previous comment), I invite you to try filling out the form and getting the file that includes the disclosure alongside the Open Ethics Label HTML code. Disclosure is a JSON file.\r\n\r\nThe example of \"empty\" disclosure is also here https://github.com/OpenEthicsAI/OETP/blob/main/examples/basic%20disclosure/oetp.json\r\n\r\nWith the same idea as in the Data Passport Schema (https://openethics.ai/schema/oedp.passport.schema.json), the schema for the disclosure will provide the rules for the fields of the Disclosure, e.g. what's optional, what's required, which formats/enums/strings/objects etc. \r\n\r\nTo learn more about JSON schemas as a standardization approach you can visit https://json-schema.org/\r\n",
+          "createdAt": "2024-11-28T17:32:33Z",
+          "updatedAt": "2024-11-28T17:32:33Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@aan2907 there was a question about the disclosure and the current schema, please see a more detailed answer here https://github.com/OpenEthicsAI/OETP/issues/23 with examples of the disclosure and the schema with the description is on https://openethics.ai/oetp/",
+          "createdAt": "2024-12-03T21:39:08Z",
+          "updatedAt": "2024-12-03T21:39:08Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "to read https://arxiv.org/abs/2412.07780",
+          "createdAt": "2024-12-15T15:57:14Z",
+          "updatedAt": "2024-12-15T15:57:14Z"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "id": "I_kwDOEzZp0M6h4yeg",
+      "title": "Current disclosure schema of the OETP.json, as supported by the OEL",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/23",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "nikiluk"
+      ],
+      "labels": [],
+      "body": "Create the schema for the disclosure that is currently happening via the Open Ethics Label form.",
+      "createdAt": "2024-12-03T21:33:00Z",
+      "updatedAt": "2024-12-07T17:01:30Z",
+      "closedAt": "2024-12-03T21:33:03Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "![Image](https://github.com/user-attachments/assets/cd5e4ff7-b3d9-4247-ba8e-0547bedbd9a1)\n\nThe schema description is available on the OETP page and the schema itself is uploaded.\n\npage https://openethics.ai/oetp/ \nthe schema is available there https://openethics.ai/schema/oetp/oetp.disclosure.schema-v0.9.3.json\n",
+          "createdAt": "2024-12-03T21:34:55Z",
+          "updatedAt": "2024-12-07T17:01:30Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Example Disclosure: [oetp.json](https://github.com/user-attachments/files/17999396/oetp.json)\n",
+          "createdAt": "2024-12-03T21:36:15Z",
+          "updatedAt": "2024-12-03T21:36:15Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Example label: [oel.html.txt](https://github.com/user-attachments/files/17999402/oel.html.txt)\n",
+          "createdAt": "2024-12-03T21:36:54Z",
+          "updatedAt": "2024-12-03T21:36:54Z"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "id": "I_kwDOEzZp0M6iaA8O",
+      "title": "Reorganize OETP schema to be stored in the OETP repository and resolve conflicts related to the schema publication to the same schema folder",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/24",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "nikiluk"
+      ],
+      "labels": [
+        "enhancement"
+      ],
+      "body": "",
+      "createdAt": "2024-12-07T17:04:40Z",
+      "updatedAt": "2024-12-07T17:07:43Z",
+      "closedAt": "2024-12-07T17:04:42Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "As a result of the reorganization:\n\n- all Data Passport schemas are stored in the OEDP repository and are deployed to `https://openethics.ai/schema/oedp/`\n- all Transparency Disclosure schemas are stored in OETP repository and are deployed to `https://openethics.ai/schema/oetp/`\n\nThe WIP on the new disclosure schema to be done here https://github.com/OpenEthicsAI/OETP/blob/main/schema/oetp.disclosure.schema-vNext.json",
+          "createdAt": "2024-12-07T17:07:42Z",
+          "updatedAt": "2024-12-07T17:07:42Z"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "id": "I_kwDOEzZp0M6iw30w",
+      "title": "Blog: Write an article focused on the EU AI Act & how the Open Ethics Label aligns with it",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/25",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AnaDeAlencar"
+      ],
+      "labels": [],
+      "body": " The article will showcase how a company can use the Open Ethics Label to meet the transparency requirements outlined in the act.",
+      "createdAt": "2024-12-10T17:20:43Z",
+      "updatedAt": "2024-12-10T17:21:19Z",
+      "closedAt": "2024-12-10T17:21:18Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Congrats @AnaDeAlencar the article is out!!! Kudos to you \n\nhttps://openethics.ai/why-is-transparency-the-key-to-ai-compliance-under-the-eu-ai-act/",
+          "createdAt": "2024-12-10T17:21:18Z",
+          "updatedAt": "2024-12-10T17:21:18Z"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "id": "I_kwDOEzZp0M6iw4eV",
+      "title": "Add Ana as a Contributor on the website",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/26",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-12-10T17:22:07Z",
+      "updatedAt": "2024-12-15T15:56:54Z",
+      "closedAt": "2024-12-15T15:56:54Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added @AnaDeAlencar  :) ",
+          "createdAt": "2024-12-15T15:56:54Z",
+          "updatedAt": "2024-12-15T15:56:54Z"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "id": "I_kwDOEzZp0M6lrIcU",
+      "title": "Blog: Write an article on the EU AI Act transparency requirements & cross-check them with the transparency disclosure",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/27",
+      "state": "OPEN",
+      "author": "dizzysunset",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "AnaDeAlencar"
+      ],
+      "labels": [],
+      "body": "The article will showcase what the EU AI Act transparency requirements are & will cross-check them with what the Open Ethics Label offers as a solution, in order for the companies to see to which extent they can align to the EU AI Act by using our tool.\n",
+      "createdAt": "2025-01-10T08:09:24Z",
+      "updatedAt": "2025-01-10T08:11:41Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 28,
+      "id": "I_kwDOEzZp0M6nkxbR",
+      "title": "Extend the IETF deadline and update the GitHub actions for submission of the I-D for the OETP",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/28",
+      "state": "CLOSED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "nikiluk"
+      ],
+      "labels": [
+        "documentation"
+      ],
+      "body": "Commits:\n\n- [x] 1. https://github.com/OpenEthicsAI/OETP/commit/3922cc5455a283ca1371907663dc16111128ad61\n- [x] 2. https://github.com/OpenEthicsAI/OETP/commit/761126d6693bc2c47bb4b83a53af0000e29a08c3\n- [x] 3. https://github.com/OpenEthicsAI/OETP/commit/73f3c41e28a500502a5c4afcb05a8916a76d0119",
+      "createdAt": "2025-01-26T09:55:40Z",
+      "updatedAt": "2025-01-26T09:58:41Z",
+      "closedAt": "2025-01-26T09:55:43Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "https://www.ietf.org/archive/id/draft-lukianets-open-ethics-transparency-protocol-07.html ",
+          "createdAt": "2025-01-26T09:58:40Z",
+          "updatedAt": "2025-01-26T09:58:40Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -206,6 +619,154 @@
       "mergedBy": "OpenEthicsAI",
       "mergeCommit": {
         "oid": "9bb24e7a5524c4c5969f5fa6c2ba4b0b2f3708b6"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOEzZp0M44PtwT",
+      "title": "Update informative references on JSON and SPDX",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/8",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "1. Updated JSON reference from RFC7159 to RFC8259\r\n2. Added SPDX informative reference\r\n3. Minor corrections in the text",
+      "createdAt": "2022-05-22T12:35:27Z",
+      "updatedAt": "2022-05-22T12:43:57Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "9bb24e7a5524c4c5969f5fa6c2ba4b0b2f3708b6",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "issue-7-add-informative-reference-for-spdx",
+      "headRefOid": "9a40ac7e620ebfb81bd1adfc1ca566848ac43ad2",
+      "closedAt": "2022-05-22T12:43:45Z",
+      "mergedAt": "2022-05-22T12:43:45Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "fa0dd2180a058dbad5ab634b661dc5df619b0b7e"
+      },
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Minor issues edits implemented to ensure correct build",
+          "createdAt": "2022-05-22T12:42:21Z",
+          "updatedAt": "2022-05-22T12:42:21Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOEzZp0M5Da5FW",
+      "title": "Added DIP, URI scheme",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/10",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Added Disclosure Identity Provider definition\r\n- Added URI scheme details to allow efficient decentralization\r\n- Provided examples of `oetp://` URI scheme",
+      "createdAt": "2022-11-22T05:40:35Z",
+      "updatedAt": "2022-11-22T05:41:47Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "4ee15e6a857791ca47b5909bc3f2498222e1f5b3",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "issue-9-add-examples-explaining-the-oetp-ri-scheme",
+      "headRefOid": "79482957f9680da90185576287be9234a9b5b05e",
+      "closedAt": "2022-11-22T05:41:25Z",
+      "mergedAt": "2022-11-22T05:41:25Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "8b1df700649cb748d2160f3e42eac70f53e272c0"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOEzZp0M5Q9I0s",
+      "title": "Areas of Future study: Generative AI disclosures",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/12",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-05-21T12:34:29Z",
+      "updatedAt": "2023-05-21T12:35:39Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "fae95c1244180eff225b0e82ba11584aedc591df",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "issue-11-disclosure-formats-for-generative-ai",
+      "headRefOid": "a3fcd6f9ba484414e84fa3d99d7cd64345233b4e",
+      "closedAt": "2023-05-21T12:35:34Z",
+      "mergedAt": "2023-05-21T12:35:34Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "146b89f8d14638c5f8fa9314b5f5fb0746ca0356"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDOEzZp0M5fi-Z7",
+      "title": "13-label-accessibility-with-aria-w3c-recommendations",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/14",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Added accessibility considerations for Labels based on OETP",
+      "createdAt": "2023-11-15T18:14:27Z",
+      "updatedAt": "2023-11-16T05:38:04Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "146b89f8d14638c5f8fa9314b5f5fb0746ca0356",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "13-label-accessibility-with-aria-w3c-recommendations",
+      "headRefOid": "df5c8565af9fe23d3abbcc32f6a0e414b65b5cb8",
+      "closedAt": "2023-11-15T18:15:16Z",
+      "mergedAt": "2023-11-15T18:15:16Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "597320710d06cd4577bd2dd0522295615c016f33"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOEzZp0M5vLqR7",
+      "title": "Areas for Future Study: Use of .well-known",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/16",
+      "state": "MERGED",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-05-12T14:53:55Z",
+      "updatedAt": "2024-05-12T15:05:43Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "597320710d06cd4577bd2dd0522295615c016f33",
+      "headRepository": "OpenEthicsAI/OETP",
+      "headRefName": "15-well-known-uri-and-oetpjson",
+      "headRefOid": "601a9e7a152b56240f778a94263d1e395f72d581",
+      "closedAt": "2024-05-12T14:54:37Z",
+      "mergedAt": "2024-05-12T14:54:37Z",
+      "mergedBy": "OpenEthicsAI",
+      "mergeCommit": {
+        "oid": "2a770bb963104372096cdbab87cf3300bda31850"
       },
       "comments": [],
       "reviews": []
