@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-28T01:19:26.279393+00:00",
+  "timestamp": "2025-01-30T01:18:33.246350+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -480,6 +480,24 @@
           "updatedAt": "2025-01-26T09:58:40Z"
         }
       ]
+    },
+    {
+      "number": 29,
+      "id": "I_kwDOEzZp0M6ny-C-",
+      "title": "Map the regulatory requirements and future Disclosure elements for EU AI Act",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/29",
+      "state": "OPEN",
+      "author": "nikiluk",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "intiequals1"
+      ],
+      "labels": [],
+      "body": "Open Ethics's mission is to develop standards that are interoperable and independent / invariant to the legal framework they are applied in.\n\nToday, there are a number of available tools present and specific to certain legal frameworks. They are not focused on the technical but in a legal aspect and the judgment on how to work with them may often be subjective. We of course should study them too. \n\nBased on the above, the goal is to study commonalities and differences between the legal frameworks and based on them and the current technology lifecycle, to develop requirements for the elements of the disclosure that should be required or optional and thus cover different frameworks at the same time\n\nThis work aims to create a bridge between the legal and technical requirements and should help product owners with the frame that is agnostic to the legal requirement, free of the legal language, but factual and understandible for the one who disclose or consumes the disclosure at the same time. \n\nThe short-term vision is to make sure multiple elements are mapped and matched across various legal guidelines and frameworks. Again, we're talking about transparency, engineering and safety decisions. \n\nThe long-term vision that the final outcome will be reached iteratively, and \n\nfirst will allow filling in the disclosure and \nlater will allow the unbiased cross-framework judgment to whether the product satisfies or not the given legal frame\n\nThis specific tasks focuses solely on the mapping of the requirements of the AI Act \nAfter its complete we will work on other frameworks, such as NIST\n",
+      "createdAt": "2025-01-28T09:59:05Z",
+      "updatedAt": "2025-01-28T09:59:05Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
