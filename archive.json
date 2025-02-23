@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-20T01:21:54.876807+00:00",
+  "timestamp": "2025-02-23T01:27:19.879246+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -238,11 +238,13 @@
       "state": "OPEN",
       "author": "nikiluk",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "iyanuashiri"
+      ],
       "labels": [],
       "body": "Use best practices in WCAG2.1 to improve the SVG files of the label and their presentation within the OEL. \n\nThis task requires updated label files to be shared on GitHub as they are not yet there, ask @nikiluk \n\n```\nFeature: Accessible labels\n\nGiven the label that is displayed in the web interface, loading from label.openethics.ai\nWhen the labels are accessed by the screen readers\nThen their meaning should be clear\nAnd the UI should be not only visible but audible\n```",
       "createdAt": "2024-08-04T20:02:25Z",
-      "updatedAt": "2024-08-05T19:25:23Z",
+      "updatedAt": "2025-02-22T08:13:40Z",
       "closedAt": null,
       "comments": [
         {
