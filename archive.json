@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-04T01:24:41.492276+00:00",
+  "timestamp": "2025-03-06T01:25:26.359000+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -857,6 +857,40 @@
         "oid": "2a770bb963104372096cdbab87cf3300bda31850"
       },
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 32,
+      "id": "PR_kwDOEzZp0M6NWHLm",
+      "title": "improved accessiblility for Open Ethics label on oel.html",
+      "url": "https://github.com/OpenEthicsAI/OETP/pull/32",
+      "state": "OPEN",
+      "author": "iyanuashiri",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-03-04T16:53:06Z",
+      "updatedAt": "2025-03-04T19:42:29Z",
+      "baseRepository": "OpenEthicsAI/OETP",
+      "baseRefName": "main",
+      "baseRefOid": "73f3c41e28a500502a5c4afcb05a8916a76d0119",
+      "headRepository": "iyanuashiri/OETP",
+      "headRefName": "accessible-labels",
+      "headRefOid": "fedceaa17d1a32e4fa3b2b706972bc4b5548d8c3",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hey, perfect, and thanks a lot\r\n\r\nI'll be sharing one more repository shortly where we could add changes in the SVG for the display of the label. For now I suggest not to merge the pull request because it will not be affect anything because this is just an example element. E.g. even if we merge this task could not be considered complete yet",
+          "createdAt": "2025-03-04T19:42:28Z",
+          "updatedAt": "2025-03-04T19:42:28Z"
+        }
+      ],
       "reviews": []
     }
   ]
