@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-09T01:14:10.803588+00:00",
+  "timestamp": "2025-03-11T01:25:33.210650+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -185,7 +185,7 @@
       "id": "I_kwDOEzZp0M6R3nhF",
       "title": "Upload the OEL repository to GitHub",
       "url": "https://github.com/OpenEthicsAI/OETP/issues/18",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "nikiluk",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -194,9 +194,17 @@
       "labels": [],
       "body": "",
       "createdAt": "2024-08-04T19:57:41Z",
-      "updatedAt": "2024-08-04T19:57:41Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-03-09T14:25:22Z",
+      "closedAt": "2025-03-09T14:25:11Z",
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "https://github.com/OpenEthicsAI/OEL",
+          "createdAt": "2025-03-09T14:25:21Z",
+          "updatedAt": "2025-03-09T14:25:21Z"
+        }
+      ]
     },
     {
       "number": 19,
@@ -229,39 +237,6 @@
       "updatedAt": "2024-08-04T20:00:13Z",
       "closedAt": null,
       "comments": []
-    },
-    {
-      "number": 21,
-      "id": "I_kwDOEzZp0M6R3n4K",
-      "title": "Enhance Label accessibility with ARIA W3C Recommendation and other approaches",
-      "url": "https://github.com/OpenEthicsAI/OETP/issues/21",
-      "state": "OPEN",
-      "author": "nikiluk",
-      "authorAssociation": "COLLABORATOR",
-      "assignees": [
-        "iyanuashiri"
-      ],
-      "labels": [],
-      "body": "Use best practices in WCAG2.1 to improve the SVG files of the label and their presentation within the OEL. \n\nThis task requires updated label files to be shared on GitHub as they are not yet there, ask @nikiluk \n\n```\nFeature: Accessible labels\n\nGiven the label that is displayed in the web interface, loading from label.openethics.ai\nWhen the labels are accessed by the screen readers\nThen their meaning should be clear\nAnd the UI should be not only visible but audible\n```",
-      "createdAt": "2024-08-04T20:02:25Z",
-      "updatedAt": "2025-03-03T21:24:42Z",
-      "closedAt": null,
-      "comments": [
-        {
-          "author": "nikiluk",
-          "authorAssociation": "COLLABORATOR",
-          "body": "See for example \nhttps://css-tricks.com/accessible-svgs/\nhttps://a11y-101.com/development/aria-describedby\nhttps://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/\nhttps://www.deque.com/blog/creating-accessible-svgs/",
-          "createdAt": "2024-08-05T18:37:14Z",
-          "updatedAt": "2024-08-05T19:25:23Z"
-        },
-        {
-          "author": "iyanuashiri",
-          "authorAssociation": "NONE",
-          "body": "Hello. I just joined Open Ethics. I was assigned to this task. I think I understand the task. I am to update the oel.html page with accessibility. I have implemented it. I just tried to send a PR, but I dont have write access yet.  ",
-          "createdAt": "2025-03-03T21:24:41Z",
-          "updatedAt": "2025-03-03T21:24:41Z"
-        }
-      ]
     },
     {
       "number": 22,
