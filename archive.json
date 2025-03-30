@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-27T01:26:53.145406+00:00",
+  "timestamp": "2025-03-30T01:41:23.203292+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -254,7 +254,7 @@
       "labels": [],
       "body": "This task is will help to extend the OETP disclosure schema and make it useful for wider set of applications.",
       "createdAt": "2024-11-22T09:35:26Z",
-      "updatedAt": "2024-12-15T15:57:15Z",
+      "updatedAt": "2025-03-27T17:47:54Z",
       "closedAt": null,
       "comments": [
         {
