@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-30T01:41:23.203292+00:00",
+  "timestamp": "2025-04-10T01:36:12.564842+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -545,6 +545,24 @@
           "updatedAt": "2025-03-02T12:44:18Z"
         }
       ]
+    },
+    {
+      "number": 33,
+      "id": "I_kwDOEzZp0M6xt41a",
+      "title": "Identify the standards of disclosure in the medical fields",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/33",
+      "state": "OPEN",
+      "author": "dizzysunset",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "AntoniaAbe"
+      ],
+      "labels": [],
+      "body": "The task consists in identifying standards of disclosure in the medical fields for the apps that process medical data. There are different categories for how apps collect, store, process, and share sensitive medical information, such as HIPA for instance. \n\nIdentifying them would then lead to being able to integrate them in the Open Ethics transparency disclosure & improving it. \n",
+      "createdAt": "2025-04-09T05:43:29Z",
+      "updatedAt": "2025-04-09T05:43:43Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
