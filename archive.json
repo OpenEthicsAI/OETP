@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-10T01:36:12.564842+00:00",
+  "timestamp": "2025-04-13T02:55:49.782995+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -560,9 +560,17 @@
       "labels": [],
       "body": "The task consists in identifying standards of disclosure in the medical fields for the apps that process medical data. There are different categories for how apps collect, store, process, and share sensitive medical information, such as HIPA for instance. \n\nIdentifying them would then lead to being able to integrate them in the Open Ethics transparency disclosure & improving it. \n",
       "createdAt": "2025-04-09T05:43:29Z",
-      "updatedAt": "2025-04-09T05:43:43Z",
+      "updatedAt": "2025-04-12T16:09:07Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AntoniaAbe",
+          "authorAssociation": "NONE",
+          "body": "Completed. \n\nResource accessible here\n\nhttps://docs.google.com/document/d/1X1abyzMxTSsi7T_W_X_kkjsNqe75WhprDZv34RUIFKk/edit?usp=drivesdk\n",
+          "createdAt": "2025-04-12T16:09:06Z",
+          "updatedAt": "2025-04-12T16:09:06Z"
+        }
+      ]
     }
   ],
   "pulls": [
