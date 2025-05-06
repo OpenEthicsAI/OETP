@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-20T01:42:58.373558+00:00",
+  "timestamp": "2025-05-06T01:40:48.569114+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -568,7 +568,7 @@
       "labels": [],
       "body": "The task consists in identifying standards of disclosure in the medical fields for the apps that process medical data. There are different categories for how apps collect, store, process, and share sensitive medical information, such as HIPA for instance. \n\nIdentifying them would then lead to being able to integrate them in the Open Ethics transparency disclosure & improving it. \n\nThe analysis can be structured in the Architecture Decision Record format ([ADR](https://github.com/joelparkerhenderson/architecture-decision-record)) on how the OE label can be modified for these disclosure standards to be included. The ADR presents the state of art, and it has quite a structured and well-informed approach when it comes to the pros and cons of each proposal (in this case it would be for each disclosure standard). \n\n\n\n",
       "createdAt": "2025-04-09T05:43:29Z",
-      "updatedAt": "2025-04-17T08:29:53Z",
+      "updatedAt": "2025-05-05T13:55:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -584,6 +584,13 @@
           "body": "Thank you @AntoniaAbe. As mentioned in our conversation, I have added the ADR component to the task description.",
           "createdAt": "2025-04-17T08:29:52Z",
           "updatedAt": "2025-04-17T08:29:52Z"
+        },
+        {
+          "author": "AntoniaAbe",
+          "authorAssociation": "NONE",
+          "body": "Hi @dizzysunset  \nCheck this out. It's open for comments. I hope it's well suited.\n\nhttps://docs.google.com/document/d/1GsYWoMmaqNtNhKeP9dTn0nT508Aa-6BSNfbGEqLLHOw/edit?usp=drivesdk\n",
+          "createdAt": "2025-05-05T13:55:20Z",
+          "updatedAt": "2025-05-05T13:55:20Z"
         }
       ]
     },
