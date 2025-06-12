@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-06T01:40:48.569114+00:00",
+  "timestamp": "2025-06-12T01:44:14.873433+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -607,6 +607,24 @@
       "body": "After a product owner submits the OEL transparency disclosure, they receive the machine-readable JSON file along with an HTML code with the visual representation of the OE label. When they paste the code on their website, the label is displayed as a set of icons, without displaying textual information of the icons.\n\nThe tasks consists in creating a tooltip in HTML (a contextual text bubble that displays a description for an element that appears on pointer hover or keyboard focus - https://developer.mozilla.org/) to be added to the visual representation of the label on a website.\n\nYou will be provided with the descriptions of all icons. ",
       "createdAt": "2025-04-15T16:40:20Z",
       "updatedAt": "2025-04-15T16:40:20Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 35,
+      "id": "I_kwDOEzZp0M66yoJp",
+      "title": "Create pitch-deck for Open Ethics",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/35",
+      "state": "OPEN",
+      "author": "dizzysunset",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "dizzysunset"
+      ],
+      "labels": [],
+      "body": "Create a ppt & pdf of a pitch-deck for Open Ethics. It should cover a general presentation of who we are, what do we do, what we provide, the why behind it, as well as extended vision and who we would like to collaborate with.",
+      "createdAt": "2025-06-10T14:31:11Z",
+      "updatedAt": "2025-06-10T14:31:24Z",
       "closedAt": null,
       "comments": []
     }
