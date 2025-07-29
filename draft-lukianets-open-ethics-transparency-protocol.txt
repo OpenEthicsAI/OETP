@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                            26 January 2025
-Expires: 30 July 2025
+Intended status: Experimental                               29 July 2025
+Expires: 30 January 2026
 
 
                    Open Ethics Transparency Protocol
@@ -41,7 +41,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 July 2025.
+   This Internet-Draft will expire on 30 January 2026.
 
 Copyright Notice
 
@@ -662,6 +662,9 @@ Table of Contents
       such as Generative Adversarial Networks (GANs), Variational
       Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs),
       Attention Mechanisms, Transformer-based Models.
+
+   *  Interoperability of the agentic disclosure and the Model Context
+      Protocol (MCP)
 
 9.  References
 
