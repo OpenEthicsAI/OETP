@@ -343,6 +343,7 @@ The following topics not addressed in this version of the document are possible 
 * Enhancing Label accessibility with ARIA W3C Recommendation and other approaches.
 * Use of the OETP Disclosure in the ADM explainability (XAI).
 * Disclosure Schemas for families of "Generative AI" technologies such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs), Attention Mechanisms, Transformer-based Models.
+* Interoperability of the agentic disclosure and the Model Context Protocol (MCP)
 
 
 
