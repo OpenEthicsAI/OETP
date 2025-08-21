@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-31T01:55:02.093332+00:00",
+  "timestamp": "2025-08-21T01:39:19.687617+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -606,7 +606,7 @@
       "labels": [],
       "body": "After a product owner submits the OEL transparency disclosure, they receive the machine-readable JSON file along with an HTML code with the visual representation of the OE label. When they paste the code on their website, the label is displayed as a set of icons, without displaying textual information of the icons.\n\nThe tasks consists in creating a tooltip in HTML (a contextual text bubble that displays a description for an element that appears on pointer hover or keyboard focus - https://developer.mozilla.org/) to be added to the visual representation of the label on a website.\n\nYou will be provided with the descriptions of all icons. ",
       "createdAt": "2025-04-15T16:40:20Z",
-      "updatedAt": "2025-07-29T15:40:52Z",
+      "updatedAt": "2025-08-19T17:44:12Z",
       "closedAt": null,
       "comments": [
         {
@@ -615,6 +615,20 @@
           "body": "I will love to pick this up can I have further Content/Context for this please",
           "createdAt": "2025-07-29T15:40:52Z",
           "updatedAt": "2025-07-29T15:40:52Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi @Nazehs here's where we can start IMO\n1) we have the current and future schema, where we can actually find the descriptions - we can add them there. The tooltips for the field itself\n2) we have the current display of the label in a very simple way, using the HTML code which embeds via iframe. I wonder, to which extent the tooltips will be visible in the parent HTML file. Could you have a look at how it works now and what could be done?\n\nFor example, see the label inserted on https://hellobio.me/ on the footer of the website.\n\nAnd the disclosure published on https://hellobio.me/oetp.json ",
+          "createdAt": "2025-08-19T17:41:30Z",
+          "updatedAt": "2025-08-19T17:44:12Z"
+        },
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This folder contains the schema that covers the disclosure\nhttps://github.com/OpenEthicsAI/OETP/tree/main/schema \n\nAlso on this page it's visualized\nhttps://openethics.ai/oetp/ ",
+          "createdAt": "2025-08-19T17:43:27Z",
+          "updatedAt": "2025-08-19T17:43:27Z"
         }
       ]
     },
