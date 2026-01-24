@@ -6,26 +6,25 @@
 <meta content="initial-scale=1.0" name="viewport">
 <title>Open Ethics Transparency Protocol</title>
 <meta content="Nikita Lukainets" name="author">
-<meta content='
-       The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format. 
-    ' name="description">
-<meta content="xml2rfc 3.30.0" name="generator">
+<meta content="
+       The Open Ethics Transparency Protocol (OETP) defines an application‑level protocol for the publication and retrieval of ethical Disclosures associated with Autonomous Systems (AS) and their Components. The Protocol specifies an HTTP‑based mechanism for exchanging information describing the ethical  postures  of such Systems in an open and standardized format. The scope of this specification includes Disclosures for Autonomous Systems incorporating Artificial Intelligence (AI), Automated Decision‑Making (ADM) capabilities, Software‑as‑a‑Service (SaaS) Autonomous Functions, Application Programming Interfaces (APIs) with autonomous behavior, and modular Components that contribute to autonomous operation. The objective of OETP is to support transparent, predictable, and safe environments for end‑users and stakeholders interacting with Autonomous Systems. The OETP Disclosure Schema is defined as an extensible, JSON‑based data format. 
+    " name="description">
+<meta content="xml2rfc 3.31.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-lukianets-open-ethics-transparency-protocol-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.30.0
-    Python 3.12.11
+  xml2rfc 3.31.0
+    Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
-    intervaltree 3.1.0
+    intervaltree 3.2.1
     Jinja2 3.1.6
-    lxml 5.3.1
-    platformdirs 4.3.8
+    lxml 6.0.2
+    platformdirs 4.5.1
     pycountry 24.6.1
-    PyYAML 6.0.2
-    requests 2.32.4
-    setuptools 80.9.0
-    wcwidth 0.2.13
+    PyYAML 6.0.3
+    requests 2.32.5
+    wcwidth 0.3.0
 -->
 <link href="draft-lukianets-open-ethics-transparency-protocol.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -566,6 +565,7 @@ aside, blockquote {
 }
 blockquote {
   margin: 1em 0;
+  border-left: 2px var(--pilcrow-strong) solid;
 }
 cite {
   display: block;
@@ -636,7 +636,7 @@ a.pilcrow {
   }
 }
 @media not print {
-  :hover > a.pilcrow {
+  :hover > a.pilcrow, a.pilcrow:focus {
     opacity: 1;
   }
   a.pilcrow[href]:hover {
@@ -1044,11 +1044,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">OETP</td>
-<td class="right">July 2025</td>
+<td class="right">January 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Lukianets</td>
-<td class="center">Expires 30 January 2026</td>
+<td class="center">Expires 28 July 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1061,12 +1061,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-lukianets-open-ethics-transparency-protocol-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-07-29" class="published">29 July 2025</time>
+<time datetime="2026-01-24" class="published">24 January 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-01-30">30 January 2026</time></dd>
+<dd class="expires"><time datetime="2026-07-28">28 July 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1079,7 +1079,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Open Ethics Transparency Protocol</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The Open Ethics Transparency Protocol (OETP) defines an application‑level protocol for the publication and retrieval of ethical Disclosures associated with Autonomous Systems (AS) and their Components. The Protocol specifies an HTTP‑based mechanism for exchanging information describing the ethical <em>postures</em> of such Systems in an open and standardized format. The scope of this specification includes Disclosures for Autonomous Systems incorporating Artificial Intelligence (AI), Automated Decision‑Making (ADM) capabilities, Software‑as‑a‑Service (SaaS) Autonomous Functions, Application Programming Interfaces (APIs) with autonomous behavior, and modular Components that contribute to autonomous operation. The objective of OETP is to support transparent, predictable, and safe environments for end‑users and stakeholders interacting with Autonomous Systems. The OETP Disclosure Schema is defined as an extensible, JSON‑based data format.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1100,7 +1100,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 30 January 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 28 July 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1109,7 +1109,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2025 IETF Trust and the persons identified as the
+            Copyright (c) 2026 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1285,26 +1285,26 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">The Open Ethics Transparency Protocol (OETP or Protocol) describes the creation and exchange of voluntary ethics Disclosures for IT products. It is brought as a solution to increase the transparency of how IT products are built and deployed. This document provides details on how disclosures for data collection and data processing practice are formed, stored, validated, and exchanged in a standardized and open format.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">OETP provides facilities for:<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-1">The Open Ethics Transparency Protocol (OETP), hereafter “the Protocol,” specifies procedures for creating, maintaining, and exchanging voluntary ethical Disclosures concerning Autonomous Systems (AS). The Protocol is intended to increase transparency regarding the design, deployment, and operational behavior of systems that exhibit autonomous or semi‑autonomous capabilities. This document defines normative requirements for the formation, storage, validation, and exchange of Disclosures describing data collection, data processing, and output logic practices, using an open and standardized representation.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">OETP is designed to support the following functions:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-3.1">
-          <p id="section-1-3.1.1"><strong>Informed consumer choices</strong> : End-users able to make informed choices based on their own ethical preferences and product disclosure.<a href="#section-1-3.1.1" class="pilcrow">¶</a></p>
+          <p id="section-1-3.1.1"><strong>Informed stakeholder choices</strong>: Enable end‑users, operators, and integrators to assess Autonomous Systems according to their ethical preferences and the characteristics declared in the corresponding Disclosure.<a href="#section-1-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.2">
-          <p id="section-1-3.2.1"><strong>Industrial-scale monitoring</strong> : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.<a href="#section-1-3.2.1" class="pilcrow">¶</a></p>
+          <p id="section-1-3.2.1"><strong>Industrial‑scale monitoring</strong>: Facilitate comparative assessment of autonomous behavior, governance practices, and risk profiles across market sectors, technology ecosystems, and application domains.<a href="#section-1-3.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.3">
-          <p id="section-1-3.3.1"><strong>Legally-agnostic guidelines</strong> : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.<a href="#section-1-3.3.1" class="pilcrow">¶</a></p>
+          <p id="section-1-3.3.1"><strong>Legally‑agnostic guidance</strong>: Provide fact‑based, jurisdiction‑neutral recommendations for developers and system owners that can be translated into technical safeguards, risk controls, or compliance requirements.<a href="#section-1-3.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.4">
-          <p id="section-1-3.4.1"><strong>Iterative improvement</strong> : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.<a href="#section-1-3.4.1" class="pilcrow">¶</a></p>
+          <p id="section-1-3.4.1"><strong>Iterative improvement</strong>: Support continuous refinement of Autonomous Systems—particularly those employing AI or machine‑learning techniques—by enabling timely feedback on operational performance and ethical characteristics, including security, privacy, fairness, diversity, power dynamics, and non‑discrimination.<a href="#section-1-3.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-3.5">
-          <p id="section-1-3.5.1"><strong>Labeling and certification</strong> : Mapping to existing and future regulatory initiatives and standards.<a href="#section-1-3.5.1" class="pilcrow">¶</a></p>
+          <p id="section-1-3.5.1"><strong>Labeling and certification</strong>: Enable alignment with existing and emerging regulatory initiatives, assurance frameworks, and formal standards applicable to Autonomous Systems.<a href="#section-1-3.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-1-4">The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical "postures", provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-4">The Open Ethics Transparency Protocol defines an application‑level mechanism for accessing and publishing ethical Disclosures for Autonomous Systems and their Components. It relies on HTTP‑based exchange of information describing ethical <em>postures</em> in a standardized format. The Protocol applies to AI‑enabled Systems, ADM Systems, autonomous SaaS functions, autonomous APIs, and modular Components that contribute to autonomous behavior. The goal of the Protocol is to support transparent, predictable, and safe autonomous operation. The OETP Disclosure Schema is specified as an extensible JSON data model.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="requirement-levels">
