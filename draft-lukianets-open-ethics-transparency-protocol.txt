@@ -27,7 +27,7 @@ Abstract
    operation.  The objective of OETP is to support transparent,
    predictable, and safe environments for end-users and stakeholders
    interacting with Autonomous Systems.  The OETP Disclosure Schema is
-   defined as an extensible, JSON-based data format.
+   defined as an extensible, JSON-based format.
 
 Status of This Memo
 
