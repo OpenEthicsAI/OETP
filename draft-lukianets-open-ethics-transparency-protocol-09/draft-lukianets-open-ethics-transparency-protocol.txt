@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                            24 January 2026
-Expires: 28 July 2026
+Intended status: Experimental                            25 January 2026
+Expires: 29 July 2026
 
 
                    Open Ethics Transparency Protocol
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 July 2026.
+   This Internet-Draft will expire on 29 July 2026.
 
 Copyright Notice
 
