@@ -176,7 +176,7 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 1) A Label MUST contain a title. Title could be either marked by the `aria-label` attribute for the narration software or be labeled by another content tag(s) present via `aria-labelledby` attribute, pointing to the ID(s) describing the label content.
 
 ~~~~ HTML
-{::include examples/basic-disclosure/oel-snippet.html}
+{::include examples/basic-disclosure/oel-snippet.html }
 ~~~~
 {: #figure-example-oel-snippet title="Example Label Snippet Content"}
 
@@ -186,7 +186,7 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 - Pattern for images embedded using IMG tags: `<svg> + role="img" + <title> + <desc> + aria-labelledby="[ID]"`
 
 ~~~~ XML
-{::include examples/basic-disclosure/label-source-open.svg}
+{::include examples/basic-disclosure/label-source-open.svg }
 ~~~~
 {: #figure-example-oel-icon-label-source-open title="Example of the SVG icon with ARIA attributes for Accessibility"}
 
@@ -307,7 +307,7 @@ Further evaluation of this approach is required.
 # Example OETP Disclosure File
 
 ~~~~ JSON
-{::include examples/basic-disclosure/oetp.json}
+{::include examples/basic-disclosure/oetp.json }
 ~~~~
 {: #figure-example-oetp-json title="Example OETP Disclosure File"}
 
@@ -360,31 +360,31 @@ Diagrams could be built from code using the below `*.puml` files automatically u
 
 ### Creation of Disclosure
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-creation.puml}
+{::include docs/diagrams/src/disclosure-creation.puml }
 ~~~~
 {: #figure-disclosure-creation title="Creation of the Disclosure"}
 
 ### Basic Disclosure Submission
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-submission-basic.puml}
+{::include docs/diagrams/src/disclosure-submission-basic.puml }
 ~~~~
 {: #figure-disclosure-submission-basic title="Basic Disclosure Submission"}
 
 ### Progressive Verification Scheme for Disclosures
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-progressive-verification.puml}
+{::include docs/diagrams/src/disclosure-progressive-verification.puml }
 ~~~~
 {: #figure-disclosure-progressive-verification title="Progressive Verification Scheme for Disclosures"}
 
 ### Disclosure Chaining: Request-Response
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-chaining-request.puml}
+{::include docs/diagrams/src/disclosure-chaining-request.puml }
 ~~~~
 {: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
 
 ### Disclosure Chaining: Level Order Traversal
 ~~~~ PUML
-{::include docs/diagrams/src/disclosure-chaining-tree.puml}
+{::include docs/diagrams/src/disclosure-chaining-tree.puml }
 ~~~~
 {: #figure-disclosure-chaining-tree title="Disclosure Chaining: Level Order Traversal"}
 
