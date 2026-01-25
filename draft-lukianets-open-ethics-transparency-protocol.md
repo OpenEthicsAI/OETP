@@ -186,10 +186,11 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 - Pattern for images embedded using SVG tags: `<img> + role="img" + alt="[title text here]"` OR `<img> + role="img" + aria-label="[title text here]"`
 - Pattern for images embedded using IMG tags: `<svg> + role="img" + <title> + <desc> + aria-labelledby="[ID]"`
 
-~~~~ XML
-{::include examples/basic-disclosure/label-source-open.svg }
-~~~~
-{: #figure-example-oel-icon-label-source-open title="Example of the SVG icon with ARIA attributes for Accessibility"}
+<div class="figure" id="figure-example-oel-icon-label-source-open" title="Example of the SVG icon with ARIA attributes for Accessibility">
+<pre>
+{::include examples/basic-disclosure/label-source-open.svg}
+</pre>
+</div>
 
 ## Verification and Validation of Disclosure
 
@@ -306,11 +307,11 @@ Formally this approach could be illustrated with the use of a conjunction table 
 Further evaluation of this approach is required.
 
 # Example OETP Disclosure File
-
-~~~~ JSON
-{::include examples/basic-disclosure/oetp.json }
-~~~~
-{: #figure-example-oetp-json title="Example OETP Disclosure File"}
+<div class="figure" id="figure-example-oetp-json" title="Example OETP Disclosure File">
+<pre>
+{::include examples/basic-disclosure/oetp.json}
+</pre>
+</div>
 
 # Security Considerations
 
@@ -360,34 +361,39 @@ Diagrams could be built from code using the below `*.puml` files automatically u
 
 
 ### Creation of Disclosure
-~~~~ PUML
-{::include docs/diagrams/src/disclosure-creation.puml }
-~~~~
-{: #figure-disclosure-creation title="Creation of the Disclosure"}
+<div class="figure" id="figure-disclosure-creation" title="Creation of the Disclosure">
+<pre>
+{::include docs/diagrams/src/disclosure-creation.puml}
+</pre>
+</div>
 
 ### Basic Disclosure Submission
-~~~~ PUML
-{::include docs/diagrams/src/disclosure-submission-basic.puml }
-~~~~
-{: #figure-disclosure-submission-basic title="Basic Disclosure Submission"}
+<div class="figure" id="figure-disclosure-submission-basic" title="Basic Disclosure Submission">
+<pre>
+{::include docs/diagrams/src/disclosure-submission-basic.puml}
+</pre>
+</div>
 
 ### Progressive Verification Scheme for Disclosures
-~~~~ PUML
-{::include docs/diagrams/src/disclosure-progressive-verification.puml }
-~~~~
-{: #figure-disclosure-progressive-verification title="Progressive Verification Scheme for Disclosures"}
+<div class="figure" id="figure-disclosure-progressive-verification" title="Progressive Verification Scheme for Disclosures">
+<pre>
+{::include docs/diagrams/src/disclosure-progressive-verification.puml}
+</pre>
+</div>
 
 ### Disclosure Chaining: Request-Response
-~~~~ PUML
-{::include docs/diagrams/src/disclosure-chaining-request.puml }
-~~~~
-{: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
+<div class="figure" id="figure-disclosure-chaining-request" title="Disclosure Chaining: Request-Response">
+<pre>
+{::include docs/diagrams/src/disclosure-chaining-request.puml}
+</pre>
+</div>
 
 ### Disclosure Chaining: Level Order Traversal
-~~~~ PUML
-{::include docs/diagrams/src/disclosure-chaining-tree.puml }
-~~~~
-{: #figure-disclosure-chaining-tree title="Disclosure Chaining: Level Order Traversal"}
+<div class="figure" id="figure-disclosure-chaining-tree" title="Disclosure Chaining: Level Order Traversal">
+<pre>
+{::include docs/diagrams/src/disclosure-chaining-tree.puml}
+</pre>
+</div>
 
 # Acknowledgments
 {:numbered="false"}
@@ -395,4 +401,3 @@ Diagrams could be built from code using the below `*.puml` files automatically u
 Part of this work related to Verification and Validation of Disclosure and Disclosure Chaining was supported by the H2020 Programme of the European Commission under Article 15 of Grant Agreement No. 951972 StandICT.eu 2023
 
 The Open Ethics community and expert volunteers contributed with their valuable feedback, discussions, and comments. Thank you Ashley Duque Kienzle, Angela Kim, Ioannis Zempekakis, Karl Müdespacher, Ida Varošanec, Claudia Del Pozo, Joerg Buss, Mariia Kriuchok, Minhaaj Rehman, Oleksii Molchanovskyi, Roberta Barone, Phil Volkofsky and others.
-
