@@ -175,10 +175,11 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 
 1) A Label MUST contain a title. Title could be either marked by the `aria-label` attribute for the narration software or be labeled by another content tag(s) present via `aria-labelledby` attribute, pointing to the ID(s) describing the label content.
 
-~~~~ HTML
-{::include examples/basic-disclosure/oel-snippet.html }
-~~~~
-{: #figure-example-oel-snippet title="Example Label Snippet Content"}
+<div class="figure" id="figure-example-oel-snippet" title="Example Label Snippet Content">
+<pre>
+{::include examples/basic-disclosure/oel-snippet.html}
+</pre>
+</div>
 
 2) Every icon that is present in the visual Label MUST contain a title, describing the property illustrated by the icon. A more extended description MAY be provided when necessary. The following patterns are suggested:
 
