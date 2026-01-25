@@ -175,22 +175,21 @@ Accessibility of the Labels for the visually impaired Users SHOULD be considered
 
 1) A Label MUST contain a title. Title could be either marked by the `aria-label` attribute for the narration software or be labeled by another content tag(s) present via `aria-labelledby` attribute, pointing to the ID(s) describing the label content.
 
-<div class="figure" id="figure-example-oel-snippet" title="Example Label Snippet Content">
 <pre>
 {::include examples/basic-disclosure/oel-snippet.html}
 </pre>
-</div>
+{: #figure-example-oel-snippet title="Example Label Snippet Content"}
+
 
 2) Every icon that is present in the visual Label MUST contain a title, describing the property illustrated by the icon. A more extended description MAY be provided when necessary. The following patterns are suggested:
 
 - Pattern for images embedded using SVG tags: `<img> + role="img" + alt="[title text here]"` OR `<img> + role="img" + aria-label="[title text here]"`
 - Pattern for images embedded using IMG tags: `<svg> + role="img" + <title> + <desc> + aria-labelledby="[ID]"`
 
-<div class="figure" id="figure-example-oel-icon-label-source-open" title="Example of the SVG icon with ARIA attributes for Accessibility">
 <pre>
 {::include examples/basic-disclosure/label-source-open.svg}
 </pre>
-</div>
+{: #figure-example-oel-icon-label-source-open title="Example of the SVG icon with ARIA attributes for Accessibility"}
 
 ## Verification and Validation of Disclosure
 
@@ -307,11 +306,11 @@ Formally this approach could be illustrated with the use of a conjunction table 
 Further evaluation of this approach is required.
 
 # Example OETP Disclosure File
-<div class="figure" id="figure-example-oetp-json" title="Example OETP Disclosure File">
+
 <pre>
 {::include examples/basic-disclosure/oetp.json}
 </pre>
-</div>
+{: #figure-example-oetp-json title="Example OETP Disclosure File"}
 
 # Security Considerations
 
@@ -361,39 +360,34 @@ Diagrams could be built from code using the below `*.puml` files automatically u
 
 
 ### Creation of Disclosure
-<div class="figure" id="figure-disclosure-creation" title="Creation of the Disclosure">
 <pre>
 {::include docs/diagrams/src/disclosure-creation.puml}
 </pre>
-</div>
+{: #figure-disclosure-creation title="Creation of the Disclosure"}
 
 ### Basic Disclosure Submission
-<div class="figure" id="figure-disclosure-submission-basic" title="Basic Disclosure Submission">
 <pre>
 {::include docs/diagrams/src/disclosure-submission-basic.puml}
 </pre>
-</div>
+{: #figure-disclosure-submission-basic title="Basic Disclosure Submission"}
 
 ### Progressive Verification Scheme for Disclosures
-<div class="figure" id="figure-disclosure-progressive-verification" title="Progressive Verification Scheme for Disclosures">
 <pre>
 {::include docs/diagrams/src/disclosure-progressive-verification.puml}
 </pre>
-</div>
+{: #figure-disclosure-progressive-verification title="Progressive Verification Scheme for Disclosures"}
 
 ### Disclosure Chaining: Request-Response
-<div class="figure" id="figure-disclosure-chaining-request" title="Disclosure Chaining: Request-Response">
 <pre>
 {::include docs/diagrams/src/disclosure-chaining-request.puml}
 </pre>
-</div>
+{: #figure-disclosure-chaining-request title="Disclosure Chaining: Request-Response"}
 
 ### Disclosure Chaining: Level Order Traversal
-<div class="figure" id="figure-disclosure-chaining-tree" title="Disclosure Chaining: Level Order Traversal">
 <pre>
 {::include docs/diagrams/src/disclosure-chaining-tree.puml}
 </pre>
-</div>
+{: #figure-disclosure-chaining-tree title="Disclosure Chaining: Level Order Traversal"}
 
 # Acknowledgments
 {:numbered="false"}
