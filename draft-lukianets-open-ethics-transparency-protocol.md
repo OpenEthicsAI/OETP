@@ -45,23 +45,23 @@ informative:
 
 --- abstract
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT Products and their Components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.
+The Open Ethics Transparency Protocol (OETP) defines an application‑level protocol for the publication and retrieval of ethical Disclosures associated with Autonomous Systems (AS) and their Components. The Protocol specifies an HTTP‑based mechanism for exchanging information describing the ethical *postures* of such Systems in an open and standardized format. The scope of this specification includes Disclosures for Autonomous Systems incorporating Artificial Intelligence (AI), Automated Decision‑Making (ADM) capabilities, Software‑as‑a‑Service (SaaS) Autonomous Functions, Application Programming Interfaces (APIs) with autonomous behavior, and modular Components that contribute to autonomous operation. The objective of OETP is to support transparent, predictable, and safe environments for end‑users and stakeholders interacting with Autonomous Systems. The OETP Disclosure Schema is defined as an extensible, JSON‑based format.
 
 --- middle
 
 # Introduction
 
-The Open Ethics Transparency Protocol (OETP or Protocol) describes the creation and exchange of voluntary ethics Disclosures for IT products. It is brought as a solution to increase the transparency of how IT products are built and deployed. This document provides details on how disclosures for data collection and data processing practice are formed, stored, validated, and exchanged in a standardized and open format.
+The Open Ethics Transparency Protocol (OETP), hereafter “the Protocol,” specifies procedures for creating, maintaining, and exchanging voluntary ethical Disclosures concerning Autonomous Systems (AS). The Protocol is intended to increase transparency regarding the design, deployment, and operational behavior of systems that exhibit autonomous or semi‑autonomous capabilities. This document defines normative requirements for the formation, storage, validation, and exchange of Disclosures describing data collection, data processing, and output logic practices, using an open and standardized representation.
 
-OETP provides facilities for:
+OETP is designed to support the following functions:
 
-* **Informed consumer choices** : End-users able to make informed choices based on their own ethical preferences and product disclosure.
-* **Industrial-scale monitoring** : Discovery of best and worst practices within market verticals, technology stacks, and product value offerings.
-* **Legally-agnostic guidelines** : Suggestions for developers and product-owners, formulated in factual language, which are legally-agnostic and could be easily transformed into product requirements and safeguards.
-* **Iterative improvement** : Digital products, specifically, the ones powered by artificial intelligence could receive nearly real-time feedback on how their performance and ethical posture could be improved to cover security, privacy, diversity, fairness, power balance, non-discrimination, and other requirements.
-* **Labeling and certification** : Mapping to existing and future regulatory initiatives and standards.
+* **Informed stakeholder choices**: Enable end‑users, operators, and integrators to assess Autonomous Systems according to their ethical preferences and the characteristics declared in the corresponding Disclosure.
+* **Industrial‑scale monitoring**: Facilitate comparative assessment of autonomous behavior, governance practices, and risk profiles across market sectors, technology ecosystems, and application domains.
+* **Legally‑agnostic guidance**: Provide fact‑based, jurisdiction‑neutral recommendations for developers and system owners that can be translated into technical safeguards, risk controls, or compliance requirements.
+* **Iterative improvement**: Support continuous refinement of Autonomous Systems—particularly those employing AI or machine‑learning techniques—by enabling timely feedback on operational performance and ethical characteristics, including security, privacy, fairness, diversity, power dynamics, and non‑discrimination.
+* **Labeling and certification**: Enable alignment with existing and emerging regulatory initiatives, assurance frameworks, and formal standards applicable to Autonomous Systems.
 
-The Open Ethics Transparency Protocol (OETP) is an application-level protocol for publishing and accessing ethical Disclosures of IT products and their components. The Protocol is based on HTTP exchange of information about the ethical &quot;postures&quot;, provided in an open and standardized format. The scope of the Protocol covers Disclosures for systems such as Software as a Service (SaaS) Applications, Software Applications, Software Components, Application Programming Interfaces (API), Automated Decision-Making (ADM) systems, and systems using Artificial Intelligence (AI). OETP aims to bring more transparent, predictable, and safe environments for the end-users. The OETP Disclosure Schema is an extensible JSON-based format.
+The Open Ethics Transparency Protocol defines an application‑level mechanism for accessing and publishing ethical Disclosures for Autonomous Systems and their Components. It relies on HTTP‑based exchange of information describing ethical *postures* in a standardized format. The Protocol applies to AI‑enabled Systems, ADM Systems, autonomous SaaS functions, autonomous APIs, and modular Components that contribute to autonomous behavior. The goal of the Protocol is to support transparent, predictable, and safe autonomous operation. The OETP Disclosure Schema is specified as an extensible JSON data model.
 
 # Requirement Levels
 
@@ -394,3 +394,4 @@ Diagrams could be built from code using the below `*.puml` files automatically u
 Part of this work related to Verification and Validation of Disclosure and Disclosure Chaining was supported by the H2020 Programme of the European Commission under Article 15 of Grant Agreement No. 951972 StandICT.eu 2023
 
 The Open Ethics community and expert volunteers contributed with their valuable feedback, discussions, and comments. Thank you Ashley Duque Kienzle, Angela Kim, Ioannis Zempekakis, Karl Müdespacher, Ida Varošanec, Claudia Del Pozo, Joerg Buss, Mariia Kriuchok, Minhaaj Rehman, Oleksii Molchanovskyi, Roberta Barone, Phil Volkofsky and others.
+
