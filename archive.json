@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-21T01:39:19.687617+00:00",
+  "timestamp": "2026-01-27T02:30:20.566452+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -649,6 +649,22 @@
       "updatedAt": "2025-06-10T14:31:24Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 36,
+      "id": "I_kwDOEzZp0M7l-UZg",
+      "title": "Build changes",
+      "url": "https://github.com/OpenEthicsAI/OETP/issues/36",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Consider updating the Makefile and workflow files.  There are some improvements you might benefit from.\n\nAlso, you should list `/lib/` in .gitignore.  I don't know how that change didn't end up being made, but the directory/link is constant pollution in any `git status` checks.",
+      "createdAt": "2026-01-27T00:53:53Z",
+      "updatedAt": "2026-01-27T00:53:53Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -952,10 +968,10 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-03-04T16:53:06Z",
-      "updatedAt": "2025-03-06T13:09:49Z",
+      "updatedAt": "2026-01-25T09:42:55Z",
       "baseRepository": "OpenEthicsAI/OETP",
       "baseRefName": "main",
-      "baseRefOid": "73f3c41e28a500502a5c4afcb05a8916a76d0119",
+      "baseRefOid": "50ad184d412bb75f4de9a4894a217574a4d77092",
       "headRepository": "iyanuashiri/OETP",
       "headRefName": "accessible-labels",
       "headRefOid": "fedceaa17d1a32e4fa3b2b706972bc4b5548d8c3",
