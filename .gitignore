@@ -11,3 +11,5 @@
 venv/
 archive.json
 report.xml
+/lib/
+.DS_Store
