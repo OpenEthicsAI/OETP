@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-27T02:30:20.566452+00:00",
+  "timestamp": "2026-01-29T02:44:00.156964+00:00",
   "repo": "OpenEthicsAI/OETP",
   "labels": [
     {
@@ -653,18 +653,30 @@
     {
       "number": 36,
       "id": "I_kwDOEzZp0M7l-UZg",
-      "title": "Build changes",
+      "title": "IETF I-D Build update changes",
       "url": "https://github.com/OpenEthicsAI/OETP/issues/36",
       "state": "OPEN",
       "author": "martinthomson",
       "authorAssociation": "NONE",
-      "assignees": [],
-      "labels": [],
+      "assignees": [
+        "nikiluk"
+      ],
+      "labels": [
+        "enhancement"
+      ],
       "body": "Consider updating the Makefile and workflow files.  There are some improvements you might benefit from.\n\nAlso, you should list `/lib/` in .gitignore.  I don't know how that change didn't end up being made, but the directory/link is constant pollution in any `git status` checks.",
       "createdAt": "2026-01-27T00:53:53Z",
-      "updatedAt": "2026-01-27T00:53:53Z",
+      "updatedAt": "2026-01-28T05:19:26Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "nikiluk",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thank you! Your fix that enables working with different line endings worked, will proceed with updates to the build.",
+          "createdAt": "2026-01-28T05:17:48Z",
+          "updatedAt": "2026-01-28T05:19:26Z"
+        }
+      ]
     }
   ],
   "pulls": [
