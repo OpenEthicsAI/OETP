@@ -4,8 +4,8 @@
 
 dispatch                                                    N. Lukianets
 Internet-Draft                                    Open Ethics Initiative
-Intended status: Experimental                            28 January 2026
-Expires: 1 August 2026
+Intended status: Experimental                               19 July 2026
+Expires: 20 January 2027
 
 
                    Open Ethics Transparency Protocol
@@ -41,7 +41,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 August 2026.
+   This Internet-Draft will expire on 20 January 2027.
 
 Copyright Notice
 
@@ -636,35 +636,25 @@ Table of Contents
 8.  Areas for Future Study
 
    The following topics not addressed in this version of the document
-   are possible areas for the future study:
-
-   *  Extensibility of the OETP Disclosure Schema.
-
-   *  Evaluate other methods of Generation of the Composite Disclosure
-      based on the Disclosure Tree
-
-   *  Disclosure Chaining mechanisms and various use-cases.
-
-   *  Typical scenarios and templates for Disclosure submissions.
-
-   *  Mapping of the regulatory requirements and future Disclosure
-      elements.
-
-   *  Standardizing Privacy Disclosure and PII data-collection
-      practices.
-
-   *  Enhancing Label accessibility with ARIA W3C Recommendation and
-      other approaches.
-
-   *  Use of the OETP Disclosure in the ADM explainability (XAI).
-
-   *  Disclosure Schemas for families of "Generative AI" technologies
-      such as Generative Adversarial Networks (GANs), Variational
-      Autoencoders (VAEs), Conditional Variational Autoencoders (CVAEs),
-      Attention Mechanisms, Transformer-based Models.
-
-   *  Interoperability of the agentic disclosure and the Model Context
-      Protocol (MCP)
+   are possible areas for the future study: * Implement the feedback
+   recommendation by making an explicit choice on where signing is used
+   and where the hashing is used. * Minor document fixes (Fix the
+   swapped SVG/IMG accessibility bullets, Normalize heading levels in
+   the supplier disclosure section) * Standardize terminology around DIP
+   / provider / generator / storage roles. * Extensibility of the OETP
+   Disclosure Schema. * Evaluate other methods of Generation of the
+   Composite Disclosure based on the Disclosure Tree * Disclosure
+   Chaining mechanisms and various use-cases. * Typical scenarios and
+   templates for Disclosure submissions. * Mapping of the regulatory
+   requirements and future Disclosure elements. * Standardizing Privacy
+   Disclosure and PII data-collection practices. * Enhancing Label
+   accessibility with ARIA W3C Recommendation and other approaches. *
+   Use of the OETP Disclosure in the ADM explainability (XAI). *
+   Disclosure Schemas for families of "Generative AI" technologies such
+   as Generative Adversarial Networks (GANs), Variational Autoencoders
+   (VAEs), Conditional Variational Autoencoders (CVAEs), Attention
+   Mechanisms, Transformer-based Models. * Interoperability of the
+   agentic disclosure and the Model Context Protocol (MCP)
 
 9.  References
 
@@ -864,6 +854,6 @@ Acknowledgments
 
 Author's Address
 
-   Nikita Lukainets
+   Nikita Lukianets
    Open Ethics Initiative
    Email: n.lukianets@openethics.ai
