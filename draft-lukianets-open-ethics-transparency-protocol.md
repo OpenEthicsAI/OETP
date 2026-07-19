@@ -20,7 +20,7 @@ pi:
 author:
  -
     ins: N. Lukianets
-    name: Nikita Lukainets
+    name: Nikita Lukianets
     organization: Open Ethics Initiative
     email: n.lukianets@openethics.ai
 
@@ -333,7 +333,9 @@ Disclosures MAY be resolved using their URIs. To allow this requirement, the `oe
 # Areas for Future Study
 
 The following topics not addressed in this version of the document are possible areas for the future study:
-
+* Implement the feedback recommendation by making an explicit choice on where signing is used and where the hashing is used.
+* Minor document fixes (Fix the swapped SVG/IMG accessibility bullets, Normalize heading levels in the supplier disclosure section)
+* Standardize terminology around DIP / provider / generator / storage roles.
 * Extensibility of the OETP Disclosure Schema.
 * Evaluate other methods of Generation of the Composite Disclosure based on the Disclosure Tree
 * Disclosure Chaining mechanisms and various use-cases.
